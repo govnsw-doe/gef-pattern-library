@@ -1,0 +1,35 @@
+{
+  "name": "gef-pattern-library",
+  "description": "A static site generator for the GEF pattern library",
+  "version": "0.0.1",
+  "keywords": [
+    "metalsmith",
+    "GEF",
+    "markdown",
+    "pug",
+    "scss"
+  ],
+  "maintainers": [
+    {
+      "name": "Alex Dewez-Lopez",
+      "email": "alexdewezlopez@gmail.com",
+      "web": "im-alex.sydney"
+    }
+  ],
+  "dependencies": {
+    "async": "^2.1.2",
+    "jstransformer-marked": "^1.0.1",
+    "metalsmith": "^2.3.0",
+    "metalsmith-babel": "^4.1.0",
+    "metalsmith-browser-sync": "^1.1.1",
+    "metalsmith-collections": "^0.9.0",
+    "metalsmith-drafts": "0.0.1",
+    "metalsmith-layouts": "^1.7.0",
+    "metalsmith-markdown": "^0.2.1",
+    "metalsmith-prism": "^3.0.1",
+    "metalsmith-pug": "^2.0.0",
+    "metalsmith-redirect": "^2.1.0",
+    "metalsmith-sass": "^1.3.0",
+    "pug": "^2.0.0-beta6"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "gef-pattern-library",
+  "description": "A static site generator for the GEF pattern library",
+  "main": "index.js",
+  "authors": [
+    "Alex Dewez-Lopez <alexdewezlopez@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "metalsmith",
+    "GEF",
+    "markdown",
+    "pug",
+    "scss"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "text-generator-pug": "^0.0.1",
+    "gef": "*",
+    "normalize-scss": "normalize.scss#^6.0.0"
+  },
+  "devDependencies": {
+    "uikit": "^2.27.2"
+  }
+}

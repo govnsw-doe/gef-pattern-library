@@ -1,0 +1,56 @@
+//-
+  - @function lowerme(string)
+  - @desc     set a string to lowercase
+- function lowerme(string) {
+-   return string.toString().toLowerCase()
+- }
+
+//-
+  - @function getPath(page)
+  - @desc
+- function getPath(page)  {
+-    return '../' + page.path.replace('.pug', '.html')
+- }
+
+
+//-
+  - @mixin  create_nav_link(page)
+  - @desc   creates a new link for the navigation based on the collection object and sets current page
+  - @param  {object} 'page' the collection object
+mixin create_nav_link(page)
+  - if (page.title === title)
+    li.current
+      a(href= getPath(page))
+        = page.title
+
+  - else
+    li
+      a(href= getPath(page))
+        = page.title
+
+
+- var collectionCategories = ["Overview", "Design", "Templates", "Components", "Utilities"]
+
+nav.pl-nav
+  h2.uk-hidden Navigation
+  ul
+    //- loop through collection names and output the links
+    - for (var i = 0; i < collectionCategories.length; i++)
+      - var category = lowerme(collectionCategories[i])
+      - var this_collection = collections[category]
+
+      mixin nav_item
+        a(href= getPath(this_collection[0]))= collectionCategories[i]
+        ul
+          - for (var o = 0; o < this_collection.length; o++)
+            +create_nav_link(this_collection[o])
+
+      - if (category === lowerme(collection))
+        li.current
+          +nav_item
+      - else
+        li
+          +nav_item
+
+
+

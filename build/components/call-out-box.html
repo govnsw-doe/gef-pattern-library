@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Call Out Box GEF Pattern Library</title>
+    <meta name="description" content="The call out box is useful for directing the user&amp;rsquo;s attention to key content and tasks.">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../styles/styles.css">
+  </head>
+</html>
+<body>
+    <div class="gef-global-header-container gef-global-header--alt" role="banner">
+      <div class="gef-global-header">
+        <div class="uk-container uk-container-center">
+          <div class="uk-grid uk-grid-collapse">
+            <div class="uk-width-1-1"><a class="gef-global-header__header" href="#" title="NSW Department of Education"><abbr title="NSW Department of Education" aria-hidden="true">NSW DoE</abbr></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <div class="uk-container uk-container-center">
+    <div class="uk-grid">
+      <div class="uk-width-large-3-10 uk-width-xlarge-2-10">
+        <header class="pl-header">
+          <h1>Global Experience Framework<span>Pattern Library</span></h1>
+          <nav class="pl-nav">
+            <h2 class="uk-hidden">Navigation</h2>
+            <ul>
+              <li><a href="../overview/welcome.html">Overview</a>
+                              <ul>
+                                          <li><a href="../overview/welcome.html">Welcome</a></li>
+                              </ul>
+              </li>
+              <li><a href="../design/themes.html">Design</a>
+                              <ul>
+                                          <li><a href="../design/themes.html">Themes</a></li>
+                              </ul>
+              </li>
+              <li><a href="../templates/landing.html">Templates</a>
+                              <ul>
+                                          <li><a href="../templates/landing.html">Landing</a></li>
+                              </ul>
+              </li>
+              <li class="current"><a href="../components/call-out-box.html">Components</a>
+                              <ul>
+                                          <li class="current"><a href="../components/call-out-box.html">Call Out Box</a></li>
+                                          <li><a href="../components/show-hide.html">Show/Hides</a></li>
+                              </ul>
+              </li>
+              <li><a href="../utilities/scroll-toggle.html">Utilities</a>
+                              <ul>
+                                          <li><a href="../utilities/scroll-toggle.html">Scroll Toggle</a></li>
+                              </ul>
+              </li>
+            </ul>
+          </nav>
+        </header>
+      </div>
+      <article class="pl-article uk-width-large-7-10" data-gef-external-link-tagger>
+        <header class="pl-highlighted">
+          <h1>Call Out Box</h1>
+          <div class="lead">
+            <p>The call out box is useful for directing the user&rsquo;s attention to key content and tasks.</p>
+          </div>
+          <p class="pl-capitalise">Available in:&nbsp;<span class="pl-pills"><span>Squiz Matrix</span></span></p>
+        </header>
+        <div class="pl-contents">
+          <div class="content"><div class="usage"><h2 id="usage">Usage</h2>
+<ul>
+<li>Keep call-out box content succinct, with clear actions for users to take.</li>
+<li>Avoid using multiple call-out boxes on a page. This helps retain the box&#39;s visual impact.</li>
+<li>Place the call-out box towards the end of the content page so users are not directed to other links prematurely.</li>
+</ul>
+</div><div class="how-to"><h2 id="how-to-guides">How-to Guides</h2>
+<p><a href="http://www.google.com">Squiz Matrix</a></p>
+</div><div class="example"><h2 id="example">Example</h2>
+<div class="live-example"><div class="gef-call-out-box"><h3>Nam quis nulla </h3><p>Phasellus rhoncus aenean id metus id velit ullamcorper pulvinar. Vestibulum fermentum tortor id mi.  Nulla non arcu lacinia neque faucibus fringilla. </p><ul class="gef-link-list"><li><a href="#">Nulla non </a></li><li><a href="#">Maecenas sollicitudin </a></li></ul></div></div></div><div class="usage"><h2 id="code">Code</h2>
+<div class="pug-usage"></div><h4>Using pug:</h4><pre><code class="language-pug">mixin call_out_box_content
+  h3
+    +lipsum(3, "words")
+  +gef_link_list(2)
++gef_call_out_box(+call_out_box_content)</code></pre></div></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</body>
+<script src="//dec-ce.bitbucket.org/gef/pattern-library/assets/js/vendor/require.js" data-main="//dec-ce.bitbucket.org/gef/pattern-library/assets/js/main.js" data-site-config-path="" type="text/javascript"></script>

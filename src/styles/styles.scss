@@ -1,0 +1,369 @@
+---
+layout: clean.pug
+---
+
+/* ------------------------------
+Normalize CSS
+-------------------------------- */
+
+@import 'normalize-scss/sass/normalize';
+
+/* ------------------------------
+Variables
+-------------------------------- */
+
+// GEF variables overrides
+$gef-max-width:           1400px;
+$gef-mq-md:               "screen and (min-width: 40rem)";
+$gef-mq-lg:               "screen and (min-width: 70rem)";
+
+// UIKIT variables overrides
+$breakpoint-large:        70rem;
+
+// Custom Pattern Library variables
+$pl-font:                 400 16px/1.5 montserrat,Arial,sans-serif;
+$pl-font-gef:             400 16px/1.5 montserrat,Arial,sans-serif;
+
+$pl-spacing-h:            25px;
+$pl-spacing-v:            40px;
+
+$pl-muted:                #e6e8ec;
+$pl-mid-grey:             #9b9b9b;
+$pl-dark-grey:            #333;
+$pl-darker-grey:          #202b40;
+$pl-highlight:            #44b9b9;
+
+$pl-header-bg:            $pl-muted;
+$pl-subheader-color:      $pl-highlight;
+
+$pl-nav-color:            $pl-dark-grey;
+$pl-nav-separator:        2px solid #fff;
+
+$pl-subnav-active:            $pl-highlight;
+$pl-subnav-separator:         1px solid $pl-muted;
+$pl-subnav-separator-active:  2px solid $pl-highlight;
+
+
+$pl-text-color:           $pl-darker-grey;
+
+/* ------------------------------
+Imports from bower_components
+-------------------------------- */
+
+// GEF usefuls
+@import 'gef/src/assets/sass/variables';
+@import 'gef/src/assets/sass/mixins';
+
+// UIKIT grid
+@import 'uikit/scss/uikit-mixins';
+@import 'uikit/scss/uikit-variables';
+@import 'uikit/scss/core/grid';
+@import 'uikit/scss/core/utility';
+
+// GEF DoE Global header
+@import 'gef/src/assets/sass/patterns/global-header';
+
+.gef-global-header {
+  font: $pl-font-gef;
+}
+
+/* ------------------------------
+Styles
+-------------------------------- */
+
+body {
+  margin: 0;
+  font: $pl-font;
+  color: $pl-text-color;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 1.35rem;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+a {
+  font-weight: 600;
+  color: inherit;
+  text-decoration: underline;
+
+  &:hover,
+  &:focus {
+    text-decoration:  none;
+  }
+}
+
+.pl-header {
+  background-color: $pl-header-bg;
+  padding: $pl-spacing-v $pl-spacing-h 0;
+  margin: 0 0-$pl-spacing-h;
+
+  h1 {
+    margin: 0 0 $pl-spacing-v;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    line-height: 1.2;
+
+    span {
+      display: block;
+      font-size: 1rem;
+      margin-top: 0.8em;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      color: $pl-subheader-color;
+    }
+  }
+}
+
+.pl-nav {
+  margin: 0 0-$pl-spacing-h;
+
+  ul {
+    margin: 0;
+    list-style: none;
+    padding-left: 0;
+  }
+
+  a {
+    text-decoration: none;
+    color: $pl-nav-color;
+  }
+
+  > ul {
+    border-top: $pl-nav-separator;
+
+    > li {
+      border-bottom: $pl-nav-separator;
+      padding: 0;
+
+      > a {
+        position: relative;
+        display: block;
+        padding: 20px $pl-spacing-h;
+
+        &:after {
+          position: absolute;
+          right: $pl-spacing-h;
+          top: 50%;
+          transform: translateY(-50%);
+          content: "\f105";
+          font-family: fontAwesome;
+          font-size: 1.3rem;
+          font-weight: 400;
+          line-height: 1;
+          color: $pl-mid-grey;
+        }
+      }
+
+      &.current {
+        background-color: #fff;
+        border-bottom: 0;
+        font-weight: 800;
+
+        > a {
+
+          &:after {
+            content: "\f107";
+          }
+        }
+      }
+    }
+  }
+
+  // subnav
+  > ul ul {
+
+    li {
+
+      a {
+        display: block;
+        border-bottom: $pl-subnav-separator;
+        padding: 15px $pl-spacing-h;
+        font-size: 0.9rem;
+        font-weight: 600;
+
+        &:hover,
+        &:focus {
+          color: $pl-subnav-active;
+        }
+      }
+
+      &.current  {
+
+        a {
+          color: $pl-subnav-active;
+          border-bottom: $pl-subnav-separator-active;
+        }
+      }
+    }
+  }
+
+  // hide subnav if not current
+  > ul > li:not(.current) ul {
+    display: none;
+  }
+}
+
+.pl-muted-bg {
+  background-color: $pl-muted;
+}
+
+.pl-highlighted {
+  background-color: $pl-highlight;
+
+  * {
+    color: #fff;
+  }
+}
+
+.pl-capitalise {
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+
+.pl-article {
+
+  header {
+    margin: 0 0-$pl-spacing-h;
+    padding: $pl-spacing-v $pl-spacing-h;
+
+    >*:first-child {
+      margin-top: 0;
+      padding-top: 0;
+    }
+
+    h1 {
+      margin-bottom: 0.5em;
+    }
+
+    .lead {
+      font-size: 1.1rem;
+    }
+
+  }
+
+  @media #{$gef-mq-lg} {
+
+    padding-left: 13%;
+
+    header {
+      margin-left: -10%;
+      padding: $pl-spacing-v 5% $pl-spacing-v/2 10%;
+    }
+  }
+}
+
+.pl-contents {
+
+  h2 {
+    margin-top: $pl-spacing-v;
+  }
+
+  code {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+    background-color: $pl-muted;
+    padding: 20px;
+    border: 1px solid $pl-mid-grey;
+    font-size: 0.85rem;
+    line-height: 1.8;
+    text-shadow: 0 1px 1px #fff;
+  }
+
+  @media #{$gef-mq-lg} {
+    padding-right: 5%;
+  }
+}
+
+.pl-pills {
+
+  span {
+    display: block;
+    vertical-align: middle;
+    margin-top: 15px;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    padding: 7px 11px 6px;
+    line-height: 1;
+    text-align: center;
+  }
+
+  @media #{$gef-mq-md} {
+
+    span {
+      display: inline-block;
+      margin-top: -3px;
+      margin-left: $pl-spacing-h;
+    }
+  }
+}
+
+
+/* ------------------------------
+Styles for GEF JS modifications
+-------------------------------- */
+
+.gef-external-link {
+  display: inline-block;
+  text-decoration: none;
+  vertical-align: middle;
+
+  &:before {
+    content: '\f08e';
+    display: inline-block;
+    vertical-align: text-top;
+    font-family: fontAwesome;
+    padding-left: 5px;
+    font-size: 0.8rem;
+  }
+}
+
+.uk-container {
+  max-width: $gef-max-width;
+}
+
+/* ------------------------------
+ Exclusive styles for live examples
+-------------------------------- */
+
+// reset font path to use bitbucket
+$font-path: 'http://dec-ce.bitbucket.org/gef/pattern-library/assets/fonts/';
+// loads Montserrat
+@import "gef/src/assets/sass/_fonts";
+
+// reset fonts to load font awesome
+$fonts: (
+  "fontawesome-webfont": 400
+  );
+$font-name: 'FontAwesome';
+// loads FontAwesome
+@import "gef/src/assets/sass/_fonts";
+
+// custom styles
+.live-example {
+  // set default font
+  font: $pl-font-gef;
+  // load all of GEF CSS
+  @import "gef/src/assets/sass/core";
+
+  // show hide fixes
+  div+.uk-accordion-title {
+    margin: 20px 0 0;
+  }
+}

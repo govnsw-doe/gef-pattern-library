@@ -1,0 +1,37 @@
+---
+layout: component.pug
+collection: components
+title: [Enter name here]
+description: [Enter description/meta description here]
+available: [Enter CMSs here]
+draft: true
+---
+
+//- Default includes // DO NOT REMOVE
+include ../../layouts/_global
+
+//- Pattern/Component include - link to the correct pattern/component
+//- e.g. ../../bower_components/GEF/src/assets/pug/patterns/call-out-box
+include ../../bower_components/GEF/src/assets/[patterns|components]/(name-of-pattern-without-extension)
+
+div.usage
+  :marked
+    ## Usage
+    Enter your content here
+
+div.how-to
+  :marked
+    ## How-to Guides
+    Enter your content here
+
+div.example
+  :marked
+    ## Example
+  div.live-example
+    +output
+
+div.usage
+  :marked
+    ## Pug usage:
+  div.pug-usage
+  +usage
