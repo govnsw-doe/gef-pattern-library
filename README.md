@@ -34,7 +34,9 @@ It leverages [GEF](https://bitbucket.org/dec-ce/gef) in order to pull in compone
 
 3. Open the file in your favourite code editor. If you don't have a code editor, we recommend [Sublime Text](https://www.sublimetext.com/) or [Atom](https://atom.io/)
 
-4. At the top of each file is a section which we call "Front matter", and it looks like this:
+### Editing the metadata
+
+1. At the top of each file is a section which we call "Front matter", and it looks like this:
 
 ```
 ---
@@ -49,12 +51,14 @@ available: <span>Squiz Matrix</span>
 
 ...and it's essentially structured data for the file which is read to build the site correctly. 
 
-5. Edit this content to match the requirements. Some notes:
+### Editing the content
+
+1. Edit this content to match the requirements. Some notes:
   * The 'layout' defines the way the page looks, we have layouts based on the category of your document. 
   * The 'collection' option groups the files in the navigation bar. Use lower case
   * Make sure you wrap a span `<span>[content here]</span>` around each 'available' CMS option.
 
-6. There are a few things to look out for when editing the rest of the file. Some categories have special sections which display live examples and code for developers, but we'll look at that later. For now:
+2. There are a few things to look out for when editing the rest of the file. Some categories have special sections which display live examples and code for developers, but we'll look at that later. For now:
   *tbc
 
 
