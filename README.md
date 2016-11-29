@@ -20,7 +20,7 @@ Clone this repo to a folder, then navigate to the repo
 
 ## How it works
 
-The library uses [Metalsmith](http://metalsmith.io) to generate a static site which displays content written in [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) within [Pug](http://pugj.org).
+The library uses [Metalsmith](http://metalsmith.io) to generate a static site which displays content written in [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) within [Pug](http://pugj.org) files
 
 It leverages [GEF](https://bitbucket.org/dec-ce/gef) in order to pull in component and pattern examples as well as using GEF's Javascript library to make practical use of utilities.
 
