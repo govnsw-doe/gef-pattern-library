@@ -16,7 +16,8 @@ Clone this repo to a folder, then navigate to the repo
 
 ### On PC
 
-`$ npm install && bower install && node index.js`
+`$ npm install && bower install`
+`$ node index.js`
 
 ## How it works
 
