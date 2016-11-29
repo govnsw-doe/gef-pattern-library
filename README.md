@@ -27,5 +27,7 @@ It leverages [GEF](https://bitbucket.org/dec-ce/gef) in order to pull in compone
 ## Adding content
 
 1. Once you have the repository on your PC, look into the `src` folder, you will see a list of folders, each of which corresponds with a section on GEFPL. 
-2. In each of these folders there's a file called `template-to-copy.pug`. Copy this file and rename to the name of the page you're creating.
-3. Open the file
+2. In each of these folders there's a file called `template-to-copy.pug`. Copy this file and rename to the name of the page you're creating keeping the pug extension e.g. `component-name.pug`.
+3. Open the file in your favourite code editor. If you don't have a code editor, we recommend [Sublime Text]() or [Atom]()
+
+tbc...
