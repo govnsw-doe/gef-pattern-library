@@ -6,7 +6,7 @@ A static site for GEF, describing design, themes, components, utilities for user
 
 ## Quickstart
 
-Clone this repo to a folder, then navigate to the repo:
+Clone this repo to a folder, then navigate to the repo
 
 `cd path/to/folder`
 
