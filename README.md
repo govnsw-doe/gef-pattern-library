@@ -4,9 +4,14 @@ A static site for GEF, describing design, themes, components, utilities for user
 
 ---
 
-## Quickstart
+## Before your start
 
-If you don't know much or anything about working with git, read [Installing, preparing and using GEF](https://docs.google.com/document/d/1cRtBJQwV9qwPoD5-J2E7Z1u_apvlnoY4w24hs7iGa9A/edit#heading=h.kj2d20an9cvp). You will need to install git, node and bower. *note: ignore anything about git flow.*
+If you don't know much or anything about working with git, read [Installing, preparing and using GEF](https://docs.google.com/document/d/1cRtBJQwV9qwPoD5-J2E7Z1u_apvlnoY4w24hs7iGa9A/edit#heading=h.kj2d20an9cvp). You will need to install git, node and bower. 
+
+**note: ignore anything about git flow.**
+
+
+## Quickstart
 
 Clone this repo to a folder, then navigate to the repo
 
