@@ -62,7 +62,7 @@ Edit this content to match the requirements. Some notes:
 
 ### Editing the content
 
-There are a few things to look out for when editing the rest of the file. Some categories have special sections which display live examples and code for developers, but we'll look at that later.
+There are a few things to look out for when editing the rest of the file. Some categories have special sections which display live examples and code examples, but we'll look at that later.
 
 For now look at the 'Overview' category and the file `template-to-copy.pug`. Wherever you see the keyword `:marked`, you will be able to enter [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) below it, but you need to make sure that the content is _indented_ with _2 spaces_.
 
@@ -74,5 +74,16 @@ For now look at the 'Overview' category and the file `template-to-copy.pug`. Whe
 
 ```
 
+Now let's look at a more complex template. In 'components', open `template-to-copy.pug`. You will see a bit of pug syntax which has the necessary code to pull in the live examples and code examples. The important part here is the inclusion of the GEF component or pattern file, the processes will do the rest. If you do not use the correct path the site will not compile and you'll get an error, in which case you need to cancel the process (in your terminal) `ctrl + C`, and restart by typing `$ index.js` or `$ make`.
 
-tbc...
+## Drafts
+
+If you are working on a document and haven't finished, you can set the document to draft mode which means it will not compile by adding the following structured data in the front matter:
+
+```
+--- 
+draft: true
+...
+...
+---
+````
