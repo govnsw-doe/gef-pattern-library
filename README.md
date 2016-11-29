@@ -62,9 +62,17 @@ Edit this content to match the requirements. Some notes:
 
 ### Editing the content
 
-2. There are a few things to look out for when editing the rest of the file. Some categories have special sections which display live examples and code for developers, but we'll look at that later. For now:
-  *tbc
+There are a few things to look out for when editing the rest of the file. Some categories have special sections which display live examples and code for developers, but we'll look at that later.
 
+For now look at the 'Overview' category and the file `template-to-copy.pug`. Wherever you see the keyword `:marked`, you will be able to enter [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) below it, but you need to make sure that the content is _indented_ with _2 spaces_.
+
+```
+:marked
+  
+  # This is your content
+  ## See how it is indented?
+
+```
 
 
 tbc...
