@@ -52,9 +52,12 @@ available: <span>Squiz Matrix</span>
 ...and it's essentially structured data for the file which is read to build the site correctly. 
 
 Edit this content to match the requirements. Some notes:
-- The 'layout' defines the way the page looks, we have layouts based on the category of your document. 
-- The 'collection' option groups the files in the navigation bar. Use lower case
-- Make sure you wrap a span `<span>[content here]</span>` around each 'available' CMS option.
+
+* The 'layout' defines the way the page looks, we have layouts based on the category of your document. 
+
+* The 'collection' option groups the files in the navigation bar. Use lower case
+
+* Make sure you wrap a span `<span>[content here]</span>` around each 'available' CMS option.
 
 
 ### Editing the content
