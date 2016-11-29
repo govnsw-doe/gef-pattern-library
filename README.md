@@ -12,7 +12,7 @@ Clone this repo to a folder, then navigate to the repo:
 
 ### On Mac
 
-`$ make`.
+`$ make`
 
 ### On PC
 
