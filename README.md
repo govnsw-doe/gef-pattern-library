@@ -83,7 +83,5 @@ If you are working on a document and haven't finished, you can set the document 
 ```
 --- 
 draft: true
-
-
 ---
 ```
