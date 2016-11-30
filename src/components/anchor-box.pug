@@ -1,0 +1,33 @@
+---
+layout: component.pug
+collection: components
+title: Anchor box
+display_title: Anchor box
+description: Anchor boxes help users ascertain a page’s content and quickly navigate to specific blocks on the page.
+available: <span>Squiz Matrix</span>
+---
+
+//- Default includes // DO NOT REMOVE
+include ../../layouts/_global
+
+//- Pattern/Component include - link to the correct pattern/component
+include ../../bower_components/gef/src/assets/pug/patterns/link-list
+include ../../bower_components/gef/src/assets/pug/components/anchor-box
+
+div.example
+  :marked
+    ## Example
+  div.live-example
+    +output
+
+div.code-usage
+  :marked
+    ## Code
+  div.code
+  +usage
+
+:marked
+  ## Usage
+  * Be aware of the number of H2 headings on the content page as they will be automatically listed in the anchor box.
+  * Use the anchor box as a navigation tool for short FAQ content. You can do this by presenting each question as an H2 heading.
+  * Squiz Matrix users: anchor boxes automatically appear on standard content pages that contain three or more H2 headings. You can choose to disable them.
