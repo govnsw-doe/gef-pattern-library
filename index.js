@@ -51,6 +51,7 @@ var metalsmith = Metalsmith(__dirname)
   }))
   .use(redirect({
     '/': 'overview/welcome.html',
+    'gef-pattern-library': 'gef-pattern-library/overview/welcome.html'
   }))
   .use(prism())
   .use(bsync({
