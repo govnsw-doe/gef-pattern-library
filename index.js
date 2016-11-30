@@ -50,7 +50,7 @@ var metalsmith = Metalsmith(__dirname)
     pretty:     true
   }))
   .use(redirect({
-    '/': '/overview/welcome.html',
+    '/': 'overview/welcome.html',
   }))
   .use(prism())
   .use(bsync({
