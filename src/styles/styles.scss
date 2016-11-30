@@ -286,6 +286,15 @@ a {
     text-shadow: 0 1px 1px #fff;
   }
 
+  kbd {
+    border: 1px solid $pl-muted;
+    border-radius: 3px;
+    color: $pl-mid-grey;
+    font: $pl-font;
+    font-size: 0.85rem;
+    padding: 0 5px;
+  }
+
   @media #{$gef-mq-lg} {
     padding-right: 5%;
   }
@@ -365,5 +374,10 @@ $font-name: 'FontAwesome';
   // show hide fixes
   div+.uk-accordion-title {
     margin: 20px 0 0;
+  }
+
+  // anchor box
+  .gef-anchor-box {
+    margin: 0;
   }
 }
