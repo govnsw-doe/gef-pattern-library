@@ -18,11 +18,10 @@ var async       = require('async'),
 
 var metalsmith = Metalsmith(__dirname)
   .metadata({
-    sitename: 'GEF Pattern Library',
-    sitedesc: 'site description goes here'
+    sitename: 'GEF Pattern Library'
   })
   .source('./src')
-  .destination('./build')
+  .destination('./docs')
   .clean(true)
   .use(drafts())
   .use(sass({
@@ -55,7 +54,7 @@ var metalsmith = Metalsmith(__dirname)
   }))
   .use(prism())
   .use(bsync({
-    server:     'build',
+    server:     'docs',
     files:      ['src/**/*.*', 'layouts/**/*.*'],
     port:       2000
   }))
