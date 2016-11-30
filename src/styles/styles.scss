@@ -104,9 +104,11 @@ a {
 }
 
 .pl-header {
+  position: relative;
   background-color: $pl-header-bg;
   padding: $pl-spacing-v $pl-spacing-h 0;
   margin: 0 0-$pl-spacing-h;
+  z-index: 1000;
 
   h1 {
     margin: 0 0 $pl-spacing-v;
@@ -128,8 +130,71 @@ a {
   }
 }
 
+.pl-mobile-nav-toggle {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 2px solid $pl-mid-grey;
+  background-color: #fff;
+  box-sizing: border-box;
+  transform: translateY(-20px);
+  text-indent: 1000px;
+  white-space: nowrap;
+  transition: border-color 0.2s;
+
+  &:hover,
+  &:focus {
+    outline: 0;
+    border-color: $pl-darker-grey;
+
+    &:before {
+      color: $pl-highlight;
+      transition: color 0.2s;
+    }
+  }
+
+  &:before {
+    content: "\f0c9";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-family: fontAwesome;
+    color: $pl-mid-grey;
+    text-indent: 0px;
+    font-size: 1.5rem;
+    line-height: 1.2;
+    transform: translate3d(-50%, -50%, 0);
+  }
+
+  &[aria-expanded=true] {
+    &:before {
+      content: "\f00d";
+    }
+  }
+
+  @media #{$gef-mq-lg} {
+    display: none;
+  }
+}
+
 .pl-nav {
+  position: absolute;
+  display: block;
+  width: 100%;
+  background-color: $pl-header-bg;
   margin: 0 0-$pl-spacing-h;
+  transition: transform 0.5s;
+  border-bottom: 3px solid $pl-mid-grey;
+  box-shadow: 0 3px 2px 2px rgba(0,0,0,0.2);
+
+  &[aria-hidden=true] {
+    transform: translateX(-105%);
+  }
 
   ul {
     margin: 0;
@@ -171,9 +236,9 @@ a {
       &.current {
         background-color: #fff;
         border-bottom: 0;
-        font-weight: 800;
 
         > a {
+          font-weight: 800;
 
           &:after {
             content: "\f107";
@@ -214,6 +279,17 @@ a {
   // hide subnav if not current
   > ul > li:not(.current) ul {
     display: none;
+  }
+
+  @media #{$gef-mq-lg} {
+    position: relative;
+    border-bottom: 0;
+    box-shadow: none;
+
+    &[aria-hidden=true] {
+      transform: none;
+      width: auto;
+    }
   }
 }
 

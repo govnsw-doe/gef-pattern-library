@@ -31,7 +31,10 @@ mixin create_nav_link(page)
 
 - var collectionCategories = ["Overview", "Design", "Templates", "Components", "Utilities"]
 
-nav.pl-nav
+button.pl-mobile-nav-toggle(href="#navigation", id="navigation-tab" role="tab", aria-controls="navigation", aria-expanded="false")
+  | show nav
+
+nav.pl-nav(id="navigation", role="tabpanel", aria-labelledby="navigation-tabtab", aria-hidden="true", aria-label="tabpanel")
   h2.uk-hidden Navigation
   ul
     //- loop through collection names and output the links
