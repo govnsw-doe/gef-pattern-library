@@ -283,6 +283,8 @@ a {
 
   @media #{$gef-mq-lg} {
     position: relative;
+    border-bottom: 0;
+    box-shadow: none;
 
     &[aria-hidden=true] {
       transform: none;
