@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Themes GEF Pattern Library</title>
-    <meta name="description">
+    <title>Image with caption GEF Pattern Library</title>
+    <meta name="description" content="A caption describes its associated image so users get a better understanding of its contents and purpose.">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../styles/styles.css">
@@ -32,9 +32,9 @@
                                           <li><a href="../overview/welcome.html">Welcome</a></li>
                               </ul>
               </li>
-              <li class="current"><a href="../design/themes.html">Design</a>
+              <li><a href="../design/themes.html">Design</a>
                               <ul>
-                                          <li class="current"><a href="../design/themes.html">Themes</a></li>
+                                          <li><a href="../design/themes.html">Themes</a></li>
                               </ul>
               </li>
               <li><a href="../templates/landing.html">Templates</a>
@@ -42,13 +42,13 @@
                                           <li><a href="../templates/landing.html">Landing</a></li>
                               </ul>
               </li>
-              <li><a href="../components/anchor-box.html">Components</a>
+              <li class="current"><a href="../components/anchor-box.html">Components</a>
                               <ul>
                                           <li><a href="../components/anchor-box.html">Anchor box</a></li>
                                           <li><a href="../components/banners.html">Banners</a></li>
                                           <li><a href="../components/breadcrumbs.html">Breadcrumbs</a></li>
                                           <li><a href="../components/call-out-box.html">Call-out box</a></li>
-                                          <li><a href="../components/image-with-caption.html">Image with caption</a></li>
+                                          <li class="current"><a href="../components/image-with-caption.html">Image with caption</a></li>
                                           <li><a href="../components/link-groups.html">Link groups</a></li>
                                           <li><a href="../components/local-footer.html">Local footer</a></li>
                                           <li><a href="../components/show-hide.html">Show/hide</a></li>
@@ -66,13 +66,39 @@
         </header>
       </div>
       <article class="pl-article uk-width-large-7-10" data-gef-external-link-tagger>
-        <header>
-          <h1>Themes of GEF / Visual languages of GEF</h1>
+        <header class="pl-highlighted">
+          <h1>Image with caption</h1>
+          <div class="lead">
+            <p>A caption describes its associated image so users get a better understanding of its contents and purpose.</p>
+          </div>
+          <p class="pl-capitalise">Available in:&nbsp;<span class="pl-pills"><span>Squiz Matrix</span></span></p>
         </header>
         <div class="pl-contents">
-          <div class="contents"><p>A visual language is a communication system that is composed of visual elements. These elements may be, though are not limited to fonts, colours, motion, grid, layout etc.</p>
-<p>The Global Experience Framework supports a number of different visual languages. These different visual languages (themes) have been developed to underpin the need for several of the DoE’s digital assets to visually appear separate from one another.</p>
-<p>Despite their visual differences, each visual language that is developed under the Global Experience Framework closely observes the framework’s design principles (link to design principles).</p>
+          <div class="content"><div class="example"><h2 id="example">Example</h2>
+<div class="live-example"><div class="gef-image-with-caption"><img src="http://placehold.it/800x400" alt="Placeholder" title="Placeholder image"/><p>Nam quis nulla. Integer malesuada, in enim a arcu imperdiet malesuada. </p></div></div></div><div class="code"><h2 id="code">Code</h2>
+<div class="code-pug"><h4>Using pug</h4><pre><code class="language-pug">mixin Image
+  img(src="http://placehold.it/800x400" alt="Placeholder" title="Placeholder image")
++gef_image_with_caption</code></pre></div></div><h2 id="usage">Usage</h2>
+<ul>
+<li>Any image uploaded into a template&rsquo;s main content body should always include a caption.</li>
+<li>The caption should describe the image&rsquo;s purpose or message.</li>
+</ul>
+<h2 id="accessibility">Accessibility</h2>
+<ul>
+<li>Do not forget to add appropriate alt text to the image.</li>
+<li>The alt text should describe the image contents literally.</li>
+</ul>
+<h2 id="how-to-guides">How-to guides</h2>
+<p>Learn how to use image with caption in:</p>
+<ul>
+<li><a href="https://education.nsw.gov.au/gef/squiz-matrix-training/components/images-and-captions">Squiz Matrix</a></li>
+</ul>
+<h2 id="related">Related</h2>
+<ul>
+<li><a href="#">Standard content</a></li>
+<li><a href="#">News article</a></li>
+<li><a href="#">Landing</a></li>
+</ul>
 </div>
         </div>
       </article>

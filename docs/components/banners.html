@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Themes GEF Pattern Library</title>
-    <meta name="description">
+    <title>Banners GEF Pattern Library</title>
+    <meta name="description" content="The banner gives publishers a way to personalise their section homepage with a key message and background image.">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../styles/styles.css">
@@ -32,9 +32,9 @@
                                           <li><a href="../overview/welcome.html">Welcome</a></li>
                               </ul>
               </li>
-              <li class="current"><a href="../design/themes.html">Design</a>
+              <li><a href="../design/themes.html">Design</a>
                               <ul>
-                                          <li class="current"><a href="../design/themes.html">Themes</a></li>
+                                          <li><a href="../design/themes.html">Themes</a></li>
                               </ul>
               </li>
               <li><a href="../templates/landing.html">Templates</a>
@@ -42,10 +42,10 @@
                                           <li><a href="../templates/landing.html">Landing</a></li>
                               </ul>
               </li>
-              <li><a href="../components/anchor-box.html">Components</a>
+              <li class="current"><a href="../components/anchor-box.html">Components</a>
                               <ul>
                                           <li><a href="../components/anchor-box.html">Anchor box</a></li>
-                                          <li><a href="../components/banners.html">Banners</a></li>
+                                          <li class="current"><a href="../components/banners.html">Banners</a></li>
                                           <li><a href="../components/breadcrumbs.html">Breadcrumbs</a></li>
                                           <li><a href="../components/call-out-box.html">Call-out box</a></li>
                                           <li><a href="../components/image-with-caption.html">Image with caption</a></li>
@@ -66,13 +66,49 @@
         </header>
       </div>
       <article class="pl-article uk-width-large-7-10" data-gef-external-link-tagger>
-        <header>
-          <h1>Themes of GEF / Visual languages of GEF</h1>
+        <header class="pl-highlighted">
+          <h1>Banners</h1>
+          <div class="lead">
+            <p>The banner gives publishers a way to personalise their section homepage with a key message and background image.</p>
+          </div>
+          <p class="pl-capitalise">Available in:&nbsp;<span class="pl-pills"><span>Squiz Matrix</span></span></p>
         </header>
         <div class="pl-contents">
-          <div class="contents"><p>A visual language is a communication system that is composed of visual elements. These elements may be, though are not limited to fonts, colours, motion, grid, layout etc.</p>
-<p>The Global Experience Framework supports a number of different visual languages. These different visual languages (themes) have been developed to underpin the need for several of the DoE’s digital assets to visually appear separate from one another.</p>
-<p>Despite their visual differences, each visual language that is developed under the Global Experience Framework closely observes the framework’s design principles (link to design principles).</p>
+          <div class="content"><div class="example"><h2 id="example">Example</h2>
+<h3 id="default-banner">Default banner</h3>
+<div class="live-example"><aside class="gef-banner-container"><div class="uk-container uk-container-center"><h2 class="show-on-sr">Featured page</h2><div class="gef-banner"><img src="//placehold.it/1350x520" alt="placeholder banner"/><div class="uk-container gef-banner__content" tabindex="0"><h3 class="gef-banner__content__title">Nam quis nulla..</h3><p>Phasellus rhoncus aenean id metus id velit ullamcorper pulvinar. Vestibulum fermentum tortor id mi. </p><a class="uk-button gef-button gef-button-x-large gef-button-submit-inverse" href="#" title="banner link" aria-label="banner link"> Nulla </a></div></div></div></aside></div><h3 id="short-banner">Short banner</h3>
+<div class="live-example"><aside class="gef-banner-container gef-banner-container--small"><div class="uk-container uk-container-center"><h2 class="show-on-sr">Featured page</h2><div class="gef-banner"><img src="//placehold.it/1350x250" alt="placeholder banner"/></div></div></aside></div></div><div class="code"><h2 id="code">Code</h2>
+<div class="code-pug"><h4>Using pug</h4><pre><code class="language-pug">+gef_banner(image_src, true)
+@param {object} image_src - banner image width and height
+@param {boolean} small_banner - True if small banner otherwise big banner</code></pre></div></div><h2 id="usage">Usage</h2>
+<ul>
+<li>There are two types of banners:<ul>
+<li>Default: a taller image banner with space for a key message. </li>
+<li>Short: a shorter, image-only banner.</li>
+</ul>
+</li>
+<li>Keep the title and description text short so they fit inside the key message box.</li>
+<li>The key message button should link to a relevant page within the current section.</li>
+<li>The default banner background image should be 1350 px × 520 px.</li>
+<li>The short banner background image should be 1350 px × 250 px.</li>
+<li>Squiz Matrix users:<ul>
+<li>Banners are only available on the section homepage template.</li>
+</ul>
+</li>
+</ul>
+<h2 id="accessibility">Accessibility</h2>
+<ul>
+<li>Do not forget to add appropriate alt text to describe the background image.</li>
+</ul>
+<h2 id="how-to-guides">How-to guides</h2>
+<p>Learn how to use banners in:</p>
+<ul>
+<li><a href="https://education.nsw.gov.au/gef/squiz-matrix-training/components/feature-banner">Squiz Matrix</a></li>
+</ul>
+<h2 id="related">Related</h2>
+<ul>
+<li><a href="#">Section homepage</a></li>
+</ul>
 </div>
         </div>
       </article>

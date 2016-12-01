@@ -350,24 +350,29 @@ a {
     margin-top: $pl-spacing-v;
   }
 
+  .code {
+    clear: both;
+  }
+
   code {
     display: block;
     max-width: 100%;
     overflow-x: auto;
-    background-color: $pl-muted;
     padding: 20px;
-    border: 1px solid $pl-mid-grey;
+    border: 1px solid $pl-muted;
+    color: $pl-mid-grey;
     font-size: 0.85rem;
     line-height: 1.8;
-    text-shadow: 0 1px 1px #fff;
   }
 
   kbd {
-    border: 1px solid $pl-muted;
+    border: 1px solid $pl-highlight;
     border-radius: 3px;
-    color: $pl-mid-grey;
+    color: $pl-highlight;
+    display: inline-block;
     font: $pl-font;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
+    margin: 0 2px;
     padding: 0 5px;
   }
 
@@ -455,5 +460,10 @@ $font-name: 'FontAwesome';
   // anchor box
   .gef-anchor-box {
     margin: 0;
+  }
+
+  // link group
+  .gef-linkgroup {
+    margin-top: 0;
   }
 }

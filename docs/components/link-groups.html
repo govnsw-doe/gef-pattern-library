@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Landing GEF Pattern Library</title>
-    <meta name="description" content="The landing template provides additional grouping of content beyond the section homepage.">
+    <title>Link groups GEF Pattern Library</title>
+    <meta name="description" content="Link groups promote useful links to a section&amp;rsquo;s audience groups.">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../styles/styles.css">
@@ -37,19 +37,19 @@
                                           <li><a href="../design/themes.html">Themes</a></li>
                               </ul>
               </li>
-              <li class="current"><a href="../templates/landing.html">Templates</a>
+              <li><a href="../templates/landing.html">Templates</a>
                               <ul>
-                                          <li class="current"><a href="../templates/landing.html">Landing</a></li>
+                                          <li><a href="../templates/landing.html">Landing</a></li>
                               </ul>
               </li>
-              <li><a href="../components/anchor-box.html">Components</a>
+              <li class="current"><a href="../components/anchor-box.html">Components</a>
                               <ul>
                                           <li><a href="../components/anchor-box.html">Anchor box</a></li>
                                           <li><a href="../components/banners.html">Banners</a></li>
                                           <li><a href="../components/breadcrumbs.html">Breadcrumbs</a></li>
                                           <li><a href="../components/call-out-box.html">Call-out box</a></li>
                                           <li><a href="../components/image-with-caption.html">Image with caption</a></li>
-                                          <li><a href="../components/link-groups.html">Link groups</a></li>
+                                          <li class="current"><a href="../components/link-groups.html">Link groups</a></li>
                                           <li><a href="../components/local-footer.html">Local footer</a></li>
                                           <li><a href="../components/show-hide.html">Show/hide</a></li>
                                           <li><a href="../components/tabs.html">Tabs</a></li>
@@ -66,27 +66,41 @@
         </header>
       </div>
       <article class="pl-article uk-width-large-7-10" data-gef-external-link-tagger>
-        <header>
-          <h1>Landing</h1>
+        <header class="pl-highlighted">
+          <h1>Link groups</h1>
           <div class="lead">
-            <p>The landing template provides additional grouping of content beyond the section homepage.</p>
+            <p>Link groups promote useful links to a section&rsquo;s audience groups.</p>
           </div>
-          <p>Available in:&nbsp;<span>Squiz Matrix</span></p>
+          <p class="pl-capitalise">Available in:&nbsp;<span class="pl-pills"><span>Squiz Matrix</span></span></p>
         </header>
         <div class="pl-contents">
-          <div class="contents"><div class="example"><h2 id="example">Example</h2>
-<a href="http://dec-ce.bitbucket.org/gef-education-theme/test/template-landing.html">Education theme Landing page</a></div><h2 id="usage">Usage</h2>
+          <div class="content"><p>Link groups provide a way to reveal and highlight key content from a section&rsquo;s information architecture so that likely audience groups can find them more easily.</p>
+<div class="example"><h2 id="example">Example</h2>
+<div class="live-example"><ul class="uk-grid gef-linkgroup-list"><li><div class="gef-linkgroup"><h3 class="gef-linkgroup__category">Nam quis nulla </h3><ul class="gef-link-list gef-linkgroups-items"><li><a href="http://education.nsw.gov.au">Phasellus rhoncus aenean id metus id.</a></li><li><a href="http://education.nsw.gov.au">Nulla non lectus sed nisl molestie.</a></li><li><a href="http://education.nsw.gov.au">Maecenas sollicitudin nullam rhoncus aliquam metus..</a></li></ul></div></li><li><div class="gef-linkgroup"><h3 class="gef-linkgroup__category">Nullam feugiat turpis </h3><ul class="gef-link-list gef-linkgroups-items"><li><a href="http://education.nsw.gov.au">Fusce nibh, curabitur sagittis hendrerit ante..</a></li><li><a href="http://education.nsw.gov.au">Duis condimentum augue id magna semper.</a></li><li><a href="http://education.nsw.gov.au">Fusce consectetuer risus a nunc. Aliquam.</a></li></ul></div></li><li><div class="gef-linkgroup"><h3 class="gef-linkgroup__category">Morbi gravida libero </h3><ul class="gef-link-list gef-linkgroups-items"><li><a href="http://education.nsw.gov.au">Proin mattis lacinia justo. Vestibulum facilisis.</a></li><li><a href="http://education.nsw.gov.au">Integer rutrum, orci vestibulum ullamcorper ultricies.</a></li><li><a href="http://education.nsw.gov.au">Aenean vel massa quis mauris vehicula.</a></li></ul></div></li></ul></div></div><div class="code"><h2 id="code">Code</h2>
+<div class="code-pug"><h4>Using pug</h4><pre><code class="language-pug">+gef_linkgroup_list(3,1)
+@param {int} num  - number of linkgroups to display. Valid inputs: 1, 2, 3, 4
+@param {int} links - number of linkgroups items within a linkgroup to display.    </code></pre></div></div><h2 id="usage">Usage</h2>
 <ul>
-<li>The landing template should be used at the content level after the section homepage.</li>
-<li>It shows the content group’s title, a brief description, and a list of pages in this group.</li>
-<li>Use the main content area to add context to this content group.</li>
-<li>Do not repeat duplicate links to child pages from within the main content area.</li>
+<li>Choose an appropriate title for the link group to describe the type of links it contains.</li>
+<li>Lists in a link group should form a unified whole, ie do not mix different types of lists.</li>
+<li>A link group can support 3 or 4 lists of links.</li>
+<li>Each list has a title, generally the audience name.</li>
+<li>Each list can contain up to 5 links.</li>
+<li>Suggested link groups: popular information, key tasks, common systems.</li>
+<li>Squiz Matrix users:<ul>
+<li>Link groups are only available on the section homepage template.</li>
+<li>Each list’s title is automatically prefixed with the label &ldquo;For&rdquo;.</li>
 </ul>
-<h2 id="how-to-guides">How-to Guides</h2>
-<p><a href="http://www.google.com">Squiz Matrix</a></p>
+</li>
+</ul>
+<h2 id="how-to-guides">How-to guides</h2>
+<p>Learn how to use link groups in:</p>
+<ul>
+<li><a href="https://education.nsw.gov.au/gef/squiz-matrix-training/components/link-groups">Squiz Matrix</a></li>
+</ul>
 <h2 id="related">Related</h2>
 <ul>
-<li>Section homepage</li>
+<li><a href="#">Section homepage</a></li>
 </ul>
 </div>
         </div>

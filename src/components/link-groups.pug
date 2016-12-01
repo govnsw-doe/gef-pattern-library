@@ -1,0 +1,65 @@
+---
+layout: component.pug
+collection: components
+title: Link groups
+display_title: Link groups
+description: Link groups promote useful links to a section&rsquo;s audience groups.
+available: <span>Squiz Matrix</span>
+---
+
+//- Default includes // DO NOT REMOVE
+include ../../layouts/_global
+
+//- Pattern/Component include - link to the correct pattern/component
+include ../../bower_components/gef/src/assets/pug/patterns/linkgroup
+include ../../bower_components/gef/src/assets/pug/patterns/linkgroup-list
+
+//- Override bower mixin
+mixin usage
+  h4 Using pug
+
+  pre
+    code.language-pug
+      | +gef_linkgroup_list(3,1)
+      | @param {int} num  - number of linkgroups to display. Valid inputs: 1, 2, 3, 4
+      | @param {int} links - number of linkgroups items within a linkgroup to display.    
+
+mixin output
+  +gef_linkgroup_list(3,3)
+
+
+:marked
+  Link groups provide a way to reveal and highlight key content from a section&rsquo;s information architecture so that likely audience groups can find them more easily.
+
+
+div.example
+  :marked
+    ## Example
+  div.live-example
+    +output
+
+div.code
+  :marked
+    ## Code
+  div.code-pug
+    +usage
+
+
+:marked
+  ## Usage
+  * Choose an appropriate title for the link group to describe the type of links it contains.
+  * Lists in a link group should form a unified whole, ie do not mix different types of lists.
+  * A link group can support 3 or 4 lists of links.
+  * Each list has a title, generally the audience name.
+  * Each list can contain up to 5 links.
+  * Suggested link groups: popular information, key tasks, common systems.
+  * Squiz Matrix users:
+    * Link groups are only available on the section homepage template.
+    * Each list’s title is automatically prefixed with the label &ldquo;For&rdquo;.
+
+  ## How-to guides
+  Learn how to use link groups in:
+  * [Squiz Matrix](https://education.nsw.gov.au/gef/squiz-matrix-training/components/link-groups)
+
+  ## Related
+  * [Section homepage](#)
