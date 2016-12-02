@@ -14,6 +14,21 @@ include ../../layouts/_global
 include ../../bower_components/gef/src/assets/pug/patterns/link-list
 include ../../bower_components/gef/src/assets/pug/components/anchor-box
 
+//- Override bower mixin
+mixin usage
+  h4 Using pug
+    
+  pre
+    code.language-pug
+      | +gef_anchor_box
+      | @param {int} num - number of links
+
+mixin output
+  +gef_anchor_box(3)
+
+
+:marked
+  Anchor boxes are dynamically generated based on the H2 headings on the page. This makes them particularly useful for navigating long content pages.
 
 div.example
   :marked
@@ -29,7 +44,6 @@ div.code
 
 :marked
   ## Usage
-  * Anchor boxes are dynamically generated based on the H2 headings on the page. This makes them particularly useful for navigating long content pages.
   * Be aware of the number of H2 headings on the content page as they will be automatically listed in the anchor box.
   * Use the anchor box as a navigation tool for short FAQ content. You can do this by presenting each question as an H2 heading.
   * Squiz Matrix users: anchor boxes automatically appear on standard content pages that contain three or more H2 headings. You can choose to disable them.
@@ -38,6 +52,3 @@ div.code
   * Use <kbd>TAB</kbd> key to enter the anchor box.
   * <kbd>TAB</kbd> to move through the list of links.
   * <kbd>ENTER</kbd> to select a link. This will cause the page to jump to the related heading. The next <kbd>TAB</kbd> should focus on content under the heading.
-
-  ## Related
-  * [Lead paragraph](#)

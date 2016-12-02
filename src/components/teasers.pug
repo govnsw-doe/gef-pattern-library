@@ -1,0 +1,64 @@
+---
+layout: component.pug
+collection: components
+title: Teasers
+display_title: Teasers
+description: Teasers are used to visually highlight a set of noteworthy content pages.
+available: <span>Squiz Matrix</span>
+---
+
+//- Default includes // DO NOT REMOVE
+include ../../layouts/_global
+
+//- Pattern/Component include - link to the correct pattern/component
+include ../../bower_components/gef/src/assets/pug/patterns/teaser
+include ../../bower_components/gef/src/assets/pug/patterns/teaser-list
+
+//- Override bower mixin
+mixin usage
+  h4 Using pug
+  
+  pre
+    code.language-pug
+      | +gef_teaser_list(3)
+      | @param {int} num  - number of teasers to display. Valid inputs: 1, 2, 3, 4
+
+mixin output
+  +gef_teaser_list(3)
+
+div.example
+  :marked
+    ## Example
+  div.live-example
+    +output
+
+div.code
+  :marked
+    ## Code
+  div.code-pug
+    +usage
+
+
+:marked
+  ## Usage
+  * Teasers are made up of links to 3 content pages.
+  * Each link includes:
+    * Label: provides additional context around the link.
+    * Title: the title of the linked page.
+    * Thumbnail: a thumbnail that visually describes the content.
+    * Description: a short description about the content.
+  * The types of content appropriate for teasers are: popular, useful, important, timely, or newsworthy.
+  * Squiz Matrix users:
+    * Teasers are only available on the section homepage template.
+    * The labels are selectable from a predefined list of options.
+    * The title, thumbnail, and description are automatically pulled from the linked page.
+
+  ## Accessibility
+  * Each thumbnail should include an alt text to describe the image.
+
+  ## How-to guides
+  Learn how to use teasers in:
+  * [Squiz Matrix](https://education.nsw.gov.au/gef/squiz-matrix-training/components/teasers)
+
+  ## Related
+  * [Section homepage](#)

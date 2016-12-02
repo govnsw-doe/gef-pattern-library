@@ -1,0 +1,50 @@
+---
+layout: component.pug
+collection: components
+title: Tabs
+display_title: Tabs
+description: Tabs allow users to switch between facets of information around a piece a content.
+available: <span>Squiz Matrix</span>
+---
+
+//- Default includes // DO NOT REMOVE
+include ../../layouts/_global
+
+//- Pattern/Component include - link to the correct pattern/component
+include ../../bower_components/gef/src/assets/pug/components/tabs
+
+
+div.example
+  :marked
+    ## Example
+  div.live-example
+    +output
+
+div.code
+  :marked
+    ## Code
+  div.code-pug
+    +usage
+
+
+:marked
+  ## Usage
+  * The title for each tab should be short (up to 25 characters).
+  * Titles should be descriptive of the content contained in the tab.
+  * A group of tabs should contain content that highly relate to one another.
+  * In small screens, tabs will appear as an accordion.
+  * Squiz Matrix users:
+    * Each group of tabs can contain a maximum of 4 tabs.
+
+  ## Accessibility
+  * Use <kbd>TAB</kbd> key to enter a group of tabs.
+  * <kbd>TAB</kbd> to move through each tab&rsquo;s title.
+  * <kbd>ENTER</kbd> to select a tab.
+  * After a tab is selected, <kbd>TAB</kbd> to focus on its contents.
+
+  ## How-to guides
+  Learn how to use tabs in:
+  * [Squiz Matrix](https://education.nsw.gov.au/gef/squiz-matrix-training/components/tabs)
+
+  ## Related
+  * [Show/hide](show-hide.html)

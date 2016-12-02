@@ -1,8 +1,8 @@
 ---
 layout: component.pug
 collection: components
-title: Show/Hides
-display_title: Show/Hides
+title: Show/hide
+display_title: Show/hide
 description: Show/hides are collections of content pairs, with each pair consisting of a title and an expandable content block.
 available: <span>Squiz Matrix</span>
 ---
@@ -12,6 +12,10 @@ include ../../layouts/_global
 
 //- Pattern/Component include - link to the correct pattern/component
 include ../../bower_components/gef/src/assets/pug/components/show-hide
+
+:marked
+  Show/hides enable users to quickly scan titles and select one to reveal its content. Multiple items can be opened at any one time. Show/hides are a good way to create distinct information blocks on a content page.
+
 
 div.example
   :marked
@@ -37,13 +41,14 @@ div.code
   * Avoid using show/hides for FAQ-style content.
 
   ## Accessibility
-  * Use TAB key to enter a group of show/hide items.
-  * TAB to move between show/hide titles.
-  * ENTER to open or close a show/hide item.
-  * After an item is opened, TAB to focus on its content block.
+  * Use <kbd>TAB</kbd> key to enter a group of show/hide items.
+  * <kbd>TAB</kbd> to move between show/hide titles.
+  * <kbd>ENTER</kbd> to open or close a show/hide item.
+  * After an item is opened, <kbd>TAB</kbd> to focus on its content block.
 
-  ## How-to Guides
-  Enter your content here
+  ## How-to guides
+  Learn how to use show/hides in:
+  * [Squiz Matrix](https://education.nsw.gov.au/gef/squiz-matrix-training/components/show-hides)
 
   ## Related
-  * Tabs
+  * [Tabs](tabs.html)

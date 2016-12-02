@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Themes GEF Pattern Library</title>
-    <meta name="description">
+    <title>Local footer GEF Pattern Library</title>
+    <meta name="description" content="The local footer shows key links and social profiles for a program, team, or business unit.">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../styles/styles.css">
@@ -32,9 +32,9 @@
                                           <li><a href="../overview/welcome.html">Welcome</a></li>
                               </ul>
               </li>
-              <li class="current"><a href="../design/themes.html">Design</a>
+              <li><a href="../design/themes.html">Design</a>
                               <ul>
-                                          <li class="current"><a href="../design/themes.html">Themes</a></li>
+                                          <li><a href="../design/themes.html">Themes</a></li>
                               </ul>
               </li>
               <li><a href="../templates/landing.html">Templates</a>
@@ -42,7 +42,7 @@
                                           <li><a href="../templates/landing.html">Landing</a></li>
                               </ul>
               </li>
-              <li><a href="../components/anchor-box.html">Components</a>
+              <li class="current"><a href="../components/anchor-box.html">Components</a>
                               <ul>
                                           <li><a href="../components/anchor-box.html">Anchor box</a></li>
                                           <li><a href="../components/banners.html">Banners</a></li>
@@ -50,7 +50,7 @@
                                           <li><a href="../components/call-out-box.html">Call-out box</a></li>
                                           <li><a href="../components/image-with-caption.html">Image with caption</a></li>
                                           <li><a href="../components/link-groups.html">Link groups</a></li>
-                                          <li><a href="../components/local-footer.html">Local footer</a></li>
+                                          <li class="current"><a href="../components/local-footer.html">Local footer</a></li>
                                           <li><a href="../components/show-hide.html">Show/hide</a></li>
                                           <li><a href="../components/tabs.html">Tabs</a></li>
                                           <li><a href="../components/teasers.html">Teasers</a></li>
@@ -66,13 +66,53 @@
         </header>
       </div>
       <article class="pl-article uk-width-large-7-10" data-gef-external-link-tagger>
-        <header>
-          <h1>Themes of GEF / Visual languages of GEF</h1>
+        <header class="pl-highlighted">
+          <h1>Local footer</h1>
+          <div class="lead">
+            <p>The local footer shows key links and social profiles for a program, team, or business unit.</p>
+          </div>
+          <p class="pl-capitalise">Available in:&nbsp;<span class="pl-pills"><span>Squiz Matrix</span></span></p>
         </header>
         <div class="pl-contents">
-          <div class="contents"><p>A visual language is a communication system that is composed of visual elements. These elements may be, though are not limited to fonts, colours, motion, grid, layout etc.</p>
-<p>The Global Experience Framework supports a number of different visual languages. These different visual languages (themes) have been developed to underpin the need for several of the DoE’s digital assets to visually appear separate from one another.</p>
-<p>Despite their visual differences, each visual language that is developed under the Global Experience Framework closely observes the framework’s design principles (link to design principles).</p>
+          <div class="content"><p>The local footer works in conjunction with the context set from the section homepage.</p>
+<div class="example"><h2 id="example">Example</h2>
+<div class="live-example"><div class="gef-section-footer"><div class="uk-container uk-container-center"><div class="uk-grid uk-grid-collapse"><div class="uk-width-1-1 uk-width-large-1-2"><nav><h2 class="show-on-sr"> information</h2><ul class="gef-section-footer__list"><li><a href="#">Nam </a></li><li><a href="#">Phasellus rhoncus </a></li><li><a href="#">Nulla non </a></li></ul></nav></div><div class="uk-width-1-1 uk-width-large-1-2"><nav class="gef-social-media"><h3 class="show-on-sr">Social media links</h3><a class="gef-social-media__link uk-icon-twitter" href="#" title="Follow us on Twitter"><span class="uk-hidden">Twitter</span></a><a class="gef-social-media__link uk-icon-facebook" href="#" title="Follow us on Facebook"><span class="uk-hidden">Facebook</span></a><a class="gef-social-media__link uk-icon-youtube" href="#" title="Follow us on YouTube"><span class="uk-hidden">YouTube</span></a></nav></div></div></div></div></div></div><div class="code"><h2 id="code">Code</h2>
+<div class="code-pug"><h4>Using pug:</h4><pre><code class="language-pug">+gef_section_footer("Yammer, Twitter, Facebook, YouTube, Instagram, Google Plus", true)
+@param {string} channels      - comma delimeted list of social media channels
+@param {bool} show_link_list  - display link list</code></pre></div></div><h2 id="usage">Usage</h2>
+<ul>
+<li>The types of links can include:<ul>
+<li>Occasional content, eg &ldquo;about your team&rdquo;</li>
+<li>Regular updates, eg &ldquo;news&rdquo;</li>
+<li>Key actions, eg &ldquo;contact&rdquo;</li>
+</ul>
+</li>
+<li>Each link title should be short and concise.</li>
+<li>Add up to 5 links to the local footer.</li>
+<li>These links can point to other pages in the section or to orphan pages.</li>
+<li>Available social profile links:<ul>
+<li>Yammer</li>
+<li>Facebook</li>
+<li>Twitter</li>
+<li>YouTube</li>
+<li>Instagram</li>
+<li>Google Plus</li>
+</ul>
+</li>
+<li>Do not use the same social profile more than once in the local footer.</li>
+<li>Squiz Matrix users:<ul>
+<li>The social profile links can only be configured by platform administrators.</li>
+</ul>
+</li>
+</ul>
+<h2 id="accessibility">Accessibility</h2>
+<ul>
+<li>When a social profile icon receives keyboard focus, its name should be announced to the screen reader.</li>
+</ul>
+<h2 id="related">Related</h2>
+<ul>
+<li><a href="#">Section homepage</a></li>
+</ul>
 </div>
         </div>
       </article>

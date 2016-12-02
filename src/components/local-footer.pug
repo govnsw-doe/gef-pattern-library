@@ -1,0 +1,72 @@
+---
+layout: component.pug
+collection: components
+title: Local footer
+display_title: Local footer
+description: The local footer shows key links and social profiles for a program, team, or business unit.
+available: <span>Squiz Matrix</span>
+---
+
+//- Default includes // DO NOT REMOVE
+include ../../layouts/_global
+
+//- Pattern/Component include - link to the correct pattern/component
+include ../../bower_components/gef/src/assets/pug/patterns/social-media
+include ../../bower_components/gef/src/assets/pug/patterns/section-footer
+
+//- Override bower mixin
+mixin usage
+  h4 Using pug:
+
+  pre
+    code.language-pug
+      | +gef_section_footer("Yammer, Twitter, Facebook, YouTube, Instagram, Google Plus", true)
+      | @param {string} channels      - comma delimeted list of social media channels
+      | @param {bool} show_link_list  - display link list
+
+mixin output
+  +gef_section_footer("Twitter, Facebook, YouTube", true)
+
+
+:marked
+  The local footer works in conjunction with the context set from the section homepage.
+
+
+div.example
+  :marked
+    ## Example
+  div.live-example
+    +output
+
+div.code
+  :marked
+    ## Code
+  div.code-pug
+    +usage
+
+
+:marked
+  ## Usage
+  * The types of links can include:
+    * Occasional content, eg &ldquo;about your team&rdquo;
+    * Regular updates, eg &ldquo;news&rdquo;
+    * Key actions, eg &ldquo;contact&rdquo;
+  * Each link title should be short and concise.
+  * Add up to 5 links to the local footer.
+  * These links can point to other pages in the section or to orphan pages.
+  * Available social profile links:
+    * Yammer
+    * Facebook
+    * Twitter
+    * YouTube
+    * Instagram
+    * Google Plus
+  * Do not use the same social profile more than once in the local footer.
+  * Squiz Matrix users:
+    * The social profile links can only be configured by platform administrators.
+
+  ## Accessibility
+  * When a social profile icon receives keyboard focus, its name should be announced to the screen reader.
+
+  ## Related
+  * [Section homepage](#)

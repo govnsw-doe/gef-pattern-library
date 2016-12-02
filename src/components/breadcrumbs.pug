@@ -1,0 +1,61 @@
+---
+layout: component.pug
+collection: components
+title: Breadcrumbs
+display_title: Breadcrumbs
+description: Breadcrumbs reveal the location of the current page within the website&rsquo;s overall information architecture.
+available: <span>Squiz Matrix</span>
+---
+
+//- Default includes // DO NOT REMOVE
+include ../../layouts/_global
+
+//- Pattern/Component include - link to the correct pattern/component
+include ../../bower_components/gef/src/assets/pug/components/breadcrumbs
+
+//- Override bower mixin
+mixin usage
+  h4 Using pug
+
+  pre
+    code.language-pug
+      | +gef_breadcrumbs(4, true)
+      | @param {int}     num      - number of links to display
+      | @param {boolean} enhanced - added JS functionality to force breadcrumbs on one line
+
+mixin output
+  +gef_breadcrumbs(3)
+
+mixin output_enhanced
+  +gef_breadcrumbs(6, true)
+
+
+div.example
+  :marked
+    ## Example
+    ### Default
+  div.live-example
+    +output
+
+  :marked
+    ### Enhanced
+    For very large websites, there can be many levels in the information architecture. Enhanced breadcrumbs automatically collapse when a page is more than 4 levels deep. Collapsed links can be accessed by hovering over the &hellip; link.
+  div.live-example
+    +output_enhanced
+
+div.code
+  :marked
+    ## Code
+  div.code-pug
+    +usage
+
+
+:marked
+  ## Usage
+  * The current page always appears as the last item in the breadcrumb and should not be linked.
+
+  ## Accessibility
+  * <kbd>TAB</kbd> to access each breadcrumb link in order.
+  * Enhanced breadcrumbs
+    * Collapsed links are always accessible with the <kbd>TAB</kbd> key.
+    * Collapsed links can be expanded by placing keyboard focus on &hellip;, then hitting <kbd>ENTER</kbd>.

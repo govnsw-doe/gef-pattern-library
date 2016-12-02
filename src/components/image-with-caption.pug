@@ -1,0 +1,61 @@
+---
+layout: component.pug
+collection: components
+title: Image with caption
+display_title: Image with caption
+description: A caption describes its associated image so users get a better understanding of its contents and purpose.
+available: <span>Squiz Matrix</span>
+---
+
+//- Default includes // DO NOT REMOVE
+include ../../layouts/_global
+
+//- Pattern/Component include - link to the correct pattern/component
+include ../../bower_components/gef/src/assets/pug/components/image-with-caption
+
+//- Override bower mixin
+mixin usage
+  h4 Using pug
+  
+  pre
+    code.language-pug
+      | mixin Image
+      |   img(src="http://placehold.it/800x400" alt="Placeholder" title="Placeholder image")
+      | +gef_image_with_caption
+
+mixin output
+  mixin Image
+    img(src="http://placehold.it/800x400" alt="Placeholder" title="Placeholder image")
+  +gef_image_with_caption
+
+
+div.example
+  :marked
+    ## Example
+  div.live-example
+    +output
+
+div.code
+  :marked
+    ## Code
+  div.code-pug
+    +usage
+
+
+:marked
+  ## Usage
+  * Any image uploaded into a template&rsquo;s main content body should always include a caption.
+  * The caption should describe the image&rsquo;s purpose or message.
+
+  ## Accessibility
+  * Do not forget to add appropriate alt text to the image.
+  * The alt text should describe the image contents literally.
+
+  ## How-to guides
+  Learn how to use image with caption in:
+  * [Squiz Matrix](https://education.nsw.gov.au/gef/squiz-matrix-training/components/images-and-captions)
+
+  ## Related
+  * [Standard content](#)
+  * [News article](#)
+  * [Landing](#)

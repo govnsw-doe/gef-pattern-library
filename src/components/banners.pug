@@ -1,0 +1,71 @@
+---
+layout: component.pug
+collection: components
+title: Banners
+display_title: Banners
+description: The banner gives publishers a way to personalise their section homepage with a key message and background image.
+available: <span>Squiz Matrix</span>
+---
+
+//- Default includes // DO NOT REMOVE
+include ../../layouts/_global
+
+//- Pattern/Component include - link to the correct pattern/component
+include ../../bower_components/gef/src/assets/pug/patterns/banner
+
+//- Override bower mixin
+mixin usage
+  h4 Using pug
+
+  pre
+    code.language-pug
+      | +gef_banner(image_src, true)
+      | @param {object} image_src - banner image width and height
+      | @param {boolean} small_banner - True if small banner otherwise big banner
+
+mixin output
+  +gef_banner("//placehold.it/1350x520")
+
+mixin output_short
+  +gef_banner("//placehold.it/1350x250", true)
+  
+
+div.example
+  :marked
+    ## Example
+    ### Default banner
+  div.live-example
+    +output
+  :marked
+    ### Short banner
+  div.live-example
+    +output_short
+
+div.code
+  :marked
+    ## Code
+  div.code-pug
+    +usage
+
+
+:marked
+  ## Usage
+  * There are two types of banners:
+    * Default: a taller image banner with space for a key message. 
+    * Short: a shorter, image-only banner.
+  * Keep the title and description text short so they fit inside the key message box.
+  * The key message button should link to a relevant page within the current section.
+  * The default banner background image should be 1350 px × 520 px.
+  * The short banner background image should be 1350 px × 250 px.
+  * Squiz Matrix users:
+    * Banners are only available on the section homepage template.
+
+  ## Accessibility
+  * Do not forget to add appropriate alt text to describe the background image.
+
+  ## How-to guides
+  Learn how to use banners in:
+  * [Squiz Matrix](https://education.nsw.gov.au/gef/squiz-matrix-training/components/feature-banner)
+
+  ## Related
+  * [Section homepage](#)
