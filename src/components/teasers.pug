@@ -14,18 +14,6 @@ include ../../layouts/_global
 include ../../bower_components/gef/src/assets/pug/patterns/teaser
 include ../../bower_components/gef/src/assets/pug/patterns/teaser-list
 
-//- Override bower mixin
-mixin usage
-  h4 Using pug
-  
-  pre
-    code.language-pug
-      | +gef_teaser_list(3)
-      | @param {int} num  - number of teasers to display. Valid inputs: 1, 2, 3, 4
-
-mixin output
-  +gef_teaser_list(3)
-
 div.example
   :marked
     ## Example
