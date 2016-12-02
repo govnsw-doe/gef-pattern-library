@@ -13,22 +13,6 @@ include ../../layouts/_global
 //- Pattern/Component include - link to the correct pattern/component
 include ../../bower_components/gef/src/assets/pug/components/image-with-caption
 
-//- Override bower mixin
-mixin usage
-  h4 Using pug
-  
-  pre
-    code.language-pug
-      | mixin Image
-      |   img(src="http://placehold.it/800x400" alt="Placeholder" title="Placeholder image")
-      | +gef_image_with_caption
-
-mixin output
-  mixin Image
-    img(src="http://placehold.it/800x400" alt="Placeholder" title="Placeholder image")
-  +gef_image_with_caption
-
-
 div.example
   :marked
     ## Example

@@ -11,21 +11,8 @@ available: <span>Squiz Matrix</span>
 include ../../layouts/_global
 
 //- Pattern/Component include - link to the correct pattern/component
-include ../../bower_components/gef/src/assets/pug/patterns/link-list
+include ../../bower_components/gef/src/assets/pug/components/partials/link-list
 include ../../bower_components/gef/src/assets/pug/components/anchor-box
-
-//- Override bower mixin
-mixin usage
-  h4 Using pug
-    
-  pre
-    code.language-pug
-      | +gef_anchor_box
-      | @param {int} num - number of links
-
-mixin output
-  +gef_anchor_box(3)
-
 
 :marked
   Anchor boxes are dynamically generated based on the H2 headings on the page. This makes them particularly useful for navigating long content pages.

@@ -11,22 +11,8 @@ available: <span>Squiz Matrix</span>
 include ../../layouts/_global
 
 //- Pattern/Component include - link to the correct pattern/component
-include ../../bower_components/gef/src/assets/pug/patterns/social-media
-include ../../bower_components/gef/src/assets/pug/patterns/section-footer
-
-//- Override bower mixin
-mixin usage
-  h4 Using pug:
-
-  pre
-    code.language-pug
-      | +gef_section_footer("Yammer, Twitter, Facebook, YouTube, Instagram, Google Plus", true)
-      | @param {string} channels      - comma delimeted list of social media channels
-      | @param {bool} show_link_list  - display link list
-
-mixin output
-  +gef_section_footer("Twitter, Facebook, YouTube", true)
-
+include ../../bower_components/gef/src/assets/pug/components/social-media
+include ../../bower_components/gef/src/assets/pug/components/section-footer
 
 :marked
   The local footer works in conjunction with the context set from the section homepage.
