@@ -1,0 +1,33 @@
+---
+layout: template.pug
+collection: templates
+title: Catalogue
+display_title: Catalogue
+description: The catalogue template displays a collection of pages visually.
+available: <span>Squiz Matrix</span>
+---
+
+//- External template URL
+- var ext_url_edu = "http://dec-ce.bitbucket.org/gef-education-theme/test/template-catalogue.html"
+
+//- External template title
+- var ext_title_edu = "View template"
+
+:marked
+  The user can choose to view pages in a grid or list format. Pages can also be filtered by category and sorted.
+
+div.example
+  :marked
+    ## Example (Education theme)
+  a(href=ext_url_edu)= ext_title_edu
+
+:marked
+  ## Usage
+  * Use this template to show content that should be browsed and compared.
+  * Each item contains a title, brief description and thumbnail.
+  * Each item can show a secondary data point (optional).
+  * Pagination controls will appear when there are more than 12 items in the catalogue view.
+  * This is a full-width template. It does not include the navigation sidebar.
+  * Squiz Matrix users:
+    * This template needs to be pre-configured before it&rsquo;s available for use. Please contact platform administrators for more information.
+    * Each item can only belong to one category.

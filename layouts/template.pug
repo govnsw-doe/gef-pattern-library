@@ -3,22 +3,26 @@ include _head
 body
   include _doe-header
 
+
   div.uk-container.uk-container-center
     div.uk-grid
 
       include _header
 
       article.pl-article.uk-width-large-7-10(data-gef-external-link-tagger)
-        header
+        header.pl-highlighted
           h1!= display_title
 
           div.lead
             p!= description
 
-          p Available in:&nbsp;
-            span!= available
+
+          p.pl-capitalise Available in:&nbsp;
+            span.pl-pills!= available
 
         div.pl-contents
-          div.contents!= contents
+
+          div.content!= contents
+
 
 include _footer

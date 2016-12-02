@@ -1,0 +1,40 @@
+---
+layout: template.pug
+collection: templates
+title: A-Z
+display_title: A-Z
+description: The A-Z template allows publishers to create a list of content sorted alphabetically.
+available: <span>Squiz Matrix</span>
+---
+
+//- External template URL
+- var ext_url_edu_1 = "http://dec-ce.bitbucket.org/gef-education-theme/test/template-landing-a-z-variation1.html"
+- var ext_url_edu_2 = "http://dec-ce.bitbucket.org/gef-education-theme/test/template-landing-a-z-variation2.html"
+- var ext_url_edu_4 = "http://dec-ce.bitbucket.org/gef-education-theme/test/template-landing-a-z-variation3.html"
+
+//- External template title
+- var ext_title_edu_1 = "Link-only"
+- var ext_title_edu_2 = "Link with description"
+- var ext_title_edu_4 = "Link with type"
+
+div.example
+  :marked
+    ## Example (Education theme)
+  a(href=ext_url_edu_1)= ext_title_edu_1
+  <br />
+  a(href=ext_url_edu_2)= ext_title_edu_2
+  <br />
+  | Title with description (similar to above)
+  <br />
+  a(href=ext_url_edu_4)= ext_title_edu_4
+
+:marked
+  ## Usage
+  * As the page scrolls, the alphabet navigation bar remains visible on the screen to allow the user to jump to any alphabet in the list at any time.
+  * If the list of content does not contain a specific alphabet, that alphabet&rsquo;s header will not appear in the list. That alphabet would still be visible in the navigation bar but won&rsquo;t be clickable.
+  * Suggested A-Z pages: glossary, document list.
+  * This is a full-width template. It does not include the navigation sidebar.
+
+  ## How-to guides
+  Learn how to use the A-Z template in:
+  * [Squiz Matrix](https://education.nsw.gov.au/gef/squiz-matrix-training/page-types/a-z-page)

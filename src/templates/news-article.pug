@@ -1,0 +1,39 @@
+---
+layout: template.pug
+collection: templates
+title: News article
+display_title: News article
+description: The news article template is used to publish general news and announcements.
+available: <span>Squiz Matrix</span>
+---
+
+//- External template URL
+- var ext_url_edu = "http://dec-ce.bitbucket.org/gef-education-theme/test/template-news-article.html"
+
+//- External template title
+- var ext_title_edu = "View template"
+
+div.example
+  :marked
+    ## Example (Education theme)
+  a(href=ext_url_edu)= ext_title_edu
+
+:marked
+  ## Usage
+  * The template supports two ways of grouping news articles:
+    * By category - high-level groupings, for example: case studies, events
+    * By tag - themes within a news article content
+  * The main content area can display general typographic elements (eg bulleted lists, tables).
+  * Each news article should be associated with a representative image (sized at 1000 px × 562 px). This image appears in the main content column.
+  * The user can select the category or tag at the bottom of the news article to view other similar articles.
+  * Squiz Matrix users:
+    * A news article can belong to one category but can be assigned multiple tags.
+    * This template needs to be pre-configured before it’s available for use. Please contact platform administrators for more information.
+    * Additional content in the sidebar (see below news categories) must be set up by platform administrators.
+
+  ## How-to guides
+  Learn how to use the news article template in:
+  * [Squiz Matrix](https://education.nsw.gov.au/gef/squiz-matrix-training/page-types/news)
+
+  ## Related
+  * [News index](news-index.html)

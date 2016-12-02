@@ -1,0 +1,32 @@
+---
+layout: template.pug
+collection: templates
+title: Standard content
+display_title: Standard content
+description: Standard content is a multipurpose template for presenting text-based content.
+available: <span>Squiz Matrix</span>
+---
+
+//- External template URL
+- var ext_url_edu = "http://dec-ce.bitbucket.org/gef-education-theme/test/template-standard.html"
+
+//- External template title
+- var ext_title_edu = "View template"
+
+:marked
+  The right-hand navigation links to the current page&rsquo;s immediate parent page, any sibling pages and direct child pages&mdash;this is the primary method for navigating to other surrounding pages.
+
+div.example
+  :marked
+    ## Example (Education theme)
+  a(href=ext_url_edu)= ext_title_edu
+
+:marked
+  ## Usage
+  * The main content area can display general typographic elements (eg bulleted lists, tables).
+  * Images should be 1000 px wide so they fill the width of the main content area. Images will be automatically resized for smaller screens, with their aspect ratios maintained.
+  * Avoid creating extensive lists of links to sibling and child pages in the main content area: they cannot be dynamically updated.
+
+  ## How-to guides
+  Learn how to use the landing template in:
+  * [Squiz Matrix](https://education.nsw.gov.au/gef/squiz-matrix-training/page-types/standard-page-with-all-details-v1)

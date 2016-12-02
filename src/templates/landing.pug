@@ -4,28 +4,32 @@ collection: templates
 title: Landing
 display_title: Landing
 description: The landing template provides additional grouping of content beyond the section homepage.
-available: Squiz Matrix
+available: <span>Squiz Matrix</span>
 ---
 
 //- External template URL
-- var ext_url = "http://dec-ce.bitbucket.org/gef-education-theme/test/template-landing.html"
+- var ext_url_edu = "http://dec-ce.bitbucket.org/gef-education-theme/test/template-landing.html"
+
 //- External template title
-- var ext_title = "Education theme Landing page"
+- var ext_title_edu = "View template"
 
 div.example
   :marked
-    ## Example
-  a(href=ext_url)= ext_title
+    ## Example (Education theme)
+  a(href=ext_url_edu)= ext_title_edu
 
 :marked
   ## Usage
-  * The landing template should be used at the content level after the section homepage.
-  * It shows the content group’s title, a brief description, and a list of pages in this group.
+  * The landing template should be used directly under the section homepage.
+  * The template shows the content group&rsquo;s title, a brief description, and a list of child pages in this group.
+  * Do not use this template if there are fewer than two child pages. Use the standard content page instead.
   * Use the main content area to add context to this content group.
   * Do not repeat duplicate links to child pages from within the main content area.
+  * If the main content area contains more than three paragraphs, use a standard content page instead.
 
-  ## How-to Guides
-  [Squiz Matrix](http://www.google.com)
+  ## How-to guides
+  Learn how to use the landing template in:
+  * [Squiz Matrix](https://education.nsw.gov.au/gef/squiz-matrix-training/page-types/landing-page)
 
   ## Related
-  * Section homepage
+  * [Section homepage](section-homepage.html)
