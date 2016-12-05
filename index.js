@@ -42,7 +42,14 @@ var metalsmith = Metalsmith(__dirname)
     metalsmith._metadata.utilities = null
     done()
   })
-  .use(collections())
+  .use(collections({
+    overview: {
+      sortBy: "order"
+    },
+    design: {
+      sortBy: "order"
+    }
+  }))
   .use(pug())
   .use(layouts({
     engine:     'pug',
