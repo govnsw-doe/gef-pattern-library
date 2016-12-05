@@ -376,6 +376,18 @@ a {
     padding: 0 5px;
   }
 
+  .lead {
+    font-size: 1.2rem;
+    margin-bottom: $pl-spacing-v;
+  }
+
+  blockquote {
+    background-color: $pl-muted;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 20px;
+  }
+
   @media #{$gef-mq-lg} {
     padding-right: 5%;
   }
