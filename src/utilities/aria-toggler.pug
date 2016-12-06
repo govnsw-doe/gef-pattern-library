@@ -1,0 +1,152 @@
+---
+layout: utility.pug
+collection: utilities
+title: Aria Toggler
+display_title: Aria Toggler
+description: A javascript utility for accessibility which toggles Aria attributes based on a click or 'return' keypress.
+since: <span>since 1.0.0</span>
+script_updated: <span>updated 1.0.1</span>
+---
+
+:marked
+
+  **This utility should be used for any show and hide relationship between two or more elements.**
+
+  The Aria Toggler utility helps you to manage toggling between Aria states on a selection of paired elements. A good example of this is an FAQ style show/hide which shows content based on whether the title is clicked. It can also be used in a grouped situation like for a tab pattern.
+
+  This pattern was built after extensive research into Aria attributes and how they should change based on element relationships.
+
+  For the sake of the examples below, we will call the element which is triggered by user action the *Trigger*, and the element which responds to that action the *Responder*.
+
+  ## Examples
+
+  * The mobile navigation on this website
+  * The "Ask for help" drawer on our [templates](http://dec-ce.bitbucket.org/gef-education-theme/test/template-standard.html)
+
+  ## How it works
+
+  Simply put, clicking or pressing of the return/enter keyboard on the trigger will toggle the following Aria attributes:
+  * On the Trigger: `[aria-expanded]` and `[aria-selected]` toggles between 'true' and 'false' with false as default.
+  * On the Responder: `[aria-hidden]` toggles between 'true' and 'false' with true as default.
+
+  The utility looks for the Aria roles `[role=tab]` (as the trigger), and `[role=tabpanel]` (as the responder), within a container of your choice.
+
+  ### Multiple pairs
+
+  If the utility finds multiple Triggers within the container, it will look for the corresponding Responder. When a Trigger is clicked it will turn toggle the other pairs to their default 'off' state.
+
+  ## Usage
+
+  By following our [Coding Guidelines](#), you will note that our best practice insists on using CSS to show, hide or modify the presentation of an element; and to never modify styles using JS because this places inline CSS in the HTML.
+
+  You would usually achieve this by toggling a class and having the presentation change based on this class, but because of our excellent [Accessibility Standards](https://education.nsw.gov.au/gef/guidelines-and-standards/accessibility), you would also need to toggle the Aria attributes anyway. So to keep things simple we simply style on the Aria attributes as they change states. Example:
+
+  ```sass
+  // SASS
+  .your-container {
+
+    [role=tab] {
+      // default 'off' state
+
+      &[aria-selected=true] {
+        // selected/active state
+      }
+    }
+
+    [role=tabpanel] {
+      // default hidden state
+      display: none;
+
+      &[aria-hidden=false] {
+        // visible state
+        display: block;
+      }
+    }
+  }
+  ```
+  As you can see, no need for classes.
+
+  ## Configuration
+
+  ### Selectors
+
+  * **triggers** {string}: the trigger(s) which toggle the aria states.
+  * **panels** {string}: the responder(s) which are affected by the trigger(s).
+  * **btnclose** {string}: an extra element which works as a close button by only toggling aria states back to the default state.
+
+  ```javascript
+  "yourAriaToggler" : {
+    "selector" : ".your-container",
+    "script" : "utilities/ariaToggler",
+    "config" : {
+      "selector": {
+        triggers:       "[role=tab]",
+        panels:         "[role=tabpanel]",
+        btnclose:       "[data-gef-ariatoggler-closebutton]"
+      }
+    }
+  }
+  ```
+
+  ### Options
+
+  **autofocus** {boolean|string}: autofocuses the Responder when expanded. Adding a selector (string) will autofocus that element if it exists as a child of the Responder.
+
+  ```javascript
+  "yourAriaToggler" : {
+    "selector" : ".your-container",
+    "script" : "utilities/ariaToggler",
+    "config" : {
+      "autofocus" : ".child-element"
+    }
+  }
+  ```
+
+  **click_outside** {boolean}: toggles the aria attributes to hide the Responder when clicked anywhere outside the Responder
+
+
+  ```javascript
+  "yourAriaToggler" : {
+    "selector" : ".your-container",
+    "script" : "utilities/ariaToggler",
+    "config" : {
+      "click_outside" : true
+    }
+  }
+  ```
+
+  **tabindex_toggle** {boolean}: toggles the tabindex value from -1 to 0 on the responder.
+
+  This makes the responder an element which can be tabbed to when in an non-hidden state.
+
+  ```javascript
+  "yourAriaToggler" : {
+    "selector" : ".your-container",
+    "script" : "utilities/ariaToggler",
+    "config" : {
+      "tabindex_toggle" : true
+    }
+  }
+  ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Aria Toggler GEF Pattern Library</title>
+    <meta name="description" content="A javascript utility for accessibility which toggles Aria attributes based on a click or 'return' keypress.">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../styles/styles.css">
+  </head>
+</html>
+<body>
+    <div class="gef-global-header-container gef-global-header--alt" role="banner">
+      <div class="gef-global-header">
+        <div class="uk-container uk-container-center">
+          <div class="uk-grid uk-grid-collapse">
+            <div class="uk-width-1-1"><a class="gef-global-header__header" href="#" title="NSW Department of Education"><abbr title="NSW Department of Education" aria-hidden="true">NSW DoE</abbr></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <div class="uk-container uk-container-center">
+    <div class="uk-grid">
+      <div class="uk-width-large-3-10 uk-width-xlarge-2-10">
+        <header class="pl-header" data-gef-aria-toggle>
+          <h1>Global Experience Framework<span>Pattern Library</span></h1>
+          <button class="pl-mobile-nav-toggle" href="#navigation" id="navigation-tab" role="tab" aria-controls="navigation" aria-expanded="false">show nav</button>
+          <nav class="pl-nav" id="navigation" role="tabpanel" aria-labelledby="navigation-tabtab" aria-hidden="true" aria-label="tabpanel">
+            <h2 class="uk-hidden">Navigation</h2>
+            <ul>
+              <li><a href="../overview/welcome.html">Overview</a>
+                              <ul>
+                                          <li><a href="../overview/welcome.html">Welcome</a></li>
+                                          <li><a href="../overview/what-are-patterns.html">What are patterns</a></li>
+                                          <li><a href="../overview/guidelines-for-publishers.html">Guidelines for publishers</a></li>
+                                          <li><a href="../overview/downloads.html">Downloads</a></li>
+                              </ul>
+              </li>
+              <li><a href="../design/themes.html">Design</a>
+                              <ul>
+                                          <li><a href="../design/themes.html">Themes</a></li>
+                              </ul>
+              </li>
+              <li><a href="../templates/a-z.html">Templates</a>
+                              <ul>
+                                          <li><a href="../templates/a-z.html">A-Z</a></li>
+                                          <li><a href="../templates/catalogue.html">Catalogue</a></li>
+                                          <li><a href="../templates/landing.html">Landing</a></li>
+                                          <li><a href="../templates/news-article.html">News article</a></li>
+                                          <li><a href="../templates/news-index.html">News index</a></li>
+                                          <li><a href="../templates/search-results.html">Search results</a></li>
+                                          <li><a href="../templates/section-homepage.html">Section homepage</a></li>
+                                          <li><a href="../templates/standard-content.html">Standard content</a></li>
+                              </ul>
+              </li>
+              <li><a href="../components/anchor-box.html">Components</a>
+                              <ul>
+                                          <li><a href="../components/anchor-box.html">Anchor box</a></li>
+                                          <li><a href="../components/banners.html">Banners</a></li>
+                                          <li><a href="../components/breadcrumbs.html">Breadcrumbs</a></li>
+                                          <li><a href="../components/call-out-box.html">Call-out box</a></li>
+                                          <li><a href="../components/image-with-caption.html">Image with caption</a></li>
+                                          <li><a href="../components/link-groups.html">Link groups</a></li>
+                                          <li><a href="../components/local-footer.html">Local footer</a></li>
+                                          <li><a href="../components/show-hide.html">Show/hide</a></li>
+                                          <li><a href="../components/tabs.html">Tabs</a></li>
+                                          <li><a href="../components/teasers.html">Teasers</a></li>
+                              </ul>
+              </li>
+              <li class="current"><a href="../utilities/aria-toggler.html">Utilities</a>
+                              <ul>
+                                          <li class="current"><a href="../utilities/aria-toggler.html">Aria Toggler</a></li>
+                              </ul>
+              </li>
+            </ul>
+          </nav>
+        </header>
+      </div>
+      <article class="pl-article uk-width-large-7-10" data-gef-external-link-tagger>
+        <header class="pl-highlighted">
+          <h1>Aria Toggler</h1>
+          <div class="lead">A javascript utility for accessibility which toggles Aria attributes based on a click or 'return' keypress.</div>
+          <p class="pl-capitalise">Versions:<span class="pl-pills"><span>since 1.0.0</span><span>updated 1.0.1</span></span></p>
+        </header>
+        <div class="pl-contents">
+          <div class="content"><p><strong>This utility should be used for any show and hide relationship between two or more elements.</strong></p>
+<p>The Aria Toggler utility helps you to manage toggling between Aria states on a selection of paired elements. A good example of this is an FAQ style show/hide which shows content based on whether the title is clicked. It can also be used in a grouped situation like for a tab pattern.</p>
+<p>This pattern was built after extensive research into Aria attributes and how they should change based on element relationships.</p>
+<p>For the sake of the examples below, we will call the element which is triggered by user action the <em>Trigger</em>, and the element which responds to that action the <em>Responder</em>.</p>
+<h2 id="examples">Examples</h2>
+<ul>
+<li>The mobile navigation on this website</li>
+<li>The &quot;Ask for help&quot; drawer on our <a href="http://dec-ce.bitbucket.org/gef-education-theme/test/template-standard.html">templates</a></li>
+</ul>
+<h2 id="how-it-works">How it works</h2>
+<p>Simply put, clicking or pressing of the return/enter keyboard on the trigger will toggle the following Aria attributes:</p>
+<ul>
+<li>On the Trigger: <code>[aria-expanded]</code> and <code>[aria-selected]</code> toggles between &#39;true&#39; and &#39;false&#39; with false as default.</li>
+<li>On the Responder: <code>[aria-hidden]</code> toggles between &#39;true&#39; and &#39;false&#39; with true as default.</li>
+</ul>
+<p>The utility looks for the Aria roles <code>[role=tab]</code> (as the trigger), and <code>[role=tabpanel]</code> (as the responder), within a container of your choice.</p>
+<h3 id="multiple-pairs">Multiple pairs</h3>
+<p>If the utility finds multiple Triggers within the container, it will look for the corresponding Responder. When a Trigger is clicked it will turn toggle the other pairs to their default &#39;off&#39; state.</p>
+<h2 id="usage">Usage</h2>
+<p>By following our <a href="#">Coding Guidelines</a>, you will note that our best practice insists on using CSS to show, hide or modify the presentation of an element; and to never modify styles using JS because this places inline CSS in the HTML.</p>
+<p>You would usually achieve this by toggling a class and having the presentation change based on this class, but because of our excellent <a href="https://education.nsw.gov.au/gef/guidelines-and-standards/accessibility">Accessibility Standards</a>, you would also need to toggle the Aria attributes anyway. So to keep things simple we simply style on the Aria attributes as they change states. Example:</p>
+<pre><code class="lang-sass">// SASS
+.your-container {
+
+  [role=tab] {
+    // default &#39;off&#39; state
+
+    &amp;[aria-selected=true] {
+      // selected/active state
+    }
+  }
+
+  [role=tabpanel] {
+    // default hidden state
+    display: none;
+
+    &amp;[aria-hidden=false] {
+      // visible state
+      display: block;
+    }
+  }
+}
+</code></pre>
+<p>As you can see, no need for classes.</p>
+<h2 id="configuration">Configuration</h2>
+<h3 id="selectors">Selectors</h3>
+<ul>
+<li><strong>triggers</strong> {string}: the trigger(s) which toggle the aria states.</li>
+<li><strong>panels</strong> {string}: the responder(s) which are affected by the trigger(s).</li>
+<li><strong>btnclose</strong> {string}: an extra element which works as a close button by only toggling aria states back to the default state.</li>
+</ul>
+<pre><code class="lang-javascript">&quot;yourAriaToggler&quot; : {
+  &quot;selector&quot; : &quot;.your-container&quot;,
+  &quot;script&quot; : &quot;utilities/ariaToggler&quot;,
+  &quot;config&quot; : {
+    &quot;selector&quot;: {
+      triggers:       &quot;[role=tab]&quot;,
+      panels:         &quot;[role=tabpanel]&quot;,
+      btnclose:       &quot;[data-gef-ariatoggler-closebutton]&quot;
+    }
+  }
+}
+</code></pre>
+<h3 id="options">Options</h3>
+<p><strong>autofocus</strong> {boolean|string}: autofocuses the Responder when expanded. Adding a selector (string) will autofocus that element if it exists as a child of the Responder.</p>
+<pre><code class="lang-javascript">&quot;yourAriaToggler&quot; : {
+  &quot;selector&quot; : &quot;.your-container&quot;,
+  &quot;script&quot; : &quot;utilities/ariaToggler&quot;,
+  &quot;config&quot; : {
+    &quot;autofocus&quot; : &quot;.child-element&quot;
+  }
+}
+</code></pre>
+<p><strong>click_outside</strong> {boolean}: toggles the aria attributes to hide the Responder when clicked anywhere outside the Responder</p>
+<pre><code class="lang-javascript">&quot;yourAriaToggler&quot; : {
+  &quot;selector&quot; : &quot;.your-container&quot;,
+  &quot;script&quot; : &quot;utilities/ariaToggler&quot;,
+  &quot;config&quot; : {
+    &quot;click_outside&quot; : true
+  }
+}
+</code></pre>
+<p><strong>tabindex_toggle</strong> {boolean}: toggles the tabindex value from -1 to 0 on the responder.</p>
+<p>This makes the responder an element which can be tabbed to when in an non-hidden state.</p>
+<pre><code class="lang-javascript">&quot;yourAriaToggler&quot; : {
+  &quot;selector&quot; : &quot;.your-container&quot;,
+  &quot;script&quot; : &quot;utilities/ariaToggler&quot;,
+  &quot;config&quot; : {
+    &quot;tabindex_toggle&quot; : true
+  }
+}
+</code></pre>
+</div>
+        </div>
+      </article>
+    </div>
+  </div>
+</body>
+<script src="//dec-ce.bitbucket.io/gef/pattern-library/assets/js/vendor/require.js" data-main="//dec-ce.bitbucket.io/gef/pattern-library/assets/js/main.js" data-site-config-path="" type="text/javascript"></script>
