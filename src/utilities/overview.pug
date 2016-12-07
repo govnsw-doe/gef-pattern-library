@@ -4,7 +4,67 @@ collection: utilities
 title: Overview
 display_title: Overview
 description: Everything you need to know about making use of our Utilities
+order: 1
 ---
 
 :marked
+
+  **Everything you need to know about making use of our Utilities.**
+
+  * Utilities are scripts designed for non-specific scenarios.
+  * They are designed for reusability across multiple scenarios.
+  * They are built to reduce the amount of JS required for simple DOM manipulations.
+  * They are unit-tested for reliability.
+  * They are loaded on a per-use basis, using [RequireJS](http://requirejs.org/)
+  * They can be extended, improved and refactored if necessary.
+  * They are easy to use.
+
+  ## Getting started
+
+  All our [templates](https://govnsw-doe.github.io/gef-pattern-library/templates/a-z.html) use [RequireJS](http://requirejs.org/) to run component and utility scripts when triggered by a selector in the DOM.
+
+  You can add to these scripts by adding to the `siteConfig.js` configuration object, which by default is located in `assets/js/config/`, but can be changed to whatever path you want using the data-attribute on the RequireJS script tag.
+
+  ```pug
+  // PUG
+  script(src="//dec-ce.bitbucket.io/gef/pattern-library/assets/js/vendor/require.js" data-main="//dec-ce.bitbucket.io/gef/pattern-library/assets/js/main.js" data-site-config-path="[your path here]" type="text/javascript")
+  ```
+
+  ### Loading a Utility
+
+  In the siteConfig.js `components` object, you can add new use-cases for utilities.
+
+  ```javascript
+  ...
+  components : {
+    "a-name-to-identify-the-use-case-of-this-utility" : {
+      "selector" : "jquery-selector-string",
+      "script" : "utilities/name-of-utility-without-.js",
+      "config" : {
+        // utility configuration options
+      }
+    },
+    "another-use-case": {
+      ...
+    }
+  },
+  ...
+  ```
+
+  ### Leveraging a Utility in another script.
+
+  **This is typically for use by in-house developers working on [GEF](https://bitbucket.org/dec-ce/gef)**
+
+  Utilities can be loaded as Classes into other scripts. This is simply importing the script.
+
+  ```javascript
+  import AriaToggler from "utilities/ariaToggler"
+  ```
+
+  And using it like so:
+
+  ```javascript
+  // Instantiate the toggler
+  this.toggle = new AriaToggler(selector, config)
+  ```
 

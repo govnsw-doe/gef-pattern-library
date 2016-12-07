@@ -48,6 +48,9 @@ var metalsmith = Metalsmith(__dirname)
     },
     design: {
       sortBy: "order"
+    },
+    utilities: {
+      sortBy: "order"
     }
   }))
   .use(pug())

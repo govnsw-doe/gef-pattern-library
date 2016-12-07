@@ -66,10 +66,11 @@
                                           <li><a href="../components/teasers.html">Teasers</a></li>
                               </ul>
               </li>
-              <li class="current"><a href="../utilities/aria-toggler.html">Utilities</a>
+              <li class="current"><a href="../utilities/overview.html">Utilities</a>
                               <ul>
-                                          <li class="current"><a href="../utilities/aria-toggler.html">Aria Toggler</a></li>
                                           <li><a href="../utilities/overview.html">Overview</a></li>
+                                          <li class="current"><a href="../utilities/aria-toggler.html">Aria Toggler</a></li>
+                                          <li><a href="../utilities/scroll-toggle.html">Scroll Toggle</a></li>
                               </ul>
               </li>
             </ul>
@@ -80,7 +81,7 @@
         <header class="pl-highlighted">
           <h1>Aria Toggler</h1>
           <div class="lead">A javascript utility for accessibility which toggles Aria attributes based on a click or 'return' keypress.</div>
-          <p class="pl-capitalise">Versions:<span class="pl-pills"><span>since 1.0.0</span><span>updated 1.0.1</span></span></p>
+          <p class="pl-capitalise">Versions:<span class="pl-pills"><span>since 1.0.0</span>undefined</span></p>
         </header>
         <div class="pl-contents">
           <div class="content"><p><strong>This utility should be used for any show and hide relationship between two or more elements.</strong></p>
@@ -129,9 +130,9 @@
 <h2 id="configuration">Configuration</h2>
 <h3 id="selectors">Selectors</h3>
 <ul>
-<li><strong>triggers</strong> {string}: the trigger(s) which toggle the aria states.</li>
-<li><strong>panels</strong> {string}: the responder(s) which are affected by the trigger(s).</li>
-<li><strong>btnclose</strong> {string}: an extra element which works as a close button by only toggling aria states back to the default state.</li>
+<li><strong>triggers</strong> <code>{string} (&quot;[role=tab]&quot;)</code> the trigger(s) which toggle the aria states.</li>
+<li><strong>panels</strong> <code>{string} (&quot;[role=tabpanel]&quot;)</code> the responder(s) which are affected by the trigger(s).</li>
+<li><strong>btnclose</strong> <code>{string} (&quot;[data-gef-ariatoggler-closebutton]&quot;)</code> an extra element which works as a close button by only toggling aria states back to the default state.</li>
 </ul>
 <pre><code class="lang-javascript">&quot;yourAriaToggler&quot; : {
   &quot;selector&quot; : &quot;.your-container&quot;,
@@ -146,7 +147,7 @@
 }
 </code></pre>
 <h3 id="options">Options</h3>
-<p><strong>autofocus</strong> {boolean|string}: autofocuses the Responder when expanded. Adding a selector (string) will autofocus that element if it exists as a child of the Responder.</p>
+<p><strong>autofocus</strong> <code>{boolean|string} (false)</code> autofocuses the Responder when expanded. Adding a selector (string) will autofocus that element if it exists as a child of the Responder.</p>
 <pre><code class="lang-javascript">&quot;yourAriaToggler&quot; : {
   &quot;selector&quot; : &quot;.your-container&quot;,
   &quot;script&quot; : &quot;utilities/ariaToggler&quot;,
@@ -155,7 +156,7 @@
   }
 }
 </code></pre>
-<p><strong>click_outside</strong> {boolean}: toggles the aria attributes to hide the Responder when clicked anywhere outside the Responder</p>
+<p><strong>click_outside</strong> <code>{boolean} (false)</code> toggles the aria attributes to hide the Responder when clicked anywhere outside the Responder</p>
 <pre><code class="lang-javascript">&quot;yourAriaToggler&quot; : {
   &quot;selector&quot; : &quot;.your-container&quot;,
   &quot;script&quot; : &quot;utilities/ariaToggler&quot;,
@@ -164,8 +165,8 @@
   }
 }
 </code></pre>
-<p><strong>tabindex_toggle</strong> {boolean}: toggles the tabindex value from -1 to 0 on the responder.</p>
-<p>This makes the responder an element which can be tabbed to when in an non-hidden state.</p>
+<p><strong>tabindex_toggle</strong> <code>{boolean} (false)</code> toggles the tabindex value from -1 to 0 on the Responder.</p>
+<p>This makes the Responder an element which can be tabbed to when in an non-hidden state.</p>
 <pre><code class="lang-javascript">&quot;yourAriaToggler&quot; : {
   &quot;selector&quot; : &quot;.your-container&quot;,
   &quot;script&quot; : &quot;utilities/ariaToggler&quot;,

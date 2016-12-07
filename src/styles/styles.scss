@@ -367,7 +367,8 @@ a {
     display: block;
     max-width: 100%;
     overflow-x: auto;
-    margin: 20px 0;
+    margin: 20px 0 50px;
+    background-color: $pl-muted;
 
     code {
       display: block;
@@ -380,9 +381,9 @@ a {
     display: inline-block;
     padding: 0 5px;
     border-radius: 2px;
-    background-color: $pl-muted;
     color: $pl-dark-grey;
     font-size: 0.8rem;
+    background-color: $pl-muted;
   }
 
   kbd {

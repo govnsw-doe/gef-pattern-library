@@ -1,63 +1,136 @@
 ---
 layout: utility.pug
 collection: utilities
-title: Aria Toggler
-display_title: Aria Toggler
-description: A javascript utility for accessibility which toggles Aria attributes based on a click or 'return' keypress.
-draft: true
-versions: <span>1.0.0</span> updated: n/a
+title: Scroll Toggle
+display_title: Scroll Toggle
+description: A javascript utility which manages attribute and class toggling based on scroll position.
+since: <span>since 1.0.0</span>
+order: 2
 ---
 
 :marked
 
-  **This utility should be used for any show and hide relationship between two or more elements.**
+  **Use this utility to fix an element's position based on the window's scroll location**
 
-  The Aria Toggler utility helps you to manage toggling between Aria states on a selection of paired elements. A good example of this is an FAQ style show/hide which shows content based on whether the title is clicked. It can also be used in a grouped situation like for a tab pattern.
+  This Utility can be used for a simple fixing of an element to the bottom of the page or a complex multi-element toggling.
 
-  This pattern was built after extensive research into Aria attributes and how they should change based on element relationships.
+  ## Examples
 
-  For the sake of the examples below, we will call the element which is triggered by user action the "trigger", and the element which responds to that action the "responder".
+  * The back-to-top button on our [templates](http://dec-ce.bitbucket.org/gef-education-theme/test/template-standard.html), uses it twice per page: once to come into view, and again to stick above the footer.
+  * The [A-Z template](https://govnsw-doe.github.io/gef-pattern-library/templates/a-z.html) where the a-z anchors are highlighted based on screen position.
 
   ## How it works
 
-  Simply put, clicking or pressing of the return/enter keyboard on the trigger will toggle the following Aria attributes:
-  * On the trigger: `[aria-expanded]` and `[aria-selected]` toggles between 'true' and 'false' with false as default.
-  * On the responder: `[aria-hidden]` toggles between 'true' and 'false' with true as default.
+  1. Scroll Toggle is passed a position which is either a DOM element's `offset().top` ([jQuery](http://api.jquery.com/offset/)) or a specific value.
+  2. When this position is passed by the scrolling element, it toggles an attribute or class on a chosen element. By default, the toggle is triggered when the checkpoint hits the bottom of the scrolling element.
 
-  The utility looks for the Aria roles `[role=tab]` (as the trigger), and `[role=tabpanel]` (as the responder), within a container of your choice.
+  ## Configuration
 
-  ## How to use
+  ### Options
 
-  By following our [Coding Guidelines](#), you will note that our best practice insists on using CSS to show, hide or modify the presentation of an element; and to never modify styles using JS because this places inline CSS in the HTML.
+  * **scroll_window** `{boolean} (false)` set the scrolling element to be the window.
+  * **container** `{string} (selector)` selector for the container.
+  * **checkpoint** `{string|number} ("[data-gef-scrolltoggle-checkpoint]")` selector for the checkpoint or a pixel value for the checkpoint from the top of the scrolling element.
+  * **subject** `{string} ("[data-gef-scrolltoggle-subject]")` selector for the element which needs to change when the checkpoint is passed.
+  * **passed_attr** `{string} ("data-gef-scrolltoggle-passed")` the attribute which gets added/removed when a checkpoint is passed
 
-  You would usually achieve this by toggling a class and having the presentation change based on this class, but because of our excellent [Accessibility Standards](https://education.nsw.gov.au/gef/guidelines-and-standards/accessibility), you would also need to toggle the Aria attributes anyway. So to keep things simple we simply style on the Aria attributes as they change states. Example:
+  If *scroll_window* is set to true, the _container_ will be only be used to find the _subject_. Otherwise the _container_ is the element is the scrolling element.
 
-  ```sass
-  // SASS
-  .your-container {
+  If the _checkpoint_ selector selects more than one element, then it will select multiple subject based on the _subject_ selector. It will reference the _subject_ by the current _checkpoint_'s index.
 
-    [role=tab] {
-      // default 'off' state
-
-      &[aria-selected=true] {
-        // selected/active state
-      }
-    }
-
-    [role=tabpanel] {
-      // default hidden state
-      display: none;
-
-      &[aria-hidden=false] {
-        // visible state
-        display: block;
-      }
+  ```javascript
+  "yourScrollToggle" : {
+    "selector" : ".your-container",
+    "script" : "utilities/scrollToggle",
+    "config": {
+      "scroll_window"   : false,
+      "container"       : selector,
+      "checkpoint"      : "[data-gef-scrolltoggle-checkpoint]",
+      "subject"         : "[data-gef-scrolltoggle-subject]",
+      "passed_attr"     : "data-gef-scrolltoggle-passed"
     }
   }
   ```
-  As you can see, no need for classes.
 
-  ### Options
+  **scroller_position** `{boolean} ("bottom")` if the `scroll_window` is true, the toggle is triggered when the checkpoint passes the bottom, middle, top or percentage of the window.
+
+  Options: `"bottom"|"middle"|"top"|"percent"`.
+
+  If `"percent"` is selected the *scroller_percent* needs to be defined or it will default to `"bottom"`
+
+  ```javascript
+  "yourScrollToggle" : {
+    "selector" : ".your-container",
+    "script" : "utilities/scrollToggle",
+    "config" : {
+      "scroller_position" : "top"
+    }
+  }
+  ```
+
+  **scroller_percent** `{int} (undefined)` the percentage value of the window where the _checkpoint_ is triggered.
+
+  For example, if set to `25`, when the _checkpoint_ passes the top 1/4 of the screen, the _subject_ is toggled.
+
+  Requires *scroller_position* to be set to `"percent"`.
+
+  ```javascript
+  "yourScrollToggle" : {
+    "selector" : ".your-container",
+    "script" : "utilities/scrollToggle",
+    "config" : {
+      "scroller_percent" : "top"
+    }
+  }
+  ```
+
+  **linked** `{boolean} (false)` set to true to make the _checkpoint_ the href value of the subject anchor tag.
+
+  For example:
+
+  ```
+  // PUG
+  a(href="#yourCheckpoint")
+    | I am the subject
+  ```
+
+  ```javascript
+  "yourScrollToggle" : {
+    "selector" : ".your-container",
+    "script" : "utilities/scrollToggle",
+    "config" : {
+      "linked" : true
+    }
+  }
+  ```
+
+  **toggle_class** `{string} (undefined)` a CSS class to toggle off and on based on whether the _checkpoint_ is passed.
+
+  If this is set, the utility will still toggle the *passed_attr*
+
+  ```javascript
+  "yourScrollToggle" : {
+    "selector" : ".your-container",
+    "script" : "utilities/scrollToggle",
+    "config" : {
+      "toggle_class" : "active"
+    }
+  }
+  ```
+
+  **external** `{string} ("data-gef-scrolltoggle-subject-id")` a data-attribute for the id of an external subject
+
+  This is used if the _subject_ is outside is *not* a child of the _container_, but the data-attribute must be on the container.
+
+  ```
+  // PUG
+
+  div.your-container(data-gef-scrolltoggle-subject-id="yourSubject")
+    div.i-am-a-child-of-your-container
+
+  div#yourSubject.i-am-not-a-child
+  ```
+
 
 
 
