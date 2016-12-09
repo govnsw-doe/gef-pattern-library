@@ -21,27 +21,35 @@ $gef-mq-lg:               "screen and (min-width: 70rem)";
 $breakpoint-large:        70rem;
 
 // Custom Pattern Library variables
-$pl-font:                 400 16px/1.5 montserrat,Arial,sans-serif;
+$pl-font:                 300 16px/1.5 Maitree,Arial,sans-serif;
+$pl-font-alt:             300 16px/1.5 "Libre Franklin",Arial,sans-serif;
 $pl-font-gef:             400 16px/1.5 montserrat,Arial,sans-serif;
 
 $pl-spacing-h:            25px;
 $pl-spacing-v:            40px;
 
-$pl-muted:                #e6e8ec;
-$pl-mid-grey:             #9b9b9b;
-$pl-dark-grey:            #333;
-$pl-darker-grey:          #202b40;
+$pl-white:                #fff;
+$pl-black:                #000;
+$pl-muted:                #f0f1f4;
+$pl-mid-grey:             #767676;
+$pl-dark-grey:            #4a4a4a;
+$pl-darker-grey:          #333;
 $pl-highlight:            #44b9b9;
 
-$pl-header-bg:            $pl-muted;
-$pl-subheader-color:      $pl-highlight;
+$pl-header-bg:            $pl-white;
+$pl-subheader-color:      $pl-black;
 
 $pl-nav-color:            $pl-dark-grey;
-$pl-nav-separator:        2px solid #fff;
+$pl-nav-separator:        1px solid $pl-black;
 
 $pl-subnav-active:            $pl-highlight;
-$pl-subnav-separator:         1px solid $pl-muted;
-$pl-subnav-separator-active:  2px solid $pl-highlight;
+$pl-subnav-separator:         1px solid $pl-black;
+$pl-subnav-separator-active:  1px solid $pl-black;
+
+$pl-mobile-nav-toggle-border:           $pl-black;
+$pl-mobile-nav-toggle-border-active:    $pl-black;
+$pl-mobile-nav-toggle-icon:             $pl-black;
+$pl-mobile-nav-toggle-icon-active:      $pl-black;
 
 
 $pl-text-color:           $pl-darker-grey;
@@ -65,6 +73,7 @@ Imports from bower_components
 
 .gef-global-header {
   font: $pl-font-gef;
+  background-color: $pl-black !important;
 }
 
 /* ------------------------------
@@ -78,17 +87,23 @@ body {
 }
 
 h1 {
-  font-size: 2rem;
-  font-weight: 400;
-}
-
-h2 {
-  font-size: 1.35rem;
+  font-size: 1.7rem;
   font-weight: 600;
 }
 
+h2 {
+  margin-top: $pl-spacing-v;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+h2 + h3 {
+  margin-top: 20px;
+}
+
 h3 {
-  font-size: 1.2rem;
+  margin-top: 40px;
+  font-size: 1rem;
   font-weight: 600;
 }
 
@@ -103,30 +118,123 @@ a {
   }
 }
 
+ul {
+  list-style: none;
+  padding-left: 0;
+
+  li {
+    position: relative;
+    padding-left: 30px;
+
+    &:before {
+      position: absolute;
+      left: 0;
+      content: '\2022';
+    }
+  }
+}
+
+hr {
+  border-color: $pl-mid-grey;
+  border-style: solid;
+}
+
+pre {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  margin: 20px 0 50px;
+  background-color: $pl-muted;
+
+  code {
+    display: block;
+    line-height: 1.6;
+    padding: 10px;
+  }
+}
+
+code {
+  display: inline-block;
+  padding: 0 5px;
+  border-radius: 2px;
+  color: $pl-dark-grey;
+  font-size: 0.8rem;
+  background-color: $pl-muted;
+}
+
+kbd {
+  border: 1px solid $pl-highlight;
+  border-radius: 3px;
+  color: $pl-highlight;
+  display: inline-block;
+  font: $pl-font;
+  font-size: 0.8rem;
+  margin: 0 2px;
+  padding: 0 5px;
+}
+
+
+blockquote {
+  background-color: $pl-muted;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 30px 20px 25px;
+  color: $pl-darker-grey;
+
+  p {
+    position: relative;
+    margin: 0;
+    padding-left: 45px;
+    font-size: 1.3rem;
+
+    &:before {
+      position: absolute;
+      font: $pl-font-alt;
+      left: 0;
+      content: '\0201C';
+      font-size: 5rem;
+      font-weight: 600;
+      line-height: 1;
+      margin-top: -11px;
+
+    }
+  }
+}
+
 .pl-header {
   position: relative;
   background-color: $pl-header-bg;
   padding: $pl-spacing-v $pl-spacing-h 0;
   margin: 0 0-$pl-spacing-h;
+  border-bottom: 1px solid $pl-black;
   z-index: 1000;
 
   h1 {
     margin: 0 0 $pl-spacing-v;
     text-transform: uppercase;
     text-align: center;
+    font: $pl-font-alt;
     font-size: 2rem;
     font-weight: 600;
     letter-spacing: 0.03em;
-    line-height: 1.2;
+    line-height: 1.1;
 
     span {
       display: block;
-      font-size: 1rem;
       margin-top: 0.8em;
-      font-weight: 800;
+      font: $pl-font;
+      font-size: 1rem;
+      font-weight: 600;
       letter-spacing: 0.1em;
       color: $pl-subheader-color;
     }
+  }
+
+  @media #{$gef-mq-lg} {
+    margin: 0;
+    border-width: 0 1px 0 1px;
+    border-color: $pl-black;
+    border-style: solid;
   }
 }
 
@@ -138,7 +246,7 @@ a {
   height: 50px;
   overflow: hidden;
   border-radius: 50%;
-  border: 2px solid $pl-mid-grey;
+  border: 2px solid $pl-mobile-nav-toggle-border;
   background-color: #fff;
   box-sizing: border-box;
   transform: translateY(-20px);
@@ -149,10 +257,10 @@ a {
   &:hover,
   &:focus {
     outline: 0;
-    border-color: $pl-darker-grey;
+    border-color: $pl-mobile-nav-toggle-border-active;
 
     &:before {
-      color: $pl-highlight;
+      color: $pl-mobile-nav-toggle-icon-active;
       transition: color 0.2s;
     }
   }
@@ -164,7 +272,7 @@ a {
     top: 50%;
     left: 50%;
     font-family: fontAwesome;
-    color: $pl-mid-grey;
+    color: $pl-mobile-nav-toggle-icon;
     text-indent: 0px;
     font-size: 1.5rem;
     line-height: 1.2;
@@ -189,7 +297,8 @@ a {
   background-color: $pl-header-bg;
   margin: 0 0-$pl-spacing-h;
   transition: transform 0.5s;
-  border-bottom: 3px solid $pl-mid-grey;
+  border-bottom: 1px solid $pl-black;
+  border-top: 1px solid $pl-black;
   box-shadow: 0 3px 2px 2px rgba(0,0,0,0.2);
 
   &[aria-hidden=true] {
@@ -200,6 +309,14 @@ a {
     margin: 0;
     list-style: none;
     padding-left: 0;
+  }
+
+  li {
+    padding-left: 0;
+
+    &:before {
+      content: none;
+    }
   }
 
   a {
@@ -218,6 +335,9 @@ a {
         position: relative;
         display: block;
         padding: 20px $pl-spacing-h;
+        font-size: 1.1rem;
+        font-weight: 300;
+        color: $pl-darker-grey;
 
         &:after {
           position: absolute;
@@ -229,22 +349,36 @@ a {
           font-size: 1.3rem;
           font-weight: 400;
           line-height: 1;
-          color: $pl-mid-grey;
+          color: $pl-black;
+        }
+
+        &:hover,
+        &:focus {
+          text-decoration: underline;
+          color: $pl-black;
         }
       }
 
       &.current {
-        background-color: #fff;
-        border-bottom: 0;
 
         > a {
           font-weight: 800;
+          color: $pl-black;
 
           &:after {
             content: "\f107";
           }
         }
+
+        ul {
+          padding-bottom: 10px;
+        }
       }
+    }
+
+
+    @media #{$gef-mq-lg} {
+      border-top: 0;
     }
   }
 
@@ -255,22 +389,24 @@ a {
 
       a {
         display: block;
-        border-bottom: $pl-subnav-separator;
         padding: 15px $pl-spacing-h;
+        font: $pl-font-alt;
         font-size: 0.9rem;
-        font-weight: 600;
+        font-weight: 300;
+        color: $pl-dark-grey;
 
         &:hover,
         &:focus {
-          color: $pl-subnav-active;
+          text-decoration: underline;
+          color: $pl-black;
         }
       }
 
       &.current  {
 
         a {
-          color: $pl-subnav-active;
-          border-bottom: $pl-subnav-separator-active;
+          font-weight: 600;
+          color: $pl-black;
         }
       }
     }
@@ -293,9 +429,9 @@ a {
   }
 }
 
-.pl-muted-bg {
-  background-color: $pl-muted;
-}
+// .pl-muted-bg {
+//   background-color: $pl-muted;
+// }
 
 .pl-highlighted {
   background-color: $pl-highlight;
@@ -307,16 +443,18 @@ a {
 
 .pl-capitalise {
   text-transform: uppercase;
-  font-size: 0.9rem;
+  font-size: 0.9rem !important;
   font-weight: 600;
   letter-spacing: 0.1em;
 }
 
 .pl-article {
 
+  padding-bottom: 100px;
+
   header {
     margin: 0 0-$pl-spacing-h;
-    padding: $pl-spacing-v $pl-spacing-h;
+    padding: $pl-spacing-v $pl-spacing-h 0;
 
     >*:first-child {
       margin-top: 0;
@@ -325,88 +463,76 @@ a {
 
     h1 {
       margin-bottom: 0.5em;
+      font-weight: 600;
+      font-size: 1.7rem;
+      line-height: 1.23;
     }
 
     .lead {
       font-size: 1.1rem;
     }
+  }
 
+  .pl-component-header {
+    border-bottom: 1px solid #000;
+
+    p {
+      font-size: 1.15rem;
+    }
   }
 
   @media #{$gef-mq-lg} {
-
-    padding-left: 13%;
+    margin-left: -$pl-spacing-v - 1;
+    padding-left: 50px;
+    border-left: 1px solid $pl-black;
 
     header {
-      margin-left: -10%;
-      padding: $pl-spacing-v 5% $pl-spacing-v/2 10%;
+      margin: 0;
+      padding-left: 0;
+    }
+
+    .pl-component-header {
+      height: 182px;
+      margin-left: -26px;
+      padding-left: 26px;
+    }
+  }
+
+  @media #{$gef-mq-xl} {
+    margin-left: -41px;
+
+    .pl-component-header {
+      margin-left: -50px;
+      padding-left: 50px;
     }
   }
 }
 
 .pl-contents {
 
-  h2 {
-    margin-top: $pl-spacing-v;
+  p {
+    font-size: 1.15rem;
   }
 
-  .content {
+  h2 ~ p,
+  h3 ~ p {
+    font-size: 1rem;
+  }
 
-    margin-bottom: 100px;
+  hr ~ p {
+    font: $pl-font-alt;
+    font-weight: 600;
+  }
 
-    > p:first-child {
+
+  .pl-component-header + & > .content {
+    > *:first-child {
       margin-top: 40px;
     }
   }
 
   .code {
     clear: both;
-  }
-
-  pre {
-    display: block;
-    max-width: 100%;
-    overflow-x: auto;
-    margin: 20px 0 50px;
-    background-color: $pl-muted;
-
-    code {
-      display: block;
-      line-height: 1.6;
-      padding: 10px;
-    }
-  }
-
-  code {
-    display: inline-block;
-    padding: 0 5px;
-    border-radius: 2px;
-    color: $pl-dark-grey;
-    font-size: 0.8rem;
-    background-color: $pl-muted;
-  }
-
-  kbd {
-    border: 1px solid $pl-highlight;
-    border-radius: 3px;
-    color: $pl-highlight;
-    display: inline-block;
-    font: $pl-font;
-    font-size: 0.8rem;
-    margin: 0 2px;
-    padding: 0 5px;
-  }
-
-  .lead {
-    font-size: 1.2rem;
-    margin-bottom: $pl-spacing-v;
-  }
-
-  blockquote {
-    background-color: $pl-muted;
-    margin-left: 0;
-    margin-right: 0;
-    padding: 20px;
   }
 
   @media #{$gef-mq-lg} {
@@ -420,11 +546,16 @@ a {
     display: block;
     vertical-align: middle;
     margin-top: 15px;
-    border: 2px solid #fff;
+    border: 2px solid $pl-black;
     border-radius: 8px;
     padding: 7px 11px 6px;
     line-height: 1;
     text-align: center;
+    font: $pl-font-alt;
+    font-weight: 800;
+    font-size: 0.8rem;
+    color: $pl-black;
+
   }
 
   @media #{$gef-mq-md} {
@@ -432,7 +563,7 @@ a {
     span {
       display: inline-block;
       margin-top: -3px;
-      margin-left: $pl-spacing-h;
+      margin-left: 15px;
     }
   }
 }

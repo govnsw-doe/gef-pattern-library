@@ -5,7 +5,8 @@
     <meta name="description" content="Teasers are used to visually highlight a set of noteworthy content pages.">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../styles/styles.css?v0.0.1">
+    <link href="../styles/styles.css?v0.0.1" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:300,600,700|Maitree:300,500,700" rel="stylesheet">
   </head>
 </html>
 <body>
@@ -20,7 +21,7 @@
     </div>
   <div class="uk-container uk-container-center">
     <div class="uk-grid">
-      <div class="uk-width-large-3-10 uk-width-xlarge-2-10">
+      <div class="uk-width-large-3-10">
         <header class="pl-header" data-gef-aria-toggle>
           <h1>Global Experience Framework<span>Pattern Library</span></h1>
           <button class="pl-mobile-nav-toggle" href="#navigation" id="navigation-tab" role="tab" aria-controls="navigation" aria-expanded="false">show nav</button>
@@ -77,16 +78,15 @@
           </nav>
         </header>
       </div>
-      <article class="pl-article uk-width-large-7-10" data-gef-external-link-tagger>
-        <header class="pl-highlighted">
-          <h1>Teasers</h1>
-          <div class="lead">
+      <article class="uk-width-large-7-10" data-gef-external-link-tagger>
+        <div class="pl-article">
+          <header class="pl-component-header">
+            <h1>Teasers</h1>
             <p>Teasers are used to visually highlight a set of noteworthy content pages.</p>
-          </div>
-          <p class="pl-capitalise">Available in:&nbsp;<span class="pl-pills"><span>Squiz Matrix</span></span></p>
-        </header>
-        <div class="pl-contents">
-          <div class="content"><div class="example"><h2 id="example">Example</h2>
+            <p class="pl-capitalise">Available in:&nbsp;<span class="pl-pills"><span>Squiz Matrix</span></span></p>
+          </header>
+          <div class="pl-contents">
+            <div class="content"><div class="example"><h2 id="example">Example</h2>
 <div class="live-example"><ul class="uk-grid gef-teaser-list"><li><div class="gef-teaser" data-pseudo-link="data-pseudo-link"><p class="gef-teaser__category">Nam quis nulla </p><h2 class="gef-teaser__heading">Phasellus rhoncus aenean id metus id vel.</h2><img src="http://placehold.it/300x200" srcset="http://placehold.it/300x200 300w" sizes="(max-width: 300px) 200vw, 300px" alt="placeholder"/><a href="#">Vestibulum fermentum tortor id mi. </a></div></li><li><div class="gef-teaser" data-pseudo-link="data-pseudo-link"><p class="gef-teaser__category"> Nulla non </p><h2 class="gef-teaser__heading">Vivamus luctus egestas leo..</h2><img src="http://placehold.it/300x200" srcset="http://placehold.it/300x200 300w" sizes="(max-width: 300px) 200vw, 300px" alt="placeholder"/><a href="#">Maecenas sollicitudin nullam rhoncus aliquam metus. </a></div></li><li><div class="gef-teaser" data-pseudo-link="data-pseudo-link"><p class="gef-teaser__category">Etiam egestas wisi </p><h2 class="gef-teaser__heading">Aliquam erat volutpat..</h2><img src="http://placehold.it/300x200" srcset="http://placehold.it/300x200 300w" sizes="(max-width: 300px) 200vw, 300px" alt="placeholder"/><a href="#">Nunc auctor, Mauris pretium quam et urna. </a></div></li></ul></div></div><div class="code"><h2 id="code">Code</h2>
 <div class="code-pug"><h4>Using pug</h4><pre><code class="language-pug">+gef_teaser_list(3)
 @param {int} num  - number of teasers to display. Valid inputs: 1, 2, 3, 4</code></pre></div></div><h2 id="usage">Usage</h2>
@@ -121,6 +121,7 @@
 <li><a href="#">Section homepage</a></li>
 </ul>
 </div>
+          </div>
         </div>
       </article>
     </div>

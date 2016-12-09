@@ -5,7 +5,8 @@
     <meta name="description" content="The local footer shows key links and social profiles for a program, team, or business unit.">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../styles/styles.css?v0.0.1">
+    <link href="../styles/styles.css?v0.0.1" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:300,600,700|Maitree:300,500,700" rel="stylesheet">
   </head>
 </html>
 <body>
@@ -20,7 +21,7 @@
     </div>
   <div class="uk-container uk-container-center">
     <div class="uk-grid">
-      <div class="uk-width-large-3-10 uk-width-xlarge-2-10">
+      <div class="uk-width-large-3-10">
         <header class="pl-header" data-gef-aria-toggle>
           <h1>Global Experience Framework<span>Pattern Library</span></h1>
           <button class="pl-mobile-nav-toggle" href="#navigation" id="navigation-tab" role="tab" aria-controls="navigation" aria-expanded="false">show nav</button>
@@ -77,16 +78,15 @@
           </nav>
         </header>
       </div>
-      <article class="pl-article uk-width-large-7-10" data-gef-external-link-tagger>
-        <header class="pl-highlighted">
-          <h1>Local footer</h1>
-          <div class="lead">
+      <article class="uk-width-large-7-10" data-gef-external-link-tagger>
+        <div class="pl-article">
+          <header class="pl-component-header">
+            <h1>Local footer</h1>
             <p>The local footer shows key links and social profiles for a program, team, or business unit.</p>
-          </div>
-          <p class="pl-capitalise">Available in:&nbsp;<span class="pl-pills"><span>Squiz Matrix</span></span></p>
-        </header>
-        <div class="pl-contents">
-          <div class="content"><p>The local footer works in conjunction with the context set from the section homepage.</p>
+            <p class="pl-capitalise">Available in:&nbsp;<span class="pl-pills"><span>Squiz Matrix</span></span></p>
+          </header>
+          <div class="pl-contents">
+            <div class="content"><p>The local footer works in conjunction with the context set from the section homepage.</p>
 <div class="example"><h2 id="example">Example</h2>
 <div class="live-example"><div class="gef-section-footer"><div class="uk-container uk-container-center"><div class="uk-grid uk-grid-collapse"><div class="uk-width-1-1 uk-width-large-1-2"><nav><h2 class="show-on-sr"> information</h2><ul class="gef-section-footer__list"><li><a href="#">Nam </a></li><li><a href="#">Phasellus rhoncus </a></li><li><a href="#">Nulla non </a></li></ul></nav></div><div class="uk-width-1-1 uk-width-large-1-2"><nav class="gef-social-media"><h3 class="show-on-sr">Social media links</h3><a class="gef-social-media__link uk-icon-twitter" href="#" title="Follow us on Twitter"><span class="uk-hidden">Twitter</span></a><a class="gef-social-media__link uk-icon-facebook" href="#" title="Follow us on Facebook"><span class="uk-hidden">Facebook</span></a><a class="gef-social-media__link uk-icon-youtube" href="#" title="Follow us on YouTube"><span class="uk-hidden">YouTube</span></a></nav></div></div></div></div></div></div><div class="code"><h2 id="code">Code</h2>
 <div class="code-pug"><h4>Using pug:</h4><pre><code class="language-pug">+gef_section_footer("Yammer, Twitter, Facebook, YouTube, Instagram, Google Plus", true)
@@ -126,6 +126,7 @@
 <li><a href="#">Section homepage</a></li>
 </ul>
 </div>
+          </div>
         </div>
       </article>
     </div>

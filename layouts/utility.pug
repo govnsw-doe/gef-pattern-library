@@ -8,17 +8,19 @@ body
 
       include _header
 
-      article.pl-article.uk-width-large-7-10(data-gef-external-link-tagger)
-        header.pl-highlighted
-          h1!= display_title
+      article.uk-width-large-7-10(data-gef-external-link-tagger)
 
-          div.lead!= description
+        div.pl-article
+          header.pl-component-header
+            h1!= display_title
 
-          p.pl-capitalise Versions:
-            span.pl-pills!= since + script_updated
+            p!= description
 
-        div.pl-contents
-          div.content!= contents
+            p.pl-capitalise Versions:
+              span.pl-pills!= since + script_updated
+
+          div.pl-contents
+            div.content!= contents
 
 
 

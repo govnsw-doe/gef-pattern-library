@@ -9,19 +9,20 @@ body
 
       include _header
 
-      article.pl-article.uk-width-large-7-10(data-gef-external-link-tagger)
-        header.pl-highlighted
-          h1!= display_title
+      article.uk-width-large-7-10(data-gef-external-link-tagger)
 
-          div.lead
+        div.pl-article
+          header.pl-component-header
+            h1!= display_title
+
             p!= description
 
 
-          p.pl-capitalise Available in:&nbsp;
-            span.pl-pills!= available
+            p.pl-capitalise Available in:&nbsp;
+              span.pl-pills!= available
 
-        div.pl-contents
-          div.content!= contents
+          div.pl-contents
+            div.content!= contents
 
 
 include _footer
