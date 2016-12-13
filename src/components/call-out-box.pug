@@ -14,18 +14,32 @@ include ../../layouts/_global
 include ../../bower_components/gef/src/assets/pug/components/partials/link-list
 include ../../bower_components/gef/src/assets/pug/components/call-out-box
 
-div.example
-  :marked
-    ## Example
-  div.live-example
-    +output
+//- Example, instance, specs
+div.pl-example
+  div.pl-example_live
+    mixin call_out_box_content
+      h3
+        +lipsum(3, "words")
+      +gef_link_list(2)
+    +gef_call_out_box
+  div.pl-example_code.pl-code
+    pre
+      code.language-pug
+        | mixin call_out_box_content
+        |   h3
+        |     +lipsum(3, "words")
+        |   +gef_link_list(2)
+        | +gef_call_out_box
 
+//- Code
 div.code
   :marked
     ## Code
+    ### Pug
   div.code-pug
     +usage
 
+//- Usage and accessibility
 :marked
   ## Usage
   * Keep call-out box content succinct, with clear actions for users to take.

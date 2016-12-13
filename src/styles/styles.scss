@@ -148,18 +148,19 @@ pre {
 
   code {
     display: block;
-    line-height: 1.6;
-    padding: 10px;
+    line-height: 1.86;
+    padding: 20px;
   }
 }
 
 code {
   display: inline-block;
-  padding: 0 5px;
-  border-radius: 2px;
-  color: $pl-dark-grey;
-  font-size: 0.8rem;
+  padding: 1px 5px;
+  color: $pl-darker-grey;
+  font-size: 0.85rem;
   background-color: $pl-muted;
+  border: 1px solid #ccd1d9;
+  font-family: consolas, courier, monospace;
 }
 
 kbd {
@@ -533,12 +534,33 @@ blockquote {
     }
   }
 
-  .code {
+  .pl-code {
     clear: both;
   }
 
   @media #{$gef-mq-lg} {
     padding-right: 5%;
+  }
+}
+
+.pl-example {
+  margin-bottom: 50px;
+}
+
+.pl-example_live {
+  border: 1px solid #ccd1d9;
+  border-bottom: 0;
+  padding: 20px;
+
+  > * {
+    margin-bottom: 0 !important;
+  }
+}
+
+.pl-example_code {
+
+  pre {
+    margin: 0;
   }
 }
 
@@ -612,24 +634,53 @@ $font-name: 'FontAwesome';
 @import "gef/src/assets/sass/_fonts";
 
 // custom styles
-.live-example {
+.pl-example_live {
   // set default font
   font: $pl-font-gef;
   // load all of GEF CSS
   @import "gef/src/assets/sass/core";
-
-  // show hide fixes
-  div+.uk-accordion-title {
-    margin: 20px 0 0;
-  }
 
   // anchor box
   .gef-anchor-box {
     margin: 0;
   }
 
+  // breadcrumbs
+  .gef-breadcrumbs {
+    margin-top: -20px;
+  }
+
+  // call out box
+  .gef-call-out-box {
+    margin-top: 0;
+  }
+
+  // image with caption
+  .gef-image-with-caption {
+    margin-top: 0;
+  }
+
   // link group
   .gef-linkgroup {
     margin-top: 0;
+  }
+
+  // show hide
+  .gef-show-hide {
+    margin-top: 0;
+
+    // show hide fixes
+    div+.uk-accordion-title {
+      margin: 20px 0 0;
+    }
+  }
+
+  // tabs
+  .gef-tabs {
+    margin-top: 0;
+
+    ul {
+      margin-top: 0;
+    }
   }
 }

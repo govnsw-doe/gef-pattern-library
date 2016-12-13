@@ -86,13 +86,15 @@
             <p class="pl-capitalise">Available in:&nbsp;<span class="pl-pills"><span>Squiz Matrix</span></span></p>
           </header>
           <div class="pl-contents">
-            <div class="content"><p>The local footer works in conjunction with the context set from the section homepage.</p>
-<div class="example"><h2 id="example">Example</h2>
-<div class="live-example"><div class="gef-section-footer"><div class="uk-container uk-container-center"><div class="uk-grid uk-grid-collapse"><div class="uk-width-1-1 uk-width-large-1-2"><nav><h2 class="show-on-sr"> information</h2><ul class="gef-section-footer__list"><li><a href="#">Nam </a></li><li><a href="#">Phasellus rhoncus </a></li><li><a href="#">Nulla non </a></li></ul></nav></div><div class="uk-width-1-1 uk-width-large-1-2"><nav class="gef-social-media"><h3 class="show-on-sr">Social media links</h3><a class="gef-social-media__link uk-icon-twitter" href="#" title="Follow us on Twitter"><span class="uk-hidden">Twitter</span></a><a class="gef-social-media__link uk-icon-facebook" href="#" title="Follow us on Facebook"><span class="uk-hidden">Facebook</span></a><a class="gef-social-media__link uk-icon-youtube" href="#" title="Follow us on YouTube"><span class="uk-hidden">YouTube</span></a></nav></div></div></div></div></div></div><div class="code"><h2 id="code">Code</h2>
-<div class="code-pug"><h4>Using pug:</h4><pre><code class="language-pug">+gef_section_footer("Yammer, Twitter, Facebook, YouTube, Instagram, Google Plus", true)
-@param {string} channels      - comma delimeted list of social media channels
-@param {bool} show_link_list  - display link list</code></pre></div></div><h2 id="usage">Usage</h2>
+            <div class="content"><div class="pl-example"><div class="pl-example_live"><div class="gef-section-footer"><div class="uk-container uk-container-center"><div class="uk-grid uk-grid-collapse"><div class="uk-width-1-1 uk-width-large-1-2"><nav><h2 class="show-on-sr"> information</h2><ul class="gef-section-footer__list"><li><a href="#">Nam </a></li><li><a href="#">Phasellus rhoncus </a></li><li><a href="#">Nulla non </a></li></ul></nav></div><div class="uk-width-1-1 uk-width-large-1-2"><nav class="gef-social-media"><h3 class="show-on-sr">Social media links</h3><a class="gef-social-media__link uk-icon-facebook" href="#" title="Follow us on Facebook"><span class="uk-hidden">Facebook</span></a><a class="gef-social-media__link uk-icon-youtube" href="#" title="Follow us on YouTube"><span class="uk-hidden">YouTube</span></a></nav></div></div></div></div></div><div class="pl-example_code pl-code"><pre><code class="language-pug">+gef_section_footer("Facebook, YouTube", true)</code></pre></div></div><div class="code"><h2 id="code">Code</h2>
+<h3 id="pug">Pug</h3>
+<div class="code-pug"><pre><code class="language-pug">//- Added: 1.0.0
+//- @param {string} channels      - comma delimeted list of social media channels.
+//- Available channels: "Yammer, Twitter, Facebook, YouTube, Instagram, Google Plus"
+//- @param {bool} show_link_list  - choose to display the link list
++gef_section_footer(channels, show_link_list)</code></pre></div></div><h2 id="usage">Usage</h2>
 <ul>
+<li>The local footer works in conjunction with the context set from the section homepage.</li>
 <li>The types of links can include:<ul>
 <li>Occasional content, eg &ldquo;about your team&rdquo;</li>
 <li>Regular updates, eg &ldquo;news&rdquo;</li>
@@ -123,7 +125,7 @@
 </ul>
 <h2 id="related">Related</h2>
 <ul>
-<li><a href="#">Section homepage</a></li>
+<li><a href="../templates/section-homepage.html">Section homepage</a></li>
 </ul>
 </div>
           </div>

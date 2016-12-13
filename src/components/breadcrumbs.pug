@@ -13,37 +13,48 @@ include ../../layouts/_global
 //- Pattern/Component include - link to the correct pattern/component
 include ../../bower_components/gef/src/assets/pug/components/breadcrumbs
 
-//- Enchanced version
-mixin output_enhanced
-  +gef_breadcrumbs(6, true)
-
-
-div.example
+//- Example, instance, specs
+:marked
+  ## Enhanced
+div.pl-example
+  div.pl-example_live
+    +gef_breadcrumbs(6, true)
+  div.pl-example_code.pl-code
+    pre
+      code.language-pug
+        | +gef_breadcrumbs(6, true)
   :marked
-    ## Example
-    ### Default
-  div.live-example
-    +output
+    * Use enhanced breadcrumbs for large websites with many levels in the information architecture.
+    * Enhanced breadcrumbs automatically collapse when a page is more than 4 levels deep. 
+    * Collapsed links can be accessed by hovering over the &hellip; link.
 
-  :marked
-    ### Enhanced
-    For very large websites, there can be many levels in the information architecture. Enhanced breadcrumbs automatically collapse when a page is more than 4 levels deep. Collapsed links can be accessed by hovering over the &hellip; link.
-  div.live-example
-    +output_enhanced
+:marked
+  ## Default
+div.pl-example
+  div.pl-example_live
+    +gef_breadcrumbs(3)
+  div.pl-example_code.pl-code
+    pre
+      code.language-pug
+        | +gef_breadcrumbs(3)
 
+//- Code
 div.code
   :marked
     ## Code
+    ### Pug
   div.code-pug
     +usage
 
-
+//- Usage and accessibility
 :marked
   ## Usage
   * The current page always appears as the last item in the breadcrumb and should not be linked.
+  * On small screens, both variations of breadcrumbs change to a single link to the parent page.
 
   ## Accessibility
+  * A hidden title announces the proceeding breadcrumb navigation.
   * <kbd>TAB</kbd> to access each breadcrumb link in order.
-  * Enhanced breadcrumbs
+  * Enhanced breadcrumbs:
     * Collapsed links are always accessible with the <kbd>TAB</kbd> key.
     * Collapsed links can be expanded by placing keyboard focus on &hellip;, then hitting <kbd>ENTER</kbd>.

@@ -86,13 +86,14 @@
             <p class="pl-capitalise">Available in:&nbsp;<span class="pl-pills"><span>Squiz Matrix</span></span></p>
           </header>
           <div class="pl-contents">
-            <div class="content"><p>Link groups provide a way to reveal and highlight key content from a section&rsquo;s information architecture so that likely audience groups can find them more easily.</p>
-<div class="example"><h2 id="example">Example</h2>
-<div class="live-example"><ul class="uk-grid gef-linkgroup-list"><li><div class="gef-linkgroup"><h3 class="gef-linkgroup__category">Nam quis nulla </h3><ul class="gef-link-list gef-linkgroups-items"><li><a href="http://education.nsw.gov.au">Phasellus rhoncus aenean id metus id.</a></li><li><a href="http://education.nsw.gov.au">Nulla non lectus sed nisl molestie.</a></li><li><a href="http://education.nsw.gov.au">Maecenas sollicitudin nullam rhoncus aliquam metus..</a></li></ul></div></li><li><div class="gef-linkgroup"><h3 class="gef-linkgroup__category">Nullam feugiat turpis </h3><ul class="gef-link-list gef-linkgroups-items"><li><a href="http://education.nsw.gov.au">Fusce nibh, curabitur sagittis hendrerit ante..</a></li><li><a href="http://education.nsw.gov.au">Duis condimentum augue id magna semper.</a></li><li><a href="http://education.nsw.gov.au">Fusce consectetuer risus a nunc. Aliquam.</a></li></ul></div></li><li><div class="gef-linkgroup"><h3 class="gef-linkgroup__category">Morbi gravida libero </h3><ul class="gef-link-list gef-linkgroups-items"><li><a href="http://education.nsw.gov.au">Proin mattis lacinia justo. Vestibulum facilisis.</a></li><li><a href="http://education.nsw.gov.au">Integer rutrum, orci vestibulum ullamcorper ultricies.</a></li><li><a href="http://education.nsw.gov.au">Aenean vel massa quis mauris vehicula.</a></li></ul></div></li></ul></div></div><div class="code"><h2 id="code">Code</h2>
-<div class="code-pug"><h4>Using pug</h4><pre><code class="language-pug">+gef_linkgroup_list(3,1)
-@param {int} num  - number of linkgroups to display. Valid inputs: 1, 2, 3, 4
-@param {int} links - number of linkgroups items within a linkgroup to display.</code></pre></div></div><h2 id="usage">Usage</h2>
+            <div class="content"><div class="pl-example"><div class="pl-example_live"><ul class="uk-grid gef-linkgroup-list"><li><div class="gef-linkgroup"><h3 class="gef-linkgroup__category">Nam quis nulla </h3><ul class="gef-link-list gef-linkgroups-items"><li><a href="http://education.nsw.gov.au">Phasellus rhoncus aenean id metus id.</a></li><li><a href="http://education.nsw.gov.au">Nulla non lectus sed nisl molestie.</a></li><li><a href="http://education.nsw.gov.au">Maecenas sollicitudin nullam rhoncus aliquam metus..</a></li></ul></div></li><li><div class="gef-linkgroup"><h3 class="gef-linkgroup__category">Nullam feugiat turpis </h3><ul class="gef-link-list gef-linkgroups-items"><li><a href="http://education.nsw.gov.au">Fusce nibh, curabitur sagittis hendrerit ante..</a></li><li><a href="http://education.nsw.gov.au">Duis condimentum augue id magna semper.</a></li><li><a href="http://education.nsw.gov.au">Fusce consectetuer risus a nunc. Aliquam.</a></li></ul></div></li><li><div class="gef-linkgroup"><h3 class="gef-linkgroup__category">Morbi gravida libero </h3><ul class="gef-link-list gef-linkgroups-items"><li><a href="http://education.nsw.gov.au">Proin mattis lacinia justo. Vestibulum facilisis.</a></li><li><a href="http://education.nsw.gov.au">Integer rutrum, orci vestibulum ullamcorper ultricies.</a></li><li><a href="http://education.nsw.gov.au">Aenean vel massa quis mauris vehicula.</a></li></ul></div></li></ul></div><div class="pl-example_code pl-code"><pre><code class="language-pug">+gef_linkgroup_list(3, 3)</code></pre></div></div><div class="code"><h2 id="code">Code</h2>
+<h3 id="pug">Pug</h3>
+<div class="code-pug"><pre><code class="language-pug">//- Added: 1.0.0
+//- @param {int} num  - number of linkgroups to display. Valid inputs: 1, 2, 3, 4
+//- @param {int} links - number of linkgroups items within a linkgroup to display.
++gef_linkgroup_list(num, links)</code></pre></div></div><h2 id="usage">Usage</h2>
 <ul>
+<li>Link groups provide a way to reveal and highlight key content from a section&rsquo;s information architecture so that likely audience groups can find them more easily.</li>
 <li>Choose an appropriate title for the link group to describe the type of links it contains.</li>
 <li>Lists in a link group should form a unified whole, ie do not mix different types of lists.</li>
 <li>A link group can support 3 or 4 lists of links.</li>
@@ -112,7 +113,7 @@
 </ul>
 <h2 id="related">Related</h2>
 <ul>
-<li><a href="#">Section homepage</a></li>
+<li><a href="../templates/section-homepage.html">Section homepage</a></li>
 </ul>
 </div>
           </div>

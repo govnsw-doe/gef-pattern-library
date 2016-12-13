@@ -14,25 +14,27 @@ include ../../layouts/_global
 include ../../bower_components/gef/src/assets/pug/components/social-media
 include ../../bower_components/gef/src/assets/pug/components/section-footer
 
-:marked
-  The local footer works in conjunction with the context set from the section homepage.
+//- Example, instance, specs
+div.pl-example
+  div.pl-example_live
+    +gef_section_footer("Facebook, YouTube", true)
+  div.pl-example_code.pl-code
+    pre
+      code.language-pug
+        | +gef_section_footer("Facebook, YouTube", true)
 
-
-div.example
-  :marked
-    ## Example
-  div.live-example
-    +output
-
+//- Code
 div.code
   :marked
     ## Code
+    ### Pug
   div.code-pug
     +usage
 
-
+//- Usage and accessibility
 :marked
   ## Usage
+  * The local footer works in conjunction with the context set from the section homepage.
   * The types of links can include:
     * Occasional content, eg &ldquo;about your team&rdquo;
     * Regular updates, eg &ldquo;news&rdquo;
@@ -55,4 +57,4 @@ div.code
   * When a social profile icon receives keyboard focus, its name should be announced to the screen reader.
 
   ## Related
-  * [Section homepage](#)
+  * [Section homepage](../templates/section-homepage.html)
