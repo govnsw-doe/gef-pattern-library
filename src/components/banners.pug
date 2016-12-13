@@ -4,7 +4,7 @@ collection: components
 title: Banners
 display_title: Banners
 description: The banner gives publishers a way to personalise their section homepage with a key message and background image.
-available: <span>Squiz Matrix</span><span>Another CMS</span>
+available: <span>Squiz Matrix</span>
 ---
 
 //- Default includes // DO NOT REMOVE
@@ -13,11 +13,7 @@ include ../../layouts/_global
 //- Pattern/Component include - link to the correct pattern/component
 include ../../bower_components/gef/src/assets/pug/components/banner
 
-//- Short version
-mixin output_short
-  +gef_banner("//placehold.it/1350x250", true)
-
-
+//- Example, instance, specs
 :marked
   ## Default banner
 div.pl-example
@@ -27,7 +23,10 @@ div.pl-example
     pre
       code.language-pug
         | +gef_banner("//placehold.it/1350x520")
-
+  :marked
+    * Keep the title and description text short so they fit inside the key message box.
+    * The key message button should link to a relevant page within the current section.
+    * The default banner background image should be 1350 px × 520 px.
 
 :marked
   ## Short banner
@@ -35,27 +34,26 @@ div.pl-example
 
 div.pl-example
   div.pl-example_live
-    +output_short
+    +gef_banner("//placehold.it/1350x250", true)
   div.pl-code.pl-example_code
     pre
       code.language-pug
         | +gef_banner("//placehold.it/1350x250", true)
+  :marked
+    * The short banner background image should be 1350 px × 250 px.
 
+//- Code
 :marked
   ## Code
   ### Pug
 +usage
 
-
+//- Usage and accessibility
 :marked
   ## Usage
   * There are two types of banners:
     * Default: a taller image banner with space for a key message.
     * Short: a shorter, image-only banner.
-  * Keep the title and description text short so they fit inside the key message box.
-  * The key message button should link to a relevant page within the current section.
-  * The default banner background image should be 1350 px × 520 px.
-  * The short banner background image should be 1350 px × 250 px.
   * Squiz Matrix users:
     * Banners are only available on the section homepage template.
 
@@ -67,4 +65,4 @@ div.pl-example
   * [Squiz Matrix](https://education.nsw.gov.au/gef/squiz-matrix-training/components/feature-banner)
 
   ## Related
-  * [Section homepage](#)
+  * [Section homepage](../templates/section-homepage.html)

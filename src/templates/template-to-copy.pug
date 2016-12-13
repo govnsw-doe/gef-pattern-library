@@ -1,8 +1,8 @@
 ---
 layout: template.pug
 collection: templates
-title: [Navigation title here]
-display_title: [Displayed page title here]
+title: [Enter short title here]
+display_title: [Enter long title here]
 description: [Enter description/meta description here]
 available: [Enter CMSs here]
 draft: true
@@ -10,20 +10,20 @@ draft: true
 
 //- External template URL
 - var ext_url = "Enter the URL here"
+
 //- External template title
 - var ext_title = "Title of the external link"
 
 div.example
   :marked
     ## Example
-  a.external-example(href=ext_url target="_blank")= ext_title
-
+  a(href=ext_url)= ext_title
 
 :marked
   ## Usage
   Enter your content here
 
-  ## How-to Guides
+  ## How-to guides
   Enter your content here
 
   ## Related

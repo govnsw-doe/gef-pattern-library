@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Banners | GEF Pattern Library</title>
+    <meta name="description" content="The banner gives publishers a way to personalise their section homepage with a key message and background image.">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../styles/styles.css?v0.0.1" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:300,600,700|Maitree:300,500,700" rel="stylesheet">
+  </head>
+</html>
+<body>
+    <div class="gef-global-header-container gef-global-header--alt" role="banner">
+      <div class="gef-global-header">
+        <div class="uk-container uk-container-center">
+          <div class="uk-grid uk-grid-collapse">
+            <div class="uk-width-1-1"><a class="gef-global-header__header" href="#" title="NSW Department of Education"><abbr title="NSW Department of Education" aria-hidden="true">NSW DoE</abbr></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <div class="uk-container uk-container-center">
+    <div class="uk-grid">
+      <div class="uk-width-large-3-10">
+        <header class="pl-header" data-gef-aria-toggle>
+          <h1>Global Experience Framework<span>Pattern Library</span></h1>
+          <button class="pl-mobile-nav-toggle" href="#navigation" id="navigation-tab" role="tab" aria-controls="navigation" aria-expanded="false">show nav</button>
+          <nav class="pl-nav" id="navigation" role="tabpanel" aria-labelledby="navigation-tabtab" aria-hidden="true" aria-label="tabpanel">
+            <h2 class="uk-hidden">Navigation</h2>
+            <ul>
+              <li><a href="../overview/welcome.html">Overview</a>
+                              <ul>
+                                          <li><a href="../overview/welcome.html">Welcome</a></li>
+                                          <li><a href="../overview/what-are-patterns.html">What are patterns</a></li>
+                                          <li><a href="../overview/guidelines-for-publishers.html">Guidelines for publishers</a></li>
+                                          <li><a href="../overview/downloads.html">Downloads</a></li>
+                              </ul>
+              </li>
+              <li><a href="../design/themes.html">Design</a>
+                              <ul>
+                                          <li><a href="../design/themes.html">Themes</a></li>
+                              </ul>
+              </li>
+              <li><a href="../templates/a-z.html">Templates</a>
+                              <ul>
+                                          <li><a href="../templates/a-z.html">A-Z</a></li>
+                                          <li><a href="../templates/catalogue.html">Catalogue</a></li>
+                                          <li><a href="../templates/landing.html">Landing</a></li>
+                                          <li><a href="../templates/news-article.html">News article</a></li>
+                                          <li><a href="../templates/news-index.html">News index</a></li>
+                                          <li><a href="../templates/search-results.html">Search results</a></li>
+                                          <li><a href="../templates/section-homepage.html">Section homepage</a></li>
+                                          <li><a href="../templates/standard-content.html">Standard content</a></li>
+                              </ul>
+              </li>
+              <li class="current"><a href="../components/banners.html">Components</a>
+                              <ul>
+                                          <li class="current"><a href="../components/banners.html">Banners</a></li>
+                                          <li><a href="../components/anchor-box.html">Anchor box</a></li>
+                                          <li><a href="../components/breadcrumbs.html">Breadcrumbs</a></li>
+                                          <li><a href="../components/call-out-box.html">Call-out box</a></li>
+                                          <li><a href="../components/link-groups.html">Link groups</a></li>
+                                          <li><a href="../components/local-footer.html">Local footer</a></li>
+                                          <li><a href="../components/show-hide.html">Show/hide</a></li>
+                                          <li><a href="../components/tabs.html">Tabs</a></li>
+                                          <li><a href="../components/image-with-caption.html">Image with caption</a></li>
+                                          <li><a href="../components/teasers.html">Teasers</a></li>
+                              </ul>
+              </li>
+              <li><a href="../utilities/overview.html">Utilities</a>
+                              <ul>
+                                          <li><a href="../utilities/overview.html">Overview</a></li>
+                                          <li><a href="../utilities/aria-toggler.html">Aria Toggler</a></li>
+                                          <li><a href="../utilities/scroll-toggle.html">Scroll Toggle</a></li>
+                              </ul>
+              </li>
+            </ul>
+          </nav>
+        </header>
+      </div>
+      <article class="uk-width-large-7-10" data-gef-external-link-tagger>
+        <div class="pl-article">
+          <header class="pl-component-header">
+            <h1>Banners</h1>
+            <p>The banner gives publishers a way to personalise their section homepage with a key message and background image.</p>
+            <p class="pl-capitalise">Available in:&nbsp;<span class="pl-pills"><span>Squiz Matrix</span></span></p>
+          </header>
+          <div class="pl-contents">
+            <div class="content"><h2 id="default-banner">Default banner</h2>
+<div class="pl-example"><div class="pl-example_live"><aside class="gef-banner-container"><div class="uk-container uk-container-center"><h2 class="show-on-sr">Featured page</h2><div class="gef-banner"><img src="//placehold.it/1350x520" alt="placeholder banner"/><div class="uk-container gef-banner__content" tabindex="0"><h3 class="gef-banner__content__title">Nam quis nulla..</h3><p>Phasellus rhoncus aenean id metus id velit ullamcorper pulvinar. Vestibulum fermentum tortor id mi. </p><a class="uk-button gef-button gef-button-x-large gef-button-submit-inverse" href="#" title="banner link" aria-label="banner link"> Nulla </a></div></div></div></aside></div><div class="pl-example_code pl-code"><pre><code class="language-pug">+gef_banner("//placehold.it/1350x520")</code></pre></div><ul>
+<li>Keep the title and description text short so they fit inside the key message box.</li>
+<li>The key message button should link to a relevant page within the current section.</li>
+<li>The default banner background image should be 1350 px × 520 px.</li>
+</ul>
+</div><h2 id="short-banner">Short banner</h2>
+<p>Automatically hidden on mobile</p>
+<div class="pl-example"><div class="pl-example_live"><aside class="gef-banner-container gef-banner-container--small"><div class="uk-container uk-container-center"><h2 class="show-on-sr">Featured page</h2><div class="gef-banner"><img src="//placehold.it/1350x250" alt="placeholder banner"/></div></div></aside></div><div class="pl-code pl-example_code"><pre><code class="language-pug">+gef_banner("//placehold.it/1350x250", true)</code></pre></div><ul>
+<li>The short banner background image should be 1350 px × 250 px.</li>
+</ul>
+</div><h2 id="code">Code</h2>
+<h3 id="pug">Pug</h3>
+<pre><code class="language-pug">//- Added: 1.0.0 / Updated: 1.0.1
+//- @param {object} image_src - banner image width and height
+//- @param {boolean} small_banner - True if small banner otherwise big banner
++gef_banner(image_src, small_banner)</code></pre><h2 id="usage">Usage</h2>
+<ul>
+<li>There are two types of banners:<ul>
+<li>Default: a taller image banner with space for a key message.</li>
+<li>Short: a shorter, image-only banner.</li>
+</ul>
+</li>
+<li>Squiz Matrix users:<ul>
+<li>Banners are only available on the section homepage template.</li>
+</ul>
+</li>
+</ul>
+<h2 id="accessibility">Accessibility</h2>
+<ul>
+<li>Do not forget to add appropriate alt text to describe the background image.</li>
+</ul>
+<h2 id="how-to-guides">How-to guides</h2>
+<p>Learn how to use banners in:</p>
+<ul>
+<li><a href="https://education.nsw.gov.au/gef/squiz-matrix-training/components/feature-banner">Squiz Matrix</a></li>
+</ul>
+<h2 id="related">Related</h2>
+<ul>
+<li><a href="../templates/section-homepage.html">Section homepage</a></li>
+</ul>
+</div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</body>
+<script src="//dec-ce.bitbucket.io/gef/pattern-library/assets/js/vendor/require.js" data-main="//dec-ce.bitbucket.io/gef/pattern-library/assets/js/main.js" data-site-config-path="" type="text/javascript"></script>

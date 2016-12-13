@@ -13,24 +13,27 @@ include ../../layouts/_global
 //- Pattern/Component include - link to the correct pattern/component
 include ../../bower_components/gef/src/assets/pug/components/show-hide
 
-:marked
-  Show/hides enable users to quickly scan titles and select one to reveal its content. Multiple items can be opened at any one time. Show/hides are a good way to create distinct information blocks on a content page.
+//- Example, instance, specs
+div.pl-example
+  div.pl-example_live
+    +gef_show_hide(false, 3)
+  div.pl-example_code.pl-code
+    pre
+      code.language-pug
+        | +gef_show_hide(false, 3)
 
-
-div.example
-  :marked
-    ## Example
-  div.live-example
-
+//- Code
 div.code
   :marked
     ## Code
+    ### Pug
   div.code-pug
     +usage
 
-
+//- Usage and accessibility
 :marked
   ## Usage
+  * Show/hides enable users to quickly scan titles and select one to reveal its content. Multiple items can be opened at any one time. Show/hides are a good way to create distinct information blocks on a content page.
   * Titles should be short to medium in length (up to 70 characters).
   * Titles should be descriptive of the content it contains so users can easily scan and decide.
   * Keep content bite-sized and quick to read.

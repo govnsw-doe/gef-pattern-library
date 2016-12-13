@@ -14,24 +14,27 @@ include ../../layouts/_global
 include ../../bower_components/gef/src/assets/pug/components/partials/linkgroup
 include ../../bower_components/gef/src/assets/pug/components/linkgroup-list
 
-:marked
-  Link groups provide a way to reveal and highlight key content from a section&rsquo;s information architecture so that likely audience groups can find them more easily.
+//- Example, instance, specs
+div.pl-example
+  div.pl-example_live
+    +gef_linkgroup_list(3, 3)
+  div.pl-example_code.pl-code
+    pre
+      code.language-pug
+        | +gef_linkgroup_list(3, 3)
 
-
-div.example
-  :marked
-    ## Example
-  div.live-examples
-
+//- Code
 div.code
   :marked
     ## Code
+    ### Pug
   div.code-pug
     +usage
 
-
+//- Usage and accessibility
 :marked
   ## Usage
+  * Link groups provide a way to reveal and highlight key content from a section&rsquo;s information architecture so that likely audience groups can find them more easily.
   * Choose an appropriate title for the link group to describe the type of links it contains.
   * Lists in a link group should form a unified whole, ie do not mix different types of lists.
   * A link group can support 3 or 4 lists of links.
@@ -47,4 +50,4 @@ div.code
   * [Squiz Matrix](https://education.nsw.gov.au/gef/squiz-matrix-training/components/link-groups)
 
   ## Related
-  * [Section homepage](#)
+  * [Section homepage](../templates/section-homepage.html)

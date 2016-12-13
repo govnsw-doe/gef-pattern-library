@@ -1,7 +1,8 @@
 ---
 layout: component.pug
 collection: components
-title: [Enter name here]
+title: [Enter short title here]
+display_title: [Enter long title here]
 description: [Enter description/meta description here]
 available: [Enter CMSs here]
 draft: true
@@ -14,18 +15,24 @@ include ../../layouts/_global
 //- e.g. ../../bower_components/GEF/src/assets/pug/patterns/call-out-box
 include ../../bower_components/GEF/src/assets/[patterns|components]/(name-of-pattern-without-extension)
 
-div.example
-  :marked
-    ## Example
-  div.live-example
-    +output
+//- Example, instance, specs
+div.pl-example
+  div.pl-example_live
+    +mixin
+  div.pl-example_code.pl-code
+    pre
+      code.language-pug
+        | +mixin
 
+//- Code
 div.code
   :marked
     ## Code
+    ### Pug
   div.code-pug
-  	+usage
+    +usage
 
+//- Usage and accessibility
 :marked
   Enter your content here
 

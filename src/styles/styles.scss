@@ -276,7 +276,7 @@ blockquote {
     color: $pl-mobile-nav-toggle-icon;
     text-indent: 0px;
     font-size: 1.5rem;
-    line-height: 1.2
+    line-height: 1.2;
     transform: translate3d(-50%, -50%, 0);
   }
 
@@ -640,18 +640,47 @@ $font-name: 'FontAwesome';
   // load all of GEF CSS
   @import "gef/src/assets/sass/core";
 
-  // show hide fixes
-  div+.uk-accordion-title {
-    margin: 20px 0 0;
-  }
-
   // anchor box
   .gef-anchor-box {
     margin: 0;
   }
 
+  // breadcrumbs
+  .gef-breadcrumbs {
+    margin-top: -20px;
+  }
+
+  // call out box
+  .gef-call-out-box {
+    margin-top: 0;
+  }
+
+  // image with caption
+  .gef-image-with-caption {
+    margin-top: 0;
+  }
+
   // link group
   .gef-linkgroup {
     margin-top: 0;
+  }
+
+  // show hide
+  .gef-show-hide {
+    margin-top: 0;
+
+    // show hide fixes
+    div+.uk-accordion-title {
+      margin: 20px 0 0;
+    }
+  }
+
+  // tabs
+  .gef-tabs {
+    margin-top: 0;
+
+    ul {
+      margin-top: 0;
+    }
   }
 }

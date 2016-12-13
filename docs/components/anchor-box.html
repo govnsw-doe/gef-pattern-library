@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Anchor box | GEF Pattern Library</title>
+    <meta name="description" content="Anchor boxes help users ascertain a page&rsquo;s content and quickly navigate to specific blocks on the page.">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../styles/styles.css?v0.0.1" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:300,600,700|Maitree:300,500,700" rel="stylesheet">
+  </head>
+</html>
+<body>
+    <div class="gef-global-header-container gef-global-header--alt" role="banner">
+      <div class="gef-global-header">
+        <div class="uk-container uk-container-center">
+          <div class="uk-grid uk-grid-collapse">
+            <div class="uk-width-1-1"><a class="gef-global-header__header" href="#" title="NSW Department of Education"><abbr title="NSW Department of Education" aria-hidden="true">NSW DoE</abbr></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <div class="uk-container uk-container-center">
+    <div class="uk-grid">
+      <div class="uk-width-large-3-10">
+        <header class="pl-header" data-gef-aria-toggle>
+          <h1>Global Experience Framework<span>Pattern Library</span></h1>
+          <button class="pl-mobile-nav-toggle" href="#navigation" id="navigation-tab" role="tab" aria-controls="navigation" aria-expanded="false">show nav</button>
+          <nav class="pl-nav" id="navigation" role="tabpanel" aria-labelledby="navigation-tabtab" aria-hidden="true" aria-label="tabpanel">
+            <h2 class="uk-hidden">Navigation</h2>
+            <ul>
+              <li><a href="../overview/welcome.html">Overview</a>
+                              <ul>
+                                          <li><a href="../overview/welcome.html">Welcome</a></li>
+                                          <li><a href="../overview/what-are-patterns.html">What are patterns</a></li>
+                                          <li><a href="../overview/guidelines-for-publishers.html">Guidelines for publishers</a></li>
+                                          <li><a href="../overview/downloads.html">Downloads</a></li>
+                              </ul>
+              </li>
+              <li><a href="../design/themes.html">Design</a>
+                              <ul>
+                                          <li><a href="../design/themes.html">Themes</a></li>
+                              </ul>
+              </li>
+              <li><a href="../templates/a-z.html">Templates</a>
+                              <ul>
+                                          <li><a href="../templates/a-z.html">A-Z</a></li>
+                                          <li><a href="../templates/catalogue.html">Catalogue</a></li>
+                                          <li><a href="../templates/landing.html">Landing</a></li>
+                                          <li><a href="../templates/news-article.html">News article</a></li>
+                                          <li><a href="../templates/news-index.html">News index</a></li>
+                                          <li><a href="../templates/search-results.html">Search results</a></li>
+                                          <li><a href="../templates/section-homepage.html">Section homepage</a></li>
+                                          <li><a href="../templates/standard-content.html">Standard content</a></li>
+                              </ul>
+              </li>
+              <li class="current"><a href="../components/banners.html">Components</a>
+                              <ul>
+                                          <li><a href="../components/banners.html">Banners</a></li>
+                                          <li class="current"><a href="../components/anchor-box.html">Anchor box</a></li>
+                                          <li><a href="../components/breadcrumbs.html">Breadcrumbs</a></li>
+                                          <li><a href="../components/call-out-box.html">Call-out box</a></li>
+                                          <li><a href="../components/link-groups.html">Link groups</a></li>
+                                          <li><a href="../components/local-footer.html">Local footer</a></li>
+                                          <li><a href="../components/show-hide.html">Show/hide</a></li>
+                                          <li><a href="../components/tabs.html">Tabs</a></li>
+                                          <li><a href="../components/image-with-caption.html">Image with caption</a></li>
+                                          <li><a href="../components/teasers.html">Teasers</a></li>
+                              </ul>
+              </li>
+              <li><a href="../utilities/overview.html">Utilities</a>
+                              <ul>
+                                          <li><a href="../utilities/overview.html">Overview</a></li>
+                                          <li><a href="../utilities/aria-toggler.html">Aria Toggler</a></li>
+                                          <li><a href="../utilities/scroll-toggle.html">Scroll Toggle</a></li>
+                              </ul>
+              </li>
+            </ul>
+          </nav>
+        </header>
+      </div>
+      <article class="uk-width-large-7-10" data-gef-external-link-tagger>
+        <div class="pl-article">
+          <header class="pl-component-header">
+            <h1>Anchor box</h1>
+            <p>Anchor boxes help users ascertain a page&rsquo;s content and quickly navigate to specific blocks on the page.</p>
+            <p class="pl-capitalise">Available in:&nbsp;<span class="pl-pills"><span>Squiz Matrix</span></span></p>
+          </header>
+          <div class="pl-contents">
+            <div class="content"><div class="pl-example"><div class="pl-example_live"><nav class="gef-anchor-box"><h2 class="uk-h6 gef-anchor-box__title">On this page</h2><ul class="gef-link-list"><li><a href="#">Nam </a></li><li><a href="#">Phasellus rhoncus </a></li><li><a href="#">Nulla non </a></li></ul></nav></div><div class="pl-example_code pl-code"><pre><code class="language-pug">+gef_anchor_box(3)</code></pre></div></div><h2 id="code">Code</h2>
+<h3 id="pug">Pug</h3>
+<pre><code class="language-pug">//- Added: 1.0.0 / Updated: 1.0.1
+//- @param {int} num - number of links
++gef_anchor_box(num)</code></pre><h2 id="usage">Usage</h2>
+<ul>
+<li>Anchor boxes are dynamically generated based on the H2 headings on the page. This makes them particularly useful for navigating long content pages.</li>
+<li>Be aware of the number of H2 headings on the content page as they will be automatically listed in the anchor box.</li>
+<li>Use the anchor box as a navigation tool for short FAQ content. You can do this by presenting each question as an H2 heading.</li>
+<li>Squiz Matrix users: anchor boxes automatically appear on standard content pages that contain three or more H2 headings. You can choose to disable them.</li>
+</ul>
+<h2 id="accessibility-notes">Accessibility notes</h2>
+<ul>
+<li>Use <kbd>TAB</kbd> key to enter the anchor box.</li>
+<li><kbd>TAB</kbd> to move through the list of links.</li>
+<li><kbd>ENTER</kbd> to select a link. This will cause the page to jump to the related heading. The next <kbd>TAB</kbd> should focus on content under the heading.</li>
+</ul>
+</div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</body>
+<script src="//dec-ce.bitbucket.io/gef/pattern-library/assets/js/vendor/require.js" data-main="//dec-ce.bitbucket.io/gef/pattern-library/assets/js/main.js" data-site-config-path="" type="text/javascript"></script>
