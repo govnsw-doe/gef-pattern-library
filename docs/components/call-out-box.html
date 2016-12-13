@@ -87,8 +87,10 @@
           </header>
           <div class="pl-contents">
             <div class="content"><div class="example"><h2 id="example">Example</h2>
-<div class="live-example"><div class="gef-call-out-box"><h3>Nam quis nulla </h3><p>Phasellus rhoncus aenean id metus id velit ullamcorper pulvinar. Vestibulum fermentum tortor id mi.  Nulla non arcu lacinia neque faucibus fringilla. </p><ul class="gef-link-list"><li><a href="#">Nulla non lectus sed </a></li><li><a href="#">Maecenas </a></li></ul></div></div></div><div class="code"><h2 id="code">Code</h2>
-<div class="code-pug"><h4>Using pug:</h4><pre><code class="language-pug">mixin call_out_box_content
+<div class="live-examples"></div></div><div class="code"><h2 id="code">Code</h2>
+<div class="code-pug"><pre><code class="language-pug">//- Added: 1.0.0
+//- @mixin call_out_box_content - use this mixin to put your custom content into the callout box
+mixin call_out_box_content
   h3
     +lipsum(3, "words")
   +gef_link_list(2)
