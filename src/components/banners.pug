@@ -18,22 +18,33 @@ mixin output_short
   +gef_banner("//placehold.it/1350x250", true)
 
 
-div.example
-  :marked
-    ## Example
-    ### Default banner
-  div.live-example
-    +output
-  :marked
-    ### Short banner
-  div.live-example
-    +output_short
+:marked
+  ## Default banner
+div.pl-example
+  div.pl-example_live
+    +gef_banner("//placehold.it/1350x520")
+  div.pl-example_code.pl-code
+    pre
+      code.language-pug
+        | +gef_banner("//placehold.it/1350x520")
 
-div.code
-  :marked
-    ## Code
-  div.code-pug
-    +usage
+
+:marked
+  ## Short banner
+  Automatically hidden on mobile
+
+div.pl-example
+  div.pl-example_live
+    +output_short
+  div.pl-code.pl-example_code
+    pre
+      code.language-pug
+        | +gef_banner("//placehold.it/1350x250", true)
+
+:marked
+  ## Code
+  ### Pug
++usage
 
 
 :marked

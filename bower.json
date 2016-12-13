@@ -24,7 +24,7 @@
   ],
   "dependencies": {
     "text-generator-pug": "^0.0.1",
-    "gef": "1.0.0",
+    "gef": "1.0.1b",
     "normalize-scss": "normalize.scss#^6.0.0"
   },
   "devDependencies": {

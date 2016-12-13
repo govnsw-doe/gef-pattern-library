@@ -104,7 +104,7 @@
 <h3 id="multiple-pairs">Multiple pairs</h3>
 <p>If the utility finds multiple Triggers within the container, it will look for the corresponding Responder. When a Trigger is clicked it will turn toggle the other pairs to their default &#39;off&#39; state.</p>
 <h2 id="usage">Usage</h2>
-<p>By following our <a href="#">Coding Guidelines</a>, you will note that our best practice insists on using CSS to show, hide or modify the presentation of an element; and to never modify styles using JS because this places inline CSS in the HTML.</p>
+<p>By following our <a href="#">Coding Guidelines</a>, you will note that our best practice insists on using CSS to show, hide or modify the presentation of an element; and to never modify styles using JS because this places inline CSS in the HTML, and makes it harder to maintain as styling is it two different locations.</p>
 <p>You would usually achieve this by toggling a class and having the presentation change based on this class, but because of our excellent <a href="https://education.nsw.gov.au/gef/guidelines-and-standards/accessibility">Accessibility Standards</a>, you would also need to toggle the Aria attributes anyway. So to keep things simple we simply style on the Aria attributes as they change states. Example:</p>
 <pre><code class="lang-sass">// SASS
 .your-container {

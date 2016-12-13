@@ -17,17 +17,19 @@ include ../../bower_components/gef/src/assets/pug/components/anchor-box
 :marked
   Anchor boxes are dynamically generated based on the H2 headings on the page. This makes them particularly useful for navigating long content pages.
 
-div.example
-  :marked
-    ## Example
-  div.live-example
-    +output
+:marked
+div.pl-example
+  div.pl-example_live
+    +gef_anchor_box(3)
+  div.pl-example_code.pl-code
+    pre
+      code.language-pug
+        | +gef_anchor_box(3)
 
-div.code
-  :marked
-    ## Code
-  div.code-pug
-    +usage
+:marked
+  ## Code
+  ### pug
++usage
 
 :marked
   ## Usage
