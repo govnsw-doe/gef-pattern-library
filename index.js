@@ -69,5 +69,7 @@ var metalsmith = Metalsmith(__dirname)
     port:       2000
   }))
   .build(function(err){
-    if (err) throw err
+    if (err) {
+      console.log(err)
+    }
   })
