@@ -545,12 +545,32 @@ blockquote {
 
 .pl-example {
   margin-bottom: 50px;
+
+  &.pl-example--tall-lg {
+
+    @media #{$gef-mq-lg} {
+
+      .pl-example_live {
+        display: block;
+        height: 300px;
+      }
+    }
+  }
+
+  &.pl-example--alt {
+    .pl-example_live {
+      background-color: $pl-muted;
+    }
+  }
 }
 
 .pl-example_live {
   border: 1px solid #ccd1d9;
   border-bottom: 0;
   padding: 20px;
+  box-sizing: border-box;
+  width: 100%;
+  overflow: auto;
 
   > * {
     margin-bottom: 0 !important;
@@ -648,6 +668,10 @@ $font-name: 'FontAwesome';
   // breadcrumbs
   .gef-breadcrumbs {
     margin-top: -20px;
+  }
+
+  .gef-breadcrumbs__item {
+    white-space: nowrap;
   }
 
   // call out box
