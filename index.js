@@ -46,6 +46,9 @@ var metalsmith = Metalsmith(__dirname)
     overview: {
       sortBy: "order"
     },
+    components: {
+      sortBy: "title"
+    },
     design: {
       sortBy: "order"
     },
