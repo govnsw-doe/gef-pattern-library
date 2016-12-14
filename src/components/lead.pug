@@ -1,0 +1,42 @@
+---
+layout: component.pug
+collection: components
+title: Lead
+display_title: Lead
+description: Use lead to give users a quick overview of a page&rsquo;s content.
+available: <span>Squiz Matrix</span>
+---
+
+//- Default includes // DO NOT REMOVE
+include ../../layouts/_global
+
+//- Pattern/Component include - link to the correct pattern/component
+include ../../bower_components/gef/src/assets/pug/components/lead
+
+//- Example, instance, specs
+div.pl-example
+  div.pl-example_live
+    +gef_lead
+  div.pl-example_code.pl-code
+    pre
+      code.language-pug
+        | +gef_lead
+
+//- Code
+div.code
+  :marked
+    ## Code
+    ### Pug
+  div.code-pug
+    +usage
+
+//- Usage and accessibility
+:marked
+  ## Usage
+  * The larger text size will get the user&rsquo;s attention and is a good opportunity to give the user a snapshot of what to expect on the page.
+  * Squiz Matrix users: 
+    * When used with the [anchor box](anchor-box.html), the lead will automatically appear at the top.
+
+  ## Related
+  * [Anchor box](anchor-box.html)
+  * [Standard content](../templates/standard-content.html)

@@ -1,0 +1,39 @@
+---
+layout: component.pug
+collection: components
+title: Landing header
+display_title: Landing header
+description: A title and description block.
+available: <span>Squiz Matrix</span>
+---
+
+//- Default includes // DO NOT REMOVE
+include ../../layouts/_global
+
+//- Pattern/Component include - link to the correct pattern/component
+include ../../bower_components/gef/src/assets/pug/components/landing-header
+
+//- Example, instance, specs
+div.pl-example
+  div.pl-example_live
+    +gef_landing_header
+  div.pl-example_code.pl-code
+    pre
+      code.language-pug
+        | +gef_landing_header
+
+//- Code
+div.code
+  :marked
+    ## Code
+    ### Pug
+  div.code-pug
+    +usage
+
+//- Usage and accessibility
+:marked
+  ## Usage
+  * This component is used display a page&rsquo;s title and brief description at the top of certain templates.
+
+  ## Related
+  * [Landing](../templates/landing.html)

@@ -660,6 +660,11 @@ $font-name: 'FontAwesome';
     margin-top: 0;
   }
 
+  // landing header
+  .gef-landing-header {
+    padding-top: 5px;
+  }
+
   // link group
   .gef-linkgroup {
     margin-top: 0;
@@ -669,10 +674,15 @@ $font-name: 'FontAwesome';
   .gef-show-hide {
     margin-top: 0;
 
-    // show hide fixes
+  // show hide fixes
     div+.uk-accordion-title {
       margin: 20px 0 0;
     }
+  }
+
+  // table of contents
+  .gef-toc {
+    overflow: hidden !important;
   }
 
   // tabs

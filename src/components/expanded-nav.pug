@@ -1,0 +1,47 @@
+---
+layout: component.pug
+collection: components
+title: Expanded nav
+display_title: Expanded nav
+description: A simple grid of links with descriptions.
+available: <span>Squiz Matrix</span>
+---
+
+//- Default includes // DO NOT REMOVE
+include ../../layouts/_global
+
+//- Pattern/Component include - link to the correct pattern/component
+include ../../bower_components/gef/src/assets/pug/components/expanded-nav
+
+//- Example, instance, specs
+div.pl-example
+  div.pl-example_live
+    +gef_expanded_nav(3)
+  div.pl-example_code.pl-code
+    pre
+      code.language-pug
+        | +gef_expanded_nav(3)
+
+//- Code
+div.code
+  :marked
+    ## Code
+    ### Pug
+  div.code-pug
+    +usage
+
+//- Usage and accessibility
+:marked
+  ## Usage
+  * Each link should be up to 70 characters in length.
+  * Each description should be up to 150 characters in length.
+  * Provide a concise and useful description to give users more information about the link&rsquo;s content.
+  * Each row can contain up to 4 fours before breaking into a new line.
+  * On small screens, the grid switches to a list format.
+  * Thumbnails can be enabled for every link.
+  * Squiz Matrix users:
+    * This component is the primary navigation for a section (see [section homepage](../templates/section-homepage.html)).
+    * Maximum number of links: 20
+
+  ## Related
+  * [Section homepage](../templates/section-homepage.html)

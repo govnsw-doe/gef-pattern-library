@@ -1,0 +1,36 @@
+---
+layout: component.pug
+collection: components
+title: Iframe
+display_title: Iframe
+description: An iframe that automatically resizes its contents based on the size of the current page.
+available: <span>Squiz Matrix</span>
+---
+
+//- Default includes // DO NOT REMOVE
+include ../../layouts/_global
+
+//- Pattern/Component include - link to the correct pattern/component
+include ../../bower_components/gef/src/assets/pug/components/iframe
+
+//- Example, instance, specs
+div.pl-example
+  div.pl-example_live
+    +gef_iframe('https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1656.492168468772!2d151.2102228485273!3d-33.86429453481775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12ae164c112efb%3A0x767ee22d5b9385b4!2sDepartment+of+Education+and+Communities!5e0!3m2!1sen!2sau!4v1434517984996')
+  div.pl-example_code.pl-code
+    pre
+      code.language-pug
+        | +gef_iframe('https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1656.492168468772!2d151.2102228485273!3d-33.86429453481775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12ae164c112efb%3A0x767ee22d5b9385b4!2sDepartment+of+Education+and+Communities!5e0!3m2!1sen!2sau!4v1434517984996')
+
+//- Code
+div.code
+  :marked
+    ## Code
+    ### Pug
+  div.code-pug
+    +usage
+
+//- Usage and accessibility
+:marked
+  ## Usage
+  * When the current page&rsquo;s viewport changes, the iframe and its contents will resize accordingly.

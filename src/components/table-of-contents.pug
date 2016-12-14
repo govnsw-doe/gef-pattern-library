@@ -1,0 +1,43 @@
+---
+layout: component.pug
+collection: components
+title: Table of contents
+display_title: Table of contents
+description: A distinct navigation landmark.
+available: <span>Squiz Matrix</span>
+---
+
+//- Default includes // DO NOT REMOVE
+include ../../layouts/_global
+
+//- Pattern/Component include - link to the correct pattern/component
+include ../../bower_components/gef/src/assets/pug/components/table-of-contents
+
+//- Example, instance, specs
+div.pl-example
+  div.pl-example_live
+    +gef_toc(8)
+  div.pl-example_code.pl-code
+    pre
+      code.language-pug
+        | +gef_toc(8)
+
+//- Code
+div.code
+  :marked
+    ## Code
+    ### Pug
+  div.code-pug
+    +usage
+
+//- Usage and accessibility
+:marked
+  ## Usage
+  * Links are displayed in two columns.
+  * On small screens, links appear in a single column.
+  * Each link should be up to 70 characters in length.
+  * Squiz Matrix users:
+    * This component is the primary navigation from the [landing](../templates/landing.html) to its child pages.
+
+  ## Related
+  * [Landing](../templates/landing.html)
