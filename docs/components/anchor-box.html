@@ -53,17 +53,22 @@
                                           <li><a href="../templates/standard-content.html">Standard content</a></li>
                               </ul>
               </li>
-              <li class="current"><a href="../components/banners.html">Components</a>
+              <li class="current"><a href="../components/anchor-box.html">Components</a>
                               <ul>
-                                          <li><a href="../components/banners.html">Banners</a></li>
                                           <li class="current"><a href="../components/anchor-box.html">Anchor box</a></li>
+                                          <li><a href="../components/banners.html">Banners</a></li>
                                           <li><a href="../components/breadcrumbs.html">Breadcrumbs</a></li>
                                           <li><a href="../components/call-out-box.html">Call-out box</a></li>
+                                          <li><a href="../components/expanded-nav.html">Expanded nav</a></li>
+                                          <li><a href="../components/iframe.html">Iframe</a></li>
+                                          <li><a href="../components/image-with-caption.html">Image with caption</a></li>
+                                          <li><a href="../components/landing-header.html">Landing header</a></li>
+                                          <li><a href="../components/lead.html">Lead</a></li>
                                           <li><a href="../components/link-groups.html">Link groups</a></li>
                                           <li><a href="../components/local-footer.html">Local footer</a></li>
                                           <li><a href="../components/show-hide.html">Show/hide</a></li>
+                                          <li><a href="../components/table-of-contents.html">Table of contents</a></li>
                                           <li><a href="../components/tabs.html">Tabs</a></li>
-                                          <li><a href="../components/image-with-caption.html">Image with caption</a></li>
                                           <li><a href="../components/teasers.html">Teasers</a></li>
                               </ul>
               </li>
@@ -86,7 +91,7 @@
             <p class="pl-capitalise">Available in:&nbsp;<span class="pl-pills"><span>Squiz Matrix</span></span></p>
           </header>
           <div class="pl-contents">
-            <div class="content"><div class="pl-example"><div class="pl-example_live"><nav class="gef-anchor-box"><h2 class="uk-h6 gef-anchor-box__title">On this page</h2><ul class="gef-link-list"><li><a href="#">Nam </a></li><li><a href="#">Phasellus rhoncus </a></li><li><a href="#">Nulla non </a></li></ul></nav></div><div class="pl-example_code pl-code"><pre><code class="language-pug">+gef_anchor_box(3)</code></pre></div></div><h2 id="code">Code</h2>
+            <div class="content"><div class="pl-example"><div class="pl-example_live"><nav class="gef-anchor-box"><h2 class="uk-h6 gef-anchor-box__title">On this page</h2><ul class="gef-link-list"><li><a href="#">Nam quis nulla </a></li><li><a href="#">Phasellus rhoncus </a></li><li><a href="#">Nulla </a></li></ul></nav></div><div class="pl-example_code pl-code"><pre><code class="language-pug">+gef_anchor_box(3)</code></pre></div></div><h2 id="code">Code</h2>
 <h3 id="pug">Pug</h3>
 <pre><code class="language-pug">//- Added: 1.0.0 / Updated: 1.0.1
 //- @param {int} num - number of links
@@ -95,7 +100,10 @@
 <li>Anchor boxes are dynamically generated based on the H2 headings on the page. This makes them particularly useful for navigating long content pages.</li>
 <li>Be aware of the number of H2 headings on the content page as they will be automatically listed in the anchor box.</li>
 <li>Use the anchor box as a navigation tool for short FAQ content. You can do this by presenting each question as an H2 heading.</li>
-<li>Squiz Matrix users: anchor boxes automatically appear on standard content pages that contain three or more H2 headings. You can choose to disable them.</li>
+<li>Squiz Matrix users:<ul>
+<li>Anchor boxes automatically appear on standard content pages that contain three or more H2 headings. You can choose to disable them.</li>
+</ul>
+</li>
 </ul>
 <h2 id="accessibility-notes">Accessibility notes</h2>
 <ul>
@@ -110,4 +118,4 @@
     </div>
   </div>
 </body>
-<script src="//dec-ce.bitbucket.io/gef/pattern-library/assets/js/vendor/require.js" data-main="//dec-ce.bitbucket.io/gef/pattern-library/assets/js/main.js" data-site-config-path="" type="text/javascript"></script>
+<script src="//dec-ce.bitbucket.io/gef/pattern-library/assets/js/vendor/require.js?v1.0.2" data-main="//dec-ce.bitbucket.io/gef/pattern-library/assets/js/main.js?v1.0.2" data-site-config-path="" type="text/javascript"></script>
