@@ -39,29 +39,32 @@ order: 2
 
   You would usually achieve this by toggling a class and having the presentation change based on this class, but because of our excellent [Accessibility Standards](https://education.nsw.gov.au/gef/guidelines-and-standards/accessibility), you would also need to toggle the Aria attributes anyway. So to keep things simple we simply style on the Aria attributes as they change states. Example:
 
-  ```sass
-  // SASS
-  .your-container {
+pre
+  code.language-scss
+    | // SASS
+    | .your-container {
+    |    
+    |   [role=tab] {
+    |    // default 'off' state
+    |    
+    |    &[aria-selected=true] {
+    |     // selected/active state
+    |     }
+    |   }
+    |    
+    |   [role=tabpanel] {
+    |     // default hidden state
+    |     display: none;
+    |     
+    |     &[aria-hidden=false] {
+    |       // visible state
+    |       display: block;
+    |     }
+    |   }
+    | }
 
-    [role=tab] {
-      // default 'off' state
+:marked
 
-      &[aria-selected=true] {
-        // selected/active state
-      }
-    }
-
-    [role=tabpanel] {
-      // default hidden state
-      display: none;
-
-      &[aria-hidden=false] {
-        // visible state
-        display: block;
-      }
-    }
-  }
-  ```
   As you can see, no need for classes.
 
   ## Configuration

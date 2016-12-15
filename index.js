@@ -65,6 +65,16 @@ var metalsmith = Metalsmith(__dirname)
   .use(redirect({
     'index.html': 'overview/welcome.html'
   }))
+  // Rename pug files to html. Otherwise prism ignores them.
+  .use((files, metalsmith, done) => {
+    //console.log(files)
+    for (var file in files) {
+      var fileInfo = files[file]
+      console.log(typeof fileInfo.path)
+      //path = filePath.replace('.pug', '.html')
+    }
+    done()
+  })
   .use(prism())
   .use(bsync({
     server:     'docs',

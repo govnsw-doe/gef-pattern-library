@@ -112,29 +112,27 @@
 <h2 id="usage">Usage</h2>
 <p>By following our <a href="#">Coding Guidelines</a>, you will note that our best practice insists on using CSS to show, hide or modify the presentation of an element; and to never modify styles using JS because this places inline CSS in the HTML, and makes it harder to maintain as styling is it two different locations.</p>
 <p>You would usually achieve this by toggling a class and having the presentation change based on this class, but because of our excellent <a href="https://education.nsw.gov.au/gef/guidelines-and-standards/accessibility">Accessibility Standards</a>, you would also need to toggle the Aria attributes anyway. So to keep things simple we simply style on the Aria attributes as they change states. Example:</p>
-<pre><code class="lang-sass">// SASS
+<pre><code class="language-scss">// SASS
 .your-container {
-
+   
   [role=tab] {
-    // default &#39;off&#39; state
-
-    &amp;[aria-selected=true] {
-      // selected/active state
+   // default 'off' state
+   
+   &[aria-selected=true] {
+    // selected/active state
     }
   }
-
+   
   [role=tabpanel] {
     // default hidden state
     display: none;
-
-    &amp;[aria-hidden=false] {
+    
+    &[aria-hidden=false] {
       // visible state
       display: block;
     }
   }
-}
-</code></pre>
-<p>As you can see, no need for classes.</p>
+}</code></pre><p>As you can see, no need for classes.</p>
 <h2 id="configuration">Configuration</h2>
 <h3 id="selectors">Selectors</h3>
 <ul>
