@@ -19,7 +19,7 @@ div.pl-example
     +gef_show_hide(false, 3)
   div.pl-example_code.pl-code
     pre
-      code.language-pug
+      code.language-jade
         | +gef_show_hide(false, 3)
 
 //- Code
@@ -27,13 +27,15 @@ div.code
   :marked
     ## Code
     ### Pug
-  div.code-pug
+  div
     +usage
 
 //- Usage and accessibility
 :marked
   ## Usage
-  * Show/hides enable users to quickly scan titles and select one to reveal its content. Multiple items can be opened at any one time. Show/hides are a good way to create distinct information blocks on a content page.
+  * Show/hides enable users to quickly scan titles and select one to reveal its content.
+  * Multiple items can be opened at any one time.
+  * Show/hides are a good way to create distinct information blocks on a content page.
   * Titles should be short to medium in length (up to 70 characters).
   * Titles should be descriptive of the content it contains so users can easily scan and decide.
   * Keep content bite-sized and quick to read.

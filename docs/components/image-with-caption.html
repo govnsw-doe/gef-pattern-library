@@ -92,18 +92,25 @@
             <p class="pl-capitalise">Available in:&nbsp;<span class="pl-pills"><span>Squiz Matrix</span></span></p>
           </header>
           <div class="pl-contents">
-            <div class="content"><div class="pl-example"><div class="pl-example_live"><div class="gef-image-with-caption"><img src="http://placehold.it/800x400" alt="Placeholder" title="Placeholder image"/><p>Nam quis nulla. Integer malesuada, in enim a arcu imperdiet malesuada. </p></div></div><div class="pl-example_code pl-code"><pre><code class="language-pug">mixin Image
+            <div class="content"><div class="pl-example"><div class="pl-example_live"><div class="gef-image-with-caption"><img src="http://placehold.it/800x400" alt="Placeholder" title="Placeholder image"/><p>Nam quis nulla. Integer malesuada, in enim a arcu imperdiet malesuada. </p></div></div><div class="pl-example_code pl-code"><pre><code class="language-jade">mixin Image
   img(src="http://placehold.it/800x400" alt="Placeholder" title="Placeholder image")
 +gef_image_with_caption</code></pre></div></div><div class="code"><h2 id="code">Code</h2>
 <h3 id="pug">Pug</h3>
-<div class="code-pug"><pre><code class="language-pug">//- Added: 1.0.0
+<div><pre><code class="language-pug">//- Added: 1.0.0
 //- @mixin Image - use this mixin for your image tag
 mixin Image
   img(src="http://placehold.it/800x400" alt="Placeholder" title="Placeholder image")
 +gef_image_with_caption</code></pre></div></div><h2 id="usage">Usage</h2>
 <ul>
-<li>Any image uploaded into a template&rsquo;s main content body should always include a caption.</li>
-<li>The caption should describe the image&rsquo;s purpose or message.</li>
+<li>Images should only be used when they add value and/or provide context to the content (not solely for decoration).</li>
+<li>Any image added to a template&rsquo;s main content body should always include a caption.</li>
+<li>Captions should be useful and succinct (up to 150 characters).</li>
+<li>Captions should give additional background and context.</li>
+<li>Captions for charts or graphs should include a figure number and label text. Example:<ul>
+<li>&ldquo;Figure 1: Components of the Resource Allocation Model explained&rdquo;</li>
+</ul>
+</li>
+<li>You do not need to use a caption if your image is a screenshot that&rsquo;s described by the text that surrounds it.</li>
 </ul>
 <h2 id="accessibility">Accessibility</h2>
 <ul>

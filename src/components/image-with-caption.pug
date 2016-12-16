@@ -21,7 +21,7 @@ div.pl-example
     +gef_image_with_caption
   div.pl-example_code.pl-code
     pre
-      code.language-pug
+      code.language-jade
         | mixin Image
         |   img(src="http://placehold.it/800x400" alt="Placeholder" title="Placeholder image")
         | +gef_image_with_caption
@@ -31,14 +31,19 @@ div.code
   :marked
     ## Code
     ### Pug
-  div.code-pug
+  div
     +usage
 
 //- Usage and accessibility
 :marked
   ## Usage
-  * Any image uploaded into a template&rsquo;s main content body should always include a caption.
-  * The caption should describe the image&rsquo;s purpose or message.
+  * Images should only be used when they add value and/or provide context to the content (not solely for decoration).
+  * Any image added to a template&rsquo;s main content body should always include a caption.
+  * Captions should be useful and succinct (up to 150 characters).
+  * Captions should give additional background and context.
+  * Captions for charts or graphs should include a figure number and label text. Example:
+    * &ldquo;Figure 1: Components of the Resource Allocation Model explained&rdquo;
+  * You do not need to use a caption if your image is a screenshot that&rsquo;s described by the text that surrounds it.
 
   ## Accessibility
   * Do not forget to add appropriate alt text to the image.
