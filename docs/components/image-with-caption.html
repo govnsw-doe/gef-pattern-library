@@ -14,7 +14,7 @@
       <div class="gef-global-header">
         <div class="uk-container uk-container-center">
           <div class="uk-grid uk-grid-collapse">
-            <div class="uk-width-1-1"><a class="gef-global-header__header" href="#" title="NSW Department of Education"><abbr title="NSW Department of Education" aria-hidden="true">NSW DoE</abbr></a></div>
+            <div class="uk-width-1-1"><a class="gef-global-header__header" href="//www.dec.nsw.gov.au" title="NSW Department of Education"><abbr title="NSW Department of Education" aria-hidden="true">NSW DoE</abbr></a></div>
           </div>
         </div>
       </div>
@@ -42,15 +42,15 @@
                                           <li><a href="../design/themes.html">Themes</a></li>
                               </ul>
               </li>
-              <li><a href="../templates/catalogue.html">Templates</a>
+              <li><a href="../templates/a-z.html">Templates</a>
                               <ul>
-                                          <li><a href="../templates/catalogue.html">Catalogue</a></li>
                                           <li><a href="../templates/a-z.html">A-Z</a></li>
+                                          <li><a href="../templates/catalogue.html">Catalogue</a></li>
                                           <li><a href="../templates/landing.html">Landing</a></li>
                                           <li><a href="../templates/news-article.html">News article</a></li>
                                           <li><a href="../templates/news-index.html">News index</a></li>
-                                          <li><a href="../templates/section-homepage.html">Section homepage</a></li>
                                           <li><a href="../templates/search-results.html">Search results</a></li>
+                                          <li><a href="../templates/section-homepage.html">Section homepage</a></li>
                                           <li><a href="../templates/standard-content.html">Standard content</a></li>
                               </ul>
               </li>
@@ -96,11 +96,11 @@
   img(src=<span class="token entity" title="&quot;">&amp;quot;</span>http://placehold.it/800x400<span class="token entity" title="&quot;">&amp;quot;</span> alt=<span class="token entity" title="&quot;">&amp;quot;</span>Placeholder<span class="token entity" title="&quot;">&amp;quot;</span> title=<span class="token entity" title="&quot;">&amp;quot;</span>Placeholder image<span class="token entity" title="&quot;">&amp;quot;</span>)
 +gef_image_with_caption</code></pre></div></div><div class="code"><h2 id="code">Code</h2>
 <h3 id="pug">Pug</h3>
-<div class="code-pug"><pre class="language-pug"><code class="language-pug">//- Added: 1.0.0
-//- @mixin Image - use this mixin for your image tag
-mixin Image
-  img(src=<span class="token entity" title="&quot;">&amp;quot;</span>http://placehold.it/800x400<span class="token entity" title="&quot;">&amp;quot;</span> alt=<span class="token entity" title="&quot;">&amp;quot;</span>Placeholder<span class="token entity" title="&quot;">&amp;quot;</span> title=<span class="token entity" title="&quot;">&amp;quot;</span>Placeholder image<span class="token entity" title="&quot;">&amp;quot;</span>)
-+gef_image_with_caption</code></pre></div></div><h2 id="usage">Usage</h2>
+<div class="code-pug"><pre class="language-jade"><code class="language-jade"><span class="token comment" spellcheck="true">//- Added: 1.0.0</span>
+<span class="token comment" spellcheck="true">//- @mixin Image - use this mixin for your image tag</span>
+<span class="token mixin"><span class="token keyword">mixin</span> <span class="token function">Image</span></span>
+  <span class="token tag">img<span class="token attributes"><span class="token punctuation">(</span><span class="token attr-name">src</span><span class="token punctuation">=</span><span class="token attr-value"><span class="token string">&quot;http://placehold.it/800x400&quot;</span> alt<span class="token operator">=</span><span class="token string">&quot;Placeholder&quot;</span> title<span class="token operator">=</span><span class="token string">&quot;Placeholder image&quot;</span></span><span class="token punctuation">)</span></span></span>
+<span class="token mixin"><span class="token name function">+gef_image_with_caption</span></span></code></pre></div></div><h2 id="usage">Usage</h2>
 <ul>
 <li>Any image uploaded into a template&#x2019;s main content body should always include a caption.</li>
 <li>The caption should describe the image&#x2019;s purpose or message.</li>

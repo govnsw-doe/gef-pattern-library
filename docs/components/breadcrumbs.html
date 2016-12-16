@@ -14,7 +14,7 @@
       <div class="gef-global-header">
         <div class="uk-container uk-container-center">
           <div class="uk-grid uk-grid-collapse">
-            <div class="uk-width-1-1"><a class="gef-global-header__header" href="#" title="NSW Department of Education"><abbr title="NSW Department of Education" aria-hidden="true">NSW DoE</abbr></a></div>
+            <div class="uk-width-1-1"><a class="gef-global-header__header" href="//www.dec.nsw.gov.au" title="NSW Department of Education"><abbr title="NSW Department of Education" aria-hidden="true">NSW DoE</abbr></a></div>
           </div>
         </div>
       </div>
@@ -42,15 +42,15 @@
                                           <li><a href="../design/themes.html">Themes</a></li>
                               </ul>
               </li>
-              <li><a href="../templates/catalogue.html">Templates</a>
+              <li><a href="../templates/a-z.html">Templates</a>
                               <ul>
-                                          <li><a href="../templates/catalogue.html">Catalogue</a></li>
                                           <li><a href="../templates/a-z.html">A-Z</a></li>
+                                          <li><a href="../templates/catalogue.html">Catalogue</a></li>
                                           <li><a href="../templates/landing.html">Landing</a></li>
                                           <li><a href="../templates/news-article.html">News article</a></li>
                                           <li><a href="../templates/news-index.html">News index</a></li>
-                                          <li><a href="../templates/section-homepage.html">Section homepage</a></li>
                                           <li><a href="../templates/search-results.html">Search results</a></li>
+                                          <li><a href="../templates/section-homepage.html">Section homepage</a></li>
                                           <li><a href="../templates/standard-content.html">Standard content</a></li>
                               </ul>
               </li>
@@ -101,10 +101,10 @@
 </div><h2 id="default">Default</h2>
 <div class="pl-example"><div class="pl-example_live"><nav class="gef-breadcrumbs "><h2 class="show-on-sr">Breadcrumb navigation</h2><a class="gef-breadcrumbs__back uk-hidden-large" title="Go back to previous page" href="#"><i class="uk-icon-angle-left" aria-hidden="true"></i>Back</a><ul class="gef-breadcrumbs__list uk-visible-large" role="menubar"><li class="gef-breadcrumbs__item"><a href="#">Fusce consectetuer </a></li><li class="gef-breadcrumbs__item"><a href="#">Morbi gravida </a></li><li class="gef-breadcrumbs__item"><span>Proin mattis </span></li></ul></nav></div><div class="pl-example_code pl-code"><pre class="language-pug"><code class="language-pug">+gef_breadcrumbs(3)</code></pre></div></div><div class="code"><h2 id="code">Code</h2>
 <h3 id="pug">Pug</h3>
-<div class="code-pug"><pre class="language-pug"><code class="language-pug">//- Added: 1.0.0
-//- @param {int}     num      - number of links to display
-//- @param {boolean} enhanced - added JS functionality to force breadcrumbs on one line
-+gef_breadcrumbs(num, enhanced)</code></pre></div></div><h2 id="usage">Usage</h2>
+<div class="code-pug"><pre class="language-jade"><code class="language-jade"><span class="token comment" spellcheck="true">//- Added: 1.0.0</span>
+<span class="token comment" spellcheck="true">//- @param {int}     num      - number of links to display</span>
+<span class="token comment" spellcheck="true">//- @param {boolean} enhanced - added JS functionality to force breadcrumbs on one line</span>
+<span class="token mixin"><span class="token name function">+gef_breadcrumbs</span><span class="token punctuation">(</span>num<span class="token punctuation">,</span> enhanced<span class="token punctuation">)</span></span></code></pre></div></div><h2 id="usage">Usage</h2>
 <ul>
 <li>The current page always appears as the last item in the breadcrumb and should not be linked.</li>
 <li>On small screens, both variations of breadcrumbs change to a single link to the parent page.</li>

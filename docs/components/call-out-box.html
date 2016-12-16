@@ -14,7 +14,7 @@
       <div class="gef-global-header">
         <div class="uk-container uk-container-center">
           <div class="uk-grid uk-grid-collapse">
-            <div class="uk-width-1-1"><a class="gef-global-header__header" href="#" title="NSW Department of Education"><abbr title="NSW Department of Education" aria-hidden="true">NSW DoE</abbr></a></div>
+            <div class="uk-width-1-1"><a class="gef-global-header__header" href="//www.dec.nsw.gov.au" title="NSW Department of Education"><abbr title="NSW Department of Education" aria-hidden="true">NSW DoE</abbr></a></div>
           </div>
         </div>
       </div>
@@ -42,15 +42,15 @@
                                           <li><a href="../design/themes.html">Themes</a></li>
                               </ul>
               </li>
-              <li><a href="../templates/catalogue.html">Templates</a>
+              <li><a href="../templates/a-z.html">Templates</a>
                               <ul>
-                                          <li><a href="../templates/catalogue.html">Catalogue</a></li>
                                           <li><a href="../templates/a-z.html">A-Z</a></li>
+                                          <li><a href="../templates/catalogue.html">Catalogue</a></li>
                                           <li><a href="../templates/landing.html">Landing</a></li>
                                           <li><a href="../templates/news-article.html">News article</a></li>
                                           <li><a href="../templates/news-index.html">News index</a></li>
-                                          <li><a href="../templates/section-homepage.html">Section homepage</a></li>
                                           <li><a href="../templates/search-results.html">Search results</a></li>
+                                          <li><a href="../templates/section-homepage.html">Section homepage</a></li>
                                           <li><a href="../templates/standard-content.html">Standard content</a></li>
                               </ul>
               </li>
@@ -92,19 +92,19 @@
             <p class="pl-capitalise">Available in:&#xA0;<span class="pl-pills"><span>Squiz Matrix</span></span></p>
           </header>
           <div class="pl-contents">
-            <div class="content"><div class="pl-example"><div class="pl-example_live"><div class="gef-call-out-box"><h3>Nam quis nulla </h3><ul class="gef-link-list"><li><a href="#">Phasellus rhoncus aenean id metus id </a></li><li><a href="#">Nulla </a></li></ul></div></div><div class="pl-example_code pl-code"><pre class="language-pug"><code class="language-pug">mixin call_out_box_content
+            <div class="content"><div class="pl-example"><div class="pl-example_live"><div class="gef-call-out-box"><h3>Nam quis nulla </h3><ul class="gef-link-list"><li><a href="#">Phasellus rhoncus aenean </a></li><li><a href="#">Nulla </a></li></ul></div></div><div class="pl-example_code pl-code"><pre class="language-pug"><code class="language-pug">mixin call_out_box_content
   h3
     +lipsum(3, <span class="token entity" title="&quot;">&amp;quot;</span>words<span class="token entity" title="&quot;">&amp;quot;</span>)
   +gef_link_list(2)
 +gef_call_out_box</code></pre></div></div><div class="code"><h2 id="code">Code</h2>
 <h3 id="pug">Pug</h3>
-<div class="code-pug"><pre class="language-pug"><code class="language-pug">//- Added: 1.0.0
-//- @mixin call_out_box_content - use this mixin to put your custom content into the callout box
-mixin call_out_box_content
-  h3
-    +lipsum(3, <span class="token entity" title="&quot;">&amp;quot;</span>words<span class="token entity" title="&quot;">&amp;quot;</span>)
-  +gef_link_list(2)
-+gef_call_out_box</code></pre></div></div><h2 id="usage">Usage</h2>
+<div class="code-pug"><pre class="language-jade"><code class="language-jade"><span class="token comment" spellcheck="true">//- Added: 1.0.0</span>
+<span class="token comment" spellcheck="true">//- @mixin call_out_box_content - use this mixin to put your custom content into the callout box</span>
+<span class="token mixin"><span class="token keyword">mixin</span> <span class="token function">call_out_box_content</span></span>
+  <span class="token tag">h3</span>
+    <span class="token mixin"><span class="token name function">+lipsum</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token string">&quot;words&quot;</span><span class="token punctuation">)</span></span>
+  <span class="token mixin"><span class="token name function">+gef_link_list</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span></span>
+<span class="token mixin"><span class="token name function">+gef_call_out_box</span></span></code></pre></div></div><h2 id="usage">Usage</h2>
 <ul>
 <li>Keep call-out box content succinct, with clear actions for users to take.</li>
 <li>Avoid using multiple call-out boxes on a page. This helps retain the box&#x2019;s visual impact.</li>
