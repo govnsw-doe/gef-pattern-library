@@ -22,7 +22,7 @@
   <div class="uk-container uk-container-center">
     <div class="uk-grid">
       <div class="uk-width-large-3-10">
-        <header class="pl-header" data-gef-aria-toggle>
+        <header class="pl-header" data-gef-aria-toggle="">
           <h1>Global Experience Framework<span>Pattern Library</span></h1>
           <button class="pl-mobile-nav-toggle" href="#navigation" id="navigation-tab" role="tab" aria-controls="navigation" aria-expanded="false">show nav</button>
           <nav class="pl-nav" id="navigation" role="tabpanel" aria-labelledby="navigation-tabtab" aria-hidden="true" aria-label="tabpanel">
@@ -84,33 +84,33 @@
           </nav>
         </header>
       </div>
-      <article class="uk-width-large-7-10" data-gef-external-link-tagger>
+      <article class="uk-width-large-7-10" data-gef-external-link-tagger="">
         <div class="pl-article">
           <header class="pl-component-header">
             <h1>Image with caption</h1>
             <p>A caption describes its associated image so users get a better understanding of its contents and purpose.</p>
-            <p class="pl-capitalise">Available in:&nbsp;<span class="pl-pills"><span>Squiz Matrix</span></span></p>
+            <p class="pl-capitalise">Available in:&#xA0;<span class="pl-pills"><span>Squiz Matrix</span></span></p>
           </header>
           <div class="pl-contents">
-            <div class="content"><div class="pl-example"><div class="pl-example_live"><div class="gef-image-with-caption"><img src="http://placehold.it/800x400" alt="Placeholder" title="Placeholder image"/><p>Nam quis nulla. Integer malesuada, in enim a arcu imperdiet malesuada. </p></div></div><div class="pl-example_code pl-code"><pre><code class="language-jade">mixin Image
-  img(src="http://placehold.it/800x400" alt="Placeholder" title="Placeholder image")
-+gef_image_with_caption</code></pre></div></div><div class="code"><h2 id="code">Code</h2>
+            <div class="content"><div class="pl-example"><div class="pl-example_live"><div class="gef-image-with-caption"><img src="http://placehold.it/800x400" alt="Placeholder" title="Placeholder image"><p>Nam quis nulla. Integer malesuada, in enim a arcu imperdiet malesuada. </p></div></div><div class="pl-example_code pl-code"><pre class="language-jade"><code class="language-jade"><span class="token mixin"><span class="token keyword">mixin</span> <span class="token function">Image</span></span>
+  <span class="token tag">img<span class="token attributes"><span class="token punctuation">(</span><span class="token attr-name">src</span><span class="token punctuation">=</span><span class="token attr-value"><span class="token string">&quot;http://placehold.it/800x400&quot;</span> alt<span class="token operator">=</span><span class="token string">&quot;Placeholder&quot;</span> title<span class="token operator">=</span><span class="token string">&quot;Placeholder image&quot;</span></span><span class="token punctuation">)</span></span></span>
+<span class="token mixin"><span class="token name function">+gef_image_with_caption</span></span></code></pre></div></div><div class="code"><h2 id="code">Code</h2>
 <h3 id="pug">Pug</h3>
-<div><pre><code class="language-pug">//- Added: 1.0.0
+<div><pre class="language-pug"><code class="language-pug">//- Added: 1.0.0
 //- @mixin Image - use this mixin for your image tag
 mixin Image
-  img(src="http://placehold.it/800x400" alt="Placeholder" title="Placeholder image")
+  img(src=<span class="token entity" title="&quot;">&amp;quot;</span>http://placehold.it/800x400<span class="token entity" title="&quot;">&amp;quot;</span> alt=<span class="token entity" title="&quot;">&amp;quot;</span>Placeholder<span class="token entity" title="&quot;">&amp;quot;</span> title=<span class="token entity" title="&quot;">&amp;quot;</span>Placeholder image<span class="token entity" title="&quot;">&amp;quot;</span>)
 +gef_image_with_caption</code></pre></div></div><h2 id="usage">Usage</h2>
 <ul>
 <li>Images should only be used when they add value and/or provide context to the content (not solely for decoration).</li>
-<li>Any image added to a template&rsquo;s main content body should always include a caption.</li>
+<li>Any image added to a template&#x2019;s main content body should always include a caption.</li>
 <li>Captions should be useful and succinct (up to 150 characters).</li>
 <li>Captions should give additional background and context.</li>
 <li>Captions for charts or graphs should include a figure number and label text. Example:<ul>
-<li>&ldquo;Figure 1: Components of the Resource Allocation Model explained&rdquo;</li>
+<li>&#x201C;Figure 1: Components of the Resource Allocation Model explained&#x201D;</li>
 </ul>
 </li>
-<li>You do not need to use a caption if your image is a screenshot that&rsquo;s described by the text that surrounds it.</li>
+<li>You do not need to use a caption if your image is a screenshot that&#x2019;s described by the text that surrounds it.</li>
 </ul>
 <h2 id="accessibility">Accessibility</h2>
 <ul>

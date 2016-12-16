@@ -22,7 +22,7 @@
   <div class="uk-container uk-container-center">
     <div class="uk-grid">
       <div class="uk-width-large-3-10">
-        <header class="pl-header" data-gef-aria-toggle>
+        <header class="pl-header" data-gef-aria-toggle="">
           <h1>Global Experience Framework<span>Pattern Library</span></h1>
           <button class="pl-mobile-nav-toggle" href="#navigation" id="navigation-tab" role="tab" aria-controls="navigation" aria-expanded="false">show nav</button>
           <nav class="pl-nav" id="navigation" role="tabpanel" aria-labelledby="navigation-tabtab" aria-hidden="true" aria-label="tabpanel">
@@ -84,21 +84,21 @@
           </nav>
         </header>
       </div>
-      <article class="uk-width-large-7-10" data-gef-external-link-tagger>
+      <article class="uk-width-large-7-10" data-gef-external-link-tagger="">
         <div class="pl-article">
           <header class="pl-component-header">
             <h1>Iframe</h1>
             <p>An iframe that automatically resizes its contents based on the size of the current page.</p>
-            <p class="pl-capitalise">Available in:&nbsp;<span class="pl-pills"><span>Squiz Matrix</span></span></p>
+            <p class="pl-capitalise">Available in:&#xA0;<span class="pl-pills"><span>Squiz Matrix</span></span></p>
           </header>
           <div class="pl-contents">
-            <div class="content"><div class="pl-example"><div class="pl-example_live"><div class="gef-iframe"><iframe></iframe></div></div><div class="pl-example_code pl-code"><pre><code class="language-jade">+gef_iframe('https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1656.492168468772!2d151.2102228485273!3d-33.86429453481775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12ae164c112efb%3A0x767ee22d5b9385b4!2sDepartment+of+Education+and+Communities!5e0!3m2!1sen!2sau!4v1434517984996')</code></pre></div></div><div class="code"><h2 id="code">Code</h2>
+            <div class="content"><div class="pl-example"><div class="pl-example_live"><div class="gef-iframe"><iframe></iframe></div></div><div class="pl-example_code pl-code"><pre class="language-jade"><code class="language-jade"><span class="token mixin"><span class="token name function">+gef_iframe</span><span class="token punctuation">(</span><span class="token string">&apos;https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1656.492168468772!2d151.2102228485273!3d-33.86429453481775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12ae164c112efb%3A0x767ee22d5b9385b4!2sDepartment+of+Education+and+Communities!5e0!3m2!1sen!2sau!4v1434517984996&apos;</span><span class="token punctuation">)</span></span></code></pre></div></div><div class="code"><h2 id="code">Code</h2>
 <h3 id="pug">Pug</h3>
-<div><pre><code class="language-pug">//- Added: 1.0.0
+<div><pre class="language-pug"><code class="language-pug">//- Added: 1.0.0
 @param {string}  src - the source of the iframe content
 +gef_iframe(src)</code></pre></div></div><h2 id="usage">Usage</h2>
 <ul>
-<li>When the current page&rsquo;s viewport changes, the iframe and its contents will resize accordingly.</li>
+<li>When the current page&#x2019;s viewport changes, the iframe and its contents will resize accordingly.</li>
 </ul>
 </div>
           </div>

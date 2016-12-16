@@ -86,10 +86,7 @@ order: 2
 
   **linked** `{boolean} (false)` set to true to make the _checkpoint_ the href value of the subject anchor tag.
 
-  For example:
-
-  ```
-  // PUG
+  ```jade
   a(href="#yourCheckpoint")
     | I am the subject
   ```
@@ -122,9 +119,7 @@ order: 2
 
   This is used if the _subject_ is outside is *not* a child of the _container_, but the data-attribute must be on the container.
 
-  ```
-  // PUG
-
+  ```jade
   div.your-container(data-gef-scrolltoggle-subject-id="yourSubject")
     div.i-am-a-child-of-your-container
 

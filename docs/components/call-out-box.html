@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <title>Call-out box | GEF Pattern Library</title>
-    <meta name="description" content="The call-out box is useful for directing the user&rsquo;s attention to key content and tasks.">
+    <meta name="description" content="The call-out box is useful for directing the user&#x2019;s attention to key content and tasks.">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="../styles/styles.css?v0.0.1" rel="stylesheet">
@@ -22,7 +22,7 @@
   <div class="uk-container uk-container-center">
     <div class="uk-grid">
       <div class="uk-width-large-3-10">
-        <header class="pl-header" data-gef-aria-toggle>
+        <header class="pl-header" data-gef-aria-toggle="">
           <h1>Global Experience Framework<span>Pattern Library</span></h1>
           <button class="pl-mobile-nav-toggle" href="#navigation" id="navigation-tab" role="tab" aria-controls="navigation" aria-expanded="false">show nav</button>
           <nav class="pl-nav" id="navigation" role="tabpanel" aria-labelledby="navigation-tabtab" aria-hidden="true" aria-label="tabpanel">
@@ -84,30 +84,30 @@
           </nav>
         </header>
       </div>
-      <article class="uk-width-large-7-10" data-gef-external-link-tagger>
+      <article class="uk-width-large-7-10" data-gef-external-link-tagger="">
         <div class="pl-article">
           <header class="pl-component-header">
             <h1>Call-out box</h1>
-            <p>The call-out box is useful for directing the user&rsquo;s attention to key content and tasks.</p>
-            <p class="pl-capitalise">Available in:&nbsp;<span class="pl-pills"><span>Squiz Matrix</span></span></p>
+            <p>The call-out box is useful for directing the user&#x2019;s attention to key content and tasks.</p>
+            <p class="pl-capitalise">Available in:&#xA0;<span class="pl-pills"><span>Squiz Matrix</span></span></p>
           </header>
           <div class="pl-contents">
-            <div class="content"><div class="pl-example"><div class="pl-example_live"><div class="gef-call-out-box"><h3>Nam quis nulla </h3><ul class="gef-link-list"><li><a href="#">Phasellus rhoncus aenean id metus id </a></li><li><a href="#">Nulla non lectus sed nisl </a></li></ul></div></div><div class="pl-example_code pl-code"><pre><code class="language-jade">mixin call_out_box_content
-  h3
-    +lipsum(3, "words")
-  +gef_link_list(2)
-+gef_call_out_box</code></pre></div></div><div class="code"><h2 id="code">Code</h2>
+            <div class="content"><div class="pl-example"><div class="pl-example_live"><div class="gef-call-out-box"><h3>Nam quis nulla </h3><ul class="gef-link-list"><li><a href="#">Phasellus rhoncus aenean id </a></li><li><a href="#">Nulla non </a></li></ul></div></div><div class="pl-example_code pl-code"><pre class="language-jade"><code class="language-jade"><span class="token mixin"><span class="token keyword">mixin</span> <span class="token function">call_out_box_content</span></span>
+  <span class="token tag">h3</span>
+    <span class="token mixin"><span class="token name function">+lipsum</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token string">&quot;words&quot;</span><span class="token punctuation">)</span></span>
+  <span class="token mixin"><span class="token name function">+gef_link_list</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span></span>
+<span class="token mixin"><span class="token name function">+gef_call_out_box</span></span></code></pre></div></div><div class="code"><h2 id="code">Code</h2>
 <h3 id="pug">Pug</h3>
-<div><pre><code class="language-pug">//- Added: 1.0.0
+<div><pre class="language-pug"><code class="language-pug">//- Added: 1.0.0
 //- @mixin call_out_box_content - use this mixin to put your custom content into the callout box
 mixin call_out_box_content
   h3
-    +lipsum(3, "words")
+    +lipsum(3, <span class="token entity" title="&quot;">&amp;quot;</span>words<span class="token entity" title="&quot;">&amp;quot;</span>)
   +gef_link_list(2)
 +gef_call_out_box</code></pre></div></div><h2 id="usage">Usage</h2>
 <ul>
 <li>Keep call-out box content succinct, with clear actions for users to take.</li>
-<li>Avoid using multiple call-out boxes on a page. This helps retain the box&rsquo;s visual impact.</li>
+<li>Avoid using multiple call-out boxes on a page. This helps retain the box&#x2019;s visual impact.</li>
 <li>Place the call-out box towards the end of the content page so users are not directed to other links prematurely.</li>
 </ul>
 <h2 id="how-to-guides">How-to guides</h2>

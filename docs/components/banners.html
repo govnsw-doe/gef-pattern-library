@@ -22,7 +22,7 @@
   <div class="uk-container uk-container-center">
     <div class="uk-grid">
       <div class="uk-width-large-3-10">
-        <header class="pl-header" data-gef-aria-toggle>
+        <header class="pl-header" data-gef-aria-toggle="">
           <h1>Global Experience Framework<span>Pattern Library</span></h1>
           <button class="pl-mobile-nav-toggle" href="#navigation" id="navigation-tab" role="tab" aria-controls="navigation" aria-expanded="false">show nav</button>
           <nav class="pl-nav" id="navigation" role="tabpanel" aria-labelledby="navigation-tabtab" aria-hidden="true" aria-label="tabpanel">
@@ -84,28 +84,28 @@
           </nav>
         </header>
       </div>
-      <article class="uk-width-large-7-10" data-gef-external-link-tagger>
+      <article class="uk-width-large-7-10" data-gef-external-link-tagger="">
         <div class="pl-article">
           <header class="pl-component-header">
             <h1>Banners</h1>
             <p>The banner gives publishers a way to personalise their section homepage with a key message and background image.</p>
-            <p class="pl-capitalise">Available in:&nbsp;<span class="pl-pills"><span>Squiz Matrix</span></span></p>
+            <p class="pl-capitalise">Available in:&#xA0;<span class="pl-pills"><span>Squiz Matrix</span></span></p>
           </header>
           <div class="pl-contents">
             <div class="content"><h2 id="default-banner">Default banner</h2>
-<div class="pl-example"><div class="pl-example_live"><aside class="gef-banner-container"><div class="uk-container uk-container-center"><h2 class="show-on-sr">Featured page</h2><div class="gef-banner"><img src="//placehold.it/1350x520" alt="placeholder banner"/><div class="uk-container gef-banner__content" tabindex="0"><h3 class="gef-banner__content__title">Nam quis nulla..</h3><p>Phasellus rhoncus aenean id metus id velit ullamcorper pulvinar. Vestibulum fermentum tortor id mi. </p><a class="uk-button gef-button gef-button-x-large gef-button-submit-inverse" href="#" title="banner link" aria-label="banner link"> Nulla </a></div></div></div></aside></div><div class="pl-example_code pl-code"><pre><code class="language-jade">+gef_banner("//placehold.it/1350x520")</code></pre></div><ul>
+<div class="pl-example"><div class="pl-example_live"><aside class="gef-banner-container"><div class="uk-container uk-container-center"><h2 class="show-on-sr">Featured page</h2><div class="gef-banner"><img src="//placehold.it/1350x520" alt="placeholder banner"><div class="uk-container gef-banner__content" tabindex="0"><h3 class="gef-banner__content__title">Nam quis nulla..</h3><p>Phasellus rhoncus aenean id metus id velit ullamcorper pulvinar. Vestibulum fermentum tortor id mi. </p><a class="uk-button gef-button gef-button-x-large gef-button-submit-inverse" href="#" title="banner link" aria-label="banner link"> Nulla </a></div></div></div></aside></div><div class="pl-example_code pl-code"><pre class="language-jade"><code class="language-jade"><span class="token mixin"><span class="token name function">+gef_banner</span><span class="token punctuation">(</span><span class="token string">&quot;//placehold.it/1350x520&quot;</span><span class="token punctuation">)</span></span></code></pre></div><ul>
 <li>Keep the title and description text short so they fit inside the key message box.</li>
 <li>The key message button should link to a relevant page within the current section.</li>
-<li>The default banner background image should be 1350 px × 520 px.</li>
+<li>The default banner background image should be 1350 px &#xD7; 520 px.</li>
 </ul>
 </div><h2 id="short-banner">Short banner</h2>
-<div class="pl-example"><div class="pl-example_live"><aside class="gef-banner-container gef-banner-container--small"><div class="uk-container uk-container-center"><h2 class="show-on-sr">Featured page</h2><div class="gef-banner"><img src="//placehold.it/1350x250" alt="placeholder banner"/></div></div></aside></div><div class="pl-code pl-example_code"><pre><code class="language-jade">+gef_banner("//placehold.it/1350x250", true)</code></pre></div><ul>
-<li>The short banner background image should be 1350 px × 250 px.</li>
+<div class="pl-example"><div class="pl-example_live"><aside class="gef-banner-container gef-banner-container--small"><div class="uk-container uk-container-center"><h2 class="show-on-sr">Featured page</h2><div class="gef-banner"><img src="//placehold.it/1350x250" alt="placeholder banner"></div></div></aside></div><div class="pl-code pl-example_code"><pre class="language-jade"><code class="language-jade"><span class="token mixin"><span class="token name function">+gef_banner</span><span class="token punctuation">(</span><span class="token string">&quot;//placehold.it/1350x250&quot;</span><span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">)</span></span></code></pre></div><ul>
+<li>The short banner background image should be 1350 px &#xD7; 250 px.</li>
 <li>This banner is automatically hidden on mobile.</li>
 </ul>
 </div><h2 id="code">Code</h2>
 <h3 id="pug">Pug</h3>
-<pre><code class="language-pug">//- Added: 1.0.0 / Updated: 1.0.1
+<pre class="language-pug"><code class="language-pug">//- Added: 1.0.0 / Updated: 1.0.1
 //- @param {object} image_src - banner image width and height
 //- @param {boolean} small_banner - True if small banner otherwise big banner
 +gef_banner(image_src, small_banner)</code></pre><h2 id="usage">Usage</h2>

@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <title>Aria Toggler | GEF Pattern Library</title>
-    <meta name="description" content="A javascript utility for accessibility which toggles Aria attributes based on a click or 'return' keypress.">
+    <meta name="description" content="A javascript utility for accessibility which toggles Aria attributes based on a click or &apos;return&apos; keypress.">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="../styles/styles.css?v0.0.1" rel="stylesheet">
@@ -22,7 +22,7 @@
   <div class="uk-container uk-container-center">
     <div class="uk-grid">
       <div class="uk-width-large-3-10">
-        <header class="pl-header" data-gef-aria-toggle>
+        <header class="pl-header" data-gef-aria-toggle="">
           <h1>Global Experience Framework<span>Pattern Library</span></h1>
           <button class="pl-mobile-nav-toggle" href="#navigation" id="navigation-tab" role="tab" aria-controls="navigation" aria-expanded="false">show nav</button>
           <nav class="pl-nav" id="navigation" role="tabpanel" aria-labelledby="navigation-tabtab" aria-hidden="true" aria-label="tabpanel">
@@ -84,11 +84,11 @@
           </nav>
         </header>
       </div>
-      <article class="uk-width-large-7-10" data-gef-external-link-tagger>
+      <article class="uk-width-large-7-10" data-gef-external-link-tagger="">
         <div class="pl-article">
           <header class="pl-component-header">
             <h1>Aria Toggler</h1>
-            <p>A javascript utility for accessibility which toggles Aria attributes based on a click or 'return' keypress.</p>
+            <p>A javascript utility for accessibility which toggles Aria attributes based on a click or &apos;return&apos; keypress.</p>
             <p class="pl-capitalise">Versions:<span class="pl-pills"><span>since 1.0.0</span>undefined</span></p>
           </header>
           <div class="pl-contents">
@@ -103,36 +103,35 @@
 <h2 id="how-it-works">How it works</h2>
 <p>Simply put, clicking or pressing of the return/enter keyboard on the Trigger will toggle the following Aria attributes:</p>
 <ul>
-<li>On the Trigger: <code>[aria-expanded]</code> and <code>[aria-selected]</code> toggles between &#39;true&#39; and &#39;false&#39; with false as default.</li>
-<li>On the Responder: <code>[aria-hidden]</code> toggles between &#39;true&#39; and &#39;false&#39; with true as default.</li>
+<li>On the Trigger: <code>[aria-expanded]</code> and <code>[aria-selected]</code> toggles between &apos;true&apos; and &apos;false&apos; with false as default.</li>
+<li>On the Responder: <code>[aria-hidden]</code> toggles between &apos;true&apos; and &apos;false&apos; with true as default.</li>
 </ul>
 <p>The utility looks for the Aria roles <code>[role=tab]</code> (as the Trigger), and <code>[role=tabpanel]</code> (as the Responder), within a container of your choice.</p>
 <h3 id="multiple-pairs">Multiple pairs</h3>
-<p>If the utility finds multiple Triggers within the container, it will look for the corresponding Responder. When a Trigger is clicked it will turn toggle the other pairs to their default &#39;off&#39; state.</p>
+<p>If the utility finds multiple Triggers within the container, it will look for the corresponding Responder. When a Trigger is clicked it will turn toggle the other pairs to their default &apos;off&apos; state.</p>
 <h2 id="usage">Usage</h2>
 <p>By following our <a href="#">Coding Guidelines</a>, you will note that our best practice insists on using CSS to show, hide or modify the presentation of an element; and to never modify styles using JS because this places inline CSS in the HTML, and makes it harder to maintain as styling is it two different locations.</p>
-<p>You would usually achieve this by toggling a class and having the presentation change based on this class, but because of our excellent <a href="https://education.nsw.gov.au/gef/guidelines-and-standards/accessibility">Accessibility Standards</a>, you would also need to toggle the Aria attributes anyway. So to keep things simple we simply style on the Aria attributes as they change states. Example:</p>
-<pre><code class="lang-sass">// SASS
-.your-container {
+<p>You would usually achieve this by toggling a class and having the presentation change based on this class, but because of our excellent <a href="https://education.nsw.gov.au/gef/guidelines-and-standards/accessibility">Accessibility Standards</a>, you would also need to toggle the Aria attributes anyway. So to keep things simple we simply style on the Aria attributes as they change states. SCSS Example:</p>
+<pre class="language-scss"><code class="language-scss"><span class="token selector">.your-container </span><span class="token punctuation">{</span>
 
-  [role=tab] {
-    // default &#39;off&#39; state
+  <span class="token selector">[role=tab] </span><span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// default &apos;off&apos; state</span>
 
-    &amp;[aria-selected=true] {
-      // selected/active state
-    }
-  }
+    <span class="token selector">&amp;[aria-selected=true] </span><span class="token punctuation">{</span>
+      <span class="token comment" spellcheck="true">// selected/active state</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
 
-  [role=tabpanel] {
-    // default hidden state
-    display: none;
+  <span class="token selector">[role=tabpanel] </span><span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// default hidden state</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
 
-    &amp;[aria-hidden=false] {
-      // visible state
-      display: block;
-    }
-  }
-}
+    <span class="token selector">&amp;[aria-hidden=false] </span><span class="token punctuation">{</span>
+      <span class="token comment" spellcheck="true">// visible state</span>
+      <span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <p>As you can see, no need for classes.</p>
 <h2 id="configuration">Configuration</h2>
@@ -142,46 +141,46 @@
 <li><strong>panels</strong> <code>{string} (&quot;[role=tabpanel]&quot;)</code> the responder(s) which are affected by the trigger(s).</li>
 <li><strong>btnclose</strong> <code>{string} (&quot;[data-gef-ariatoggler-closebutton]&quot;)</code> an extra element which works as a close button by only toggling aria states back to the default state.</li>
 </ul>
-<pre><code class="lang-javascript">&quot;yourAriaToggler&quot; : {
-  &quot;selector&quot; : &quot;.your-container&quot;,
-  &quot;script&quot; : &quot;utilities/ariaToggler&quot;,
-  &quot;config&quot; : {
-    &quot;selector&quot;: {
-      triggers:       &quot;[role=tab]&quot;,
-      panels:         &quot;[role=tabpanel]&quot;,
-      btnclose:       &quot;[data-gef-ariatoggler-closebutton]&quot;
-    }
-  }
-}
+<pre class="language-javascript"><code class="language-javascript"><span class="token string">&quot;yourAriaToggler&quot;</span> <span class="token punctuation">:</span> <span class="token punctuation">{</span>
+  <span class="token string">&quot;selector&quot;</span> <span class="token punctuation">:</span> <span class="token string">&quot;.your-container&quot;</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;script&quot;</span> <span class="token punctuation">:</span> <span class="token string">&quot;utilities/ariaToggler&quot;</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;config&quot;</span> <span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;selector&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      triggers<span class="token punctuation">:</span>       <span class="token string">&quot;[role=tab]&quot;</span><span class="token punctuation">,</span>
+      panels<span class="token punctuation">:</span>         <span class="token string">&quot;[role=tabpanel]&quot;</span><span class="token punctuation">,</span>
+      btnclose<span class="token punctuation">:</span>       <span class="token string">&quot;[data-gef-ariatoggler-closebutton]&quot;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <h3 id="options">Options</h3>
 <p><strong>autofocus</strong> <code>{boolean|string} (false)</code> autofocuses the Responder when expanded. Adding a selector (string) will autofocus that element if it exists as a child of the Responder.</p>
-<pre><code class="lang-javascript">&quot;yourAriaToggler&quot; : {
-  &quot;selector&quot; : &quot;.your-container&quot;,
-  &quot;script&quot; : &quot;utilities/ariaToggler&quot;,
-  &quot;config&quot; : {
-    &quot;autofocus&quot; : &quot;.child-element&quot;
-  }
-}
+<pre class="language-javascript"><code class="language-javascript"><span class="token string">&quot;yourAriaToggler&quot;</span> <span class="token punctuation">:</span> <span class="token punctuation">{</span>
+  <span class="token string">&quot;selector&quot;</span> <span class="token punctuation">:</span> <span class="token string">&quot;.your-container&quot;</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;script&quot;</span> <span class="token punctuation">:</span> <span class="token string">&quot;utilities/ariaToggler&quot;</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;config&quot;</span> <span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;autofocus&quot;</span> <span class="token punctuation">:</span> <span class="token string">&quot;.child-element&quot;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <p><strong>click_outside</strong> <code>{boolean} (false)</code> toggles the aria attributes to hide the Responder when clicked anywhere outside the Responder</p>
-<pre><code class="lang-javascript">&quot;yourAriaToggler&quot; : {
-  &quot;selector&quot; : &quot;.your-container&quot;,
-  &quot;script&quot; : &quot;utilities/ariaToggler&quot;,
-  &quot;config&quot; : {
-    &quot;click_outside&quot; : true
-  }
-}
+<pre class="language-javascript"><code class="language-javascript"><span class="token string">&quot;yourAriaToggler&quot;</span> <span class="token punctuation">:</span> <span class="token punctuation">{</span>
+  <span class="token string">&quot;selector&quot;</span> <span class="token punctuation">:</span> <span class="token string">&quot;.your-container&quot;</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;script&quot;</span> <span class="token punctuation">:</span> <span class="token string">&quot;utilities/ariaToggler&quot;</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;config&quot;</span> <span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;click_outside&quot;</span> <span class="token punctuation">:</span> <span class="token boolean">true</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <p><strong>tabindex_toggle</strong> <code>{boolean} (false)</code> toggles the tabindex value from -1 to 0 on the Responder.</p>
 <p>This makes the Responder an element which can be tabbed to when in an non-hidden state.</p>
-<pre><code class="lang-javascript">&quot;yourAriaToggler&quot; : {
-  &quot;selector&quot; : &quot;.your-container&quot;,
-  &quot;script&quot; : &quot;utilities/ariaToggler&quot;,
-  &quot;config&quot; : {
-    &quot;tabindex_toggle&quot; : true
-  }
-}
+<pre class="language-javascript"><code class="language-javascript"><span class="token string">&quot;yourAriaToggler&quot;</span> <span class="token punctuation">:</span> <span class="token punctuation">{</span>
+  <span class="token string">&quot;selector&quot;</span> <span class="token punctuation">:</span> <span class="token string">&quot;.your-container&quot;</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;script&quot;</span> <span class="token punctuation">:</span> <span class="token string">&quot;utilities/ariaToggler&quot;</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;config&quot;</span> <span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;tabindex_toggle&quot;</span> <span class="token punctuation">:</span> <span class="token boolean">true</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 </code></pre>
 </div>
           </div>

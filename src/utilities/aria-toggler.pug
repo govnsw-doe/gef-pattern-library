@@ -37,10 +37,9 @@ order: 2
 
   By following our [Coding Guidelines](#), you will note that our best practice insists on using CSS to show, hide or modify the presentation of an element; and to never modify styles using JS because this places inline CSS in the HTML, and makes it harder to maintain as styling is it two different locations.
 
-  You would usually achieve this by toggling a class and having the presentation change based on this class, but because of our excellent [Accessibility Standards](https://education.nsw.gov.au/gef/guidelines-and-standards/accessibility), you would also need to toggle the Aria attributes anyway. So to keep things simple we simply style on the Aria attributes as they change states. Example:
+  You would usually achieve this by toggling a class and having the presentation change based on this class, but because of our excellent [Accessibility Standards](https://education.nsw.gov.au/gef/guidelines-and-standards/accessibility), you would also need to toggle the Aria attributes anyway. So to keep things simple we simply style on the Aria attributes as they change states. SCSS Example:
 
-  ```sass
-  // SASS
+  ```scss
   .your-container {
 
     [role=tab] {

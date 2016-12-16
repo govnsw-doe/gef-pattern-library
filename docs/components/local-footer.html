@@ -22,7 +22,7 @@
   <div class="uk-container uk-container-center">
     <div class="uk-grid">
       <div class="uk-width-large-3-10">
-        <header class="pl-header" data-gef-aria-toggle>
+        <header class="pl-header" data-gef-aria-toggle="">
           <h1>Global Experience Framework<span>Pattern Library</span></h1>
           <button class="pl-mobile-nav-toggle" href="#navigation" id="navigation-tab" role="tab" aria-controls="navigation" aria-expanded="false">show nav</button>
           <nav class="pl-nav" id="navigation" role="tabpanel" aria-labelledby="navigation-tabtab" aria-hidden="true" aria-label="tabpanel">
@@ -84,27 +84,27 @@
           </nav>
         </header>
       </div>
-      <article class="uk-width-large-7-10" data-gef-external-link-tagger>
+      <article class="uk-width-large-7-10" data-gef-external-link-tagger="">
         <div class="pl-article">
           <header class="pl-component-header">
             <h1>Local footer</h1>
             <p>The local footer shows key links and social profiles for a program, team, or business unit.</p>
-            <p class="pl-capitalise">Available in:&nbsp;<span class="pl-pills"><span>Squiz Matrix</span></span></p>
+            <p class="pl-capitalise">Available in:&#xA0;<span class="pl-pills"><span>Squiz Matrix</span></span></p>
           </header>
           <div class="pl-contents">
-            <div class="content"><div class="pl-example"><div class="pl-example_live"><div class="gef-section-footer"><div class="uk-container uk-container-center"><div class="uk-grid uk-grid-collapse"><div class="uk-width-1-1 uk-width-large-1-2"><nav><h2 class="show-on-sr"> information</h2><ul class="gef-section-footer__list"><li><a href="#">Nam </a></li><li><a href="#">Phasellus </a></li><li><a href="#">Nulla </a></li></ul></nav></div><div class="uk-width-1-1 uk-width-large-1-2"><nav class="gef-social-media"><h3 class="show-on-sr">Social media links</h3><a class="gef-social-media__link uk-icon-facebook" href="#" title="Follow us on Facebook"><span class="uk-hidden">Facebook</span></a><a class="gef-social-media__link uk-icon-youtube" href="#" title="Follow us on YouTube"><span class="uk-hidden">YouTube</span></a></nav></div></div></div></div></div><div class="pl-example_code pl-code"><pre><code class="language-jade">+gef_section_footer("Facebook, YouTube", true)</code></pre></div></div><div class="code"><h2 id="code">Code</h2>
+            <div class="content"><div class="pl-example"><div class="pl-example_live"><div class="gef-section-footer"><div class="uk-container uk-container-center"><div class="uk-grid uk-grid-collapse"><div class="uk-width-1-1 uk-width-large-1-2"><nav><h2 class="show-on-sr"> information</h2><ul class="gef-section-footer__list"><li><a href="#">Nam </a></li><li><a href="#">Phasellus </a></li><li><a href="#">Nulla </a></li></ul></nav></div><div class="uk-width-1-1 uk-width-large-1-2"><nav class="gef-social-media"><h3 class="show-on-sr">Social media links</h3><a class="gef-social-media__link uk-icon-facebook" href="#" title="Follow us on Facebook"><span class="uk-hidden">Facebook</span></a><a class="gef-social-media__link uk-icon-youtube" href="#" title="Follow us on YouTube"><span class="uk-hidden">YouTube</span></a></nav></div></div></div></div></div><div class="pl-example_code pl-code"><pre class="language-jade"><code class="language-jade"><span class="token mixin"><span class="token name function">+gef_section_footer</span><span class="token punctuation">(</span><span class="token string">&quot;Facebook, YouTube&quot;</span><span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">)</span></span></code></pre></div></div><div class="code"><h2 id="code">Code</h2>
 <h3 id="pug">Pug</h3>
-<div><pre><code class="language-pug">//- Added: 1.0.0
+<div><pre class="language-pug"><code class="language-pug">//- Added: 1.0.0
 //- @param {string} channels      - comma delimeted list of social media channels.
-//- Available channels: "Yammer, Twitter, Facebook, YouTube, Instagram, Google Plus"
+//- Available channels: <span class="token entity" title="&quot;">&amp;quot;</span>Yammer, Twitter, Facebook, YouTube, Instagram, Google Plus<span class="token entity" title="&quot;">&amp;quot;</span>
 //- @param {bool} show_link_list  - choose to display the link list
 +gef_section_footer(channels, show_link_list)</code></pre></div></div><h2 id="usage">Usage</h2>
 <ul>
 <li>The local footer works in conjunction with the context set from the section homepage.</li>
 <li>The types of links can include:<ul>
-<li>Occasional content, eg &ldquo;about your team&rdquo;</li>
-<li>Regular updates, eg &ldquo;news&rdquo;</li>
-<li>Key actions, eg &ldquo;contact&rdquo;</li>
+<li>Occasional content, eg &#x201C;about your team&#x201D;</li>
+<li>Regular updates, eg &#x201C;news&#x201D;</li>
+<li>Key actions, eg &#x201C;contact&#x201D;</li>
 </ul>
 </li>
 <li>Each link title should be short and concise.</li>
