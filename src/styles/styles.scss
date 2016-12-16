@@ -63,6 +63,41 @@ Prism Syntax Highlighting CSS
 pre[class^="language-"] {
   background-color: $pl-muted;
   padding: 0;
+  position: relative;
+
+  &:before {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 2px 5px;
+    border: 1px solid #ccd1d9;
+    border-width: 0 0 1px 1px;
+    font-size: 0.8rem;
+    color: $pl-mid-grey;
+  }
+}
+
+pre.language-javascript {
+
+  &:before {
+    content: '.js';
+  }
+}
+
+pre.language-scss {
+
+  &:before {
+    content: '.scss';
+  }
+}
+
+pre.language-jade {
+
+
+  &:before {
+    content: '.pug';
+  }
 }
 
 /* ------------------------------
@@ -153,14 +188,16 @@ hr {
 pre {
   display: block;
   max-width: 100%;
-  overflow-x: auto;
   margin: 20px 0 50px;
   background-color: $pl-muted;
+  border: 1px solid #ccd1d9;
 
   code {
     display: block;
     line-height: 1.86;
     padding: 20px;
+    border: 0;
+    overflow-x: auto;
   }
 }
 
@@ -170,7 +207,6 @@ code {
   color: $pl-darker-grey;
   font-size: 0.85rem;
   background-color: $pl-muted;
-  border: 1px solid #ccd1d9;
   font-family: consolas, courier, monospace;
 }
 
