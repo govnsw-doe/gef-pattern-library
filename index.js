@@ -44,7 +44,7 @@ var metalsmith = Metalsmith(__dirname)
     metalsmith._metadata.templates = null
     metalsmith._metadata.components = null
     metalsmith._metadata.utilities = null
-    metalsmith._metadata.themes = null
+    metalsmith._metadata["education nsw"] = null
     metalsmith._metadata.javascript = null
     done()
   })
