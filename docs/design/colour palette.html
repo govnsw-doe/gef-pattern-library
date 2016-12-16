@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Expanded nav | GEF Pattern Library</title>
-    <meta name="description" content="A simple grid of links with descriptions.">
+    <title>Colour palette | GEF Pattern Library</title>
+    <meta name="description" content='["Enter description here"]'>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="../styles/styles.css?v0.0.1" rel="stylesheet">
@@ -22,7 +22,7 @@
   <div class="uk-container uk-container-center">
     <div class="uk-grid">
       <div class="uk-width-large-3-10">
-        <header class="pl-header" data-gef-aria-toggle="">
+        <header class="pl-header" data-gef-aria-toggle>
           <h1>Global Experience Framework<span>Pattern Library</span></h1>
           <button class="pl-mobile-nav-toggle" href="#navigation" id="navigation-tab" role="tab" aria-controls="navigation" aria-expanded="false">show nav</button>
           <nav class="pl-nav" id="navigation" role="tabpanel" aria-labelledby="navigation-tabtab" aria-hidden="true" aria-label="tabpanel">
@@ -36,12 +36,12 @@
                                   <li><a href="../overview/downloads.html">Downloads</a></li>
                       </ul>
           </li>
-          <li><a href="../design/colour.html">Design</a>
+          <li class="current"><a href="../design/colour.html">Design</a>
                       <ul>
                                   <li><a href="../design/colour.html">Colour</a></li>
                                   <li><a href="../design/education-nsw.html">Education NSW</a></li>
                                   <ul>
-                                              <li><a href="../design/colour palette.html">Colour palette</a></li>
+                                              <li class="current"><a href="../design/colour palette.html">Colour palette</a></li>
                                               <li><a href="../design/example-sub-page.html">Typography</a></li>
                                   </ul>
                       </ul>
@@ -58,13 +58,13 @@
                                   <li><a href="../templates/standard-content.html">Standard content</a></li>
                       </ul>
           </li>
-          <li class="current"><a href="../components/anchor-box.html">Components</a>
+          <li><a href="../components/anchor-box.html">Components</a>
                       <ul>
                                   <li><a href="../components/anchor-box.html">Anchor box</a></li>
                                   <li><a href="../components/banners.html">Banners</a></li>
                                   <li><a href="../components/breadcrumbs.html">Breadcrumbs</a></li>
                                   <li><a href="../components/call-out-box.html">Call-out box</a></li>
-                                  <li class="current"><a href="../components/expanded-nav.html">Expanded nav</a></li>
+                                  <li><a href="../components/expanded-nav.html">Expanded nav</a></li>
                                   <li><a href="../components/iframe.html">Iframe</a></li>
                                   <li><a href="../components/image-with-caption.html">Image with caption</a></li>
                                   <li><a href="../components/landing-header.html">Landing header</a></li>
@@ -90,43 +90,13 @@
           </nav>
         </header>
       </div>
-      <article class="uk-width-large-7-10" data-gef-external-link-tagger="">
+      <article class="uk-width-large-7-10" data-gef-external-link-tagger>
         <div class="pl-article">
-          <header class="pl-component-header">
-            <h1>Expanded nav</h1>
-            <p>A simple grid of links with descriptions.</p>
-            <p class="pl-capitalise">Available in:&#xA0;<span class="pl-pills"><span>Squiz Matrix</span></span></p>
+          <header>
+            <h1>Education.nsw colour palette</h1>
           </header>
           <div class="pl-contents">
-            <div class="content"><h2 id="example">Example</h2>
-<div class="pl-example"><div class="pl-example_live"><ul class="gef-expanded-nav"><li class="gef-expanded-nav__item "><h3><a href="#">Nam quis nulla Integer </a></h3><p>Phasellus rhoncus aenean id metus id velit ullamcorper pulvinar. Vestibulum fermentum tortor.</p></li><li class="gef-expanded-nav__item "><h3><a href="#">Nulla non lectus sed </a></h3><p>Maecenas sollicitudin nullam rhoncus aliquam metus. Etiam egestas wisi a erat. Lorem.</p></li><li class="gef-expanded-nav__item "><h3><a href="#">Nullam feugiat turpis at </a></h3><p>Fusce nibh, curabitur sagittis hendrerit ante. Aliquam erat volutpat. Vestibulum erat nulla,.</p></li></ul></div><div class="pl-example_code pl-code"><pre class="language-jade"><code class="language-jade"><span class="token mixin"><span class="token name function">+gef_expanded_nav</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span></span></code></pre></div></div><div class="code"><h2 id="code">Code</h2>
-<h3 id="pug">Pug</h3>
-<div><pre class="language-jade"><code class="language-jade"><span class="token comment" spellcheck="true">//- Added: 1.0.0</span>
-<span class="token comment" spellcheck="true">//-  @param {integer}  num - number of navs</span>
-<span class="token comment" spellcheck="true">//- @param {object}  options - options for the different variations of this pattern</span>
-<span class="token comment" spellcheck="true">//- @param {boolean}  options.hide_mobile_description - hide description on mobile</span>
-<span class="token comment" spellcheck="true">//- @param {object}  options.image_size - activates thumbnail</span>
-<span class="token comment" spellcheck="true">//- @param {string}  options.image_size.width - width of thumb</span>
-<span class="token comment" spellcheck="true">//- @param {string}  options.image_size.height - height of thumb</span>
-<span class="token comment" spellcheck="true">//- @param {string}  options.extra_classes - add extra classes to the individual expanded nav items</span>
-<span class="token mixin"><span class="token name function">+gef_expanded_nav</span><span class="token punctuation">(</span>num<span class="token punctuation">,</span> options<span class="token punctuation">)</span></span></code></pre></div></div><h2 id="usage">Usage</h2>
-<ul>
-<li>Each link should be up to 70 characters in length.</li>
-<li>Each description should be up to 150 characters in length.</li>
-<li>Provide a concise and useful description to give users more information about the link&#x2019;s content.</li>
-<li>Each row can contain up to 4 fours before breaking into a new line.</li>
-<li>On small screens, the grid switches to a list format.</li>
-<li>Thumbnails can be enabled for every link.</li>
-<li>Squiz Matrix users:<ul>
-<li>This component is the primary navigation for a section (see <a href="../templates/section-homepage.html">section homepage</a>).</li>
-<li>Maximum number of links: 20</li>
-</ul>
-</li>
-</ul>
-<h2 id="related">Related</h2>
-<ul>
-<li><a href="../templates/section-homepage.html">Section homepage</a></li>
-</ul>
+            <div class="content"><p>Education.nsw colour palette</p>
 </div>
           </div>
         </div>
