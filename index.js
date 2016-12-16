@@ -10,6 +10,10 @@ var async       = require('async'),
     prism       = require('metalsmith-prism'),
     redirect    = require('metalsmith-redirect')
 
+require('marked').setOptions({
+  langPrefix: 'language-'
+})
+
 
 
 /**
@@ -25,7 +29,7 @@ var metalsmith = Metalsmith(__dirname)
   .clean(true)
   .use(drafts())
   .use(sass({
-    includePaths: ['bower_components/gef/src/assets/sass/', '../../bower_components', '../bower_components/', 'bower_components/' ]
+    includePaths: ['bower_components/gef/src/assets/sass/', '../../bower_components', '../bower_components/', 'bower_components/']
   }))
   .use(babel({
     "plugins": ["transform-es2015-modules-amd"]
@@ -40,6 +44,8 @@ var metalsmith = Metalsmith(__dirname)
     metalsmith._metadata.templates = null
     metalsmith._metadata.components = null
     metalsmith._metadata.utilities = null
+    metalsmith._metadata["education nsw"] = null
+    metalsmith._metadata.javascript = null
     done()
   })
   .use(collections({
@@ -65,6 +71,18 @@ var metalsmith = Metalsmith(__dirname)
   .use(redirect({
     'index.html': 'overview/welcome.html'
   }))
+  // Rename pug files to html. Otherwise prism ignores them.
+  .use((files, metalsmith, done) => {
+    for (var file in files) {
+      var fileInfo = files[file],
+          filePath = fileInfo.path
+      if (filePath !== undefined) {
+        var newPath = filePath.replace('.pug', '.html')
+      }
+      fileInfo.path = newPath
+    }
+    done()
+  })
   .use(prism())
   .use(bsync({
     server:     'docs',

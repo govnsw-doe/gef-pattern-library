@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Welcome | GEF Pattern Library</title>
-    <meta name="description" content='["Enter description here"]'>
+    <title>Javascript | GEF Pattern Library</title>
+    <meta name="description" content="Everything you need to know about making use of our JS Utilities">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="../styles/styles.css?v0.0.1" rel="stylesheet">
@@ -22,15 +22,15 @@
   <div class="uk-container uk-container-center">
     <div class="uk-grid">
       <div class="uk-width-large-3-10">
-        <header class="pl-header" data-gef-aria-toggle>
+        <header class="pl-header" data-gef-aria-toggle="">
           <h1>Global Experience Framework<span>Pattern Library</span></h1>
           <button class="pl-mobile-nav-toggle" href="#navigation" id="navigation-tab" role="tab" aria-controls="navigation" aria-expanded="false">show nav</button>
           <nav class="pl-nav" id="navigation" role="tabpanel" aria-labelledby="navigation-tabtab" aria-hidden="true" aria-label="tabpanel">
             <h2 class="uk-hidden">Navigation</h2>
             <ul>
-          <li class="current"><a href="../overview/welcome.html">Overview</a>
+          <li><a href="../overview/welcome.html">Overview</a>
                       <ul>
-                                  <li class="current"><a href="../overview/welcome.html">Welcome</a></li>
+                                  <li><a href="../overview/welcome.html">Welcome</a></li>
                                   <li><a href="../overview/what-are-patterns.html">What are patterns</a></li>
                                   <li><a href="../overview/guidelines-for-publishers.html">Guidelines for publishers</a></li>
                                   <li><a href="../overview/downloads.html">Downloads</a></li>
@@ -76,9 +76,9 @@
                                   <li><a href="../components/teasers.html">Teasers</a></li>
                       </ul>
           </li>
-          <li><a href="../utilities/javascript.html">Utilities</a>
+          <li class="current"><a href="../utilities/javascript.html">Utilities</a>
                       <ul>
-                                  <li><a href="../utilities/javascript.html">Javascript</a></li>
+                                  <li class="current"><a href="../utilities/javascript.html">Javascript</a></li>
                                   <ul>
                                               <li><a href="../utilities/scroll-toggle.html">Scroll Toggle</a></li>
                                               <li><a href="../utilities/aria-toggler.html">Aria Toggler</a></li>
@@ -89,42 +89,53 @@
           </nav>
         </header>
       </div>
-      <article class="uk-width-large-7-10" data-gef-external-link-tagger>
+      <article class="uk-width-large-7-10" data-gef-external-link-tagger="">
         <div class="pl-article">
           <header>
-            <h1>Welcome to the GEF Pattern Library</h1>
+            <h1>Javascript</h1>
           </header>
           <div class="pl-contents">
-            <div class="content"><p>The pattern library is part of our <a href="https://education.nsw.gov.au/gef">Global Experience Framework</a> (GEF).</p>
-<p>Here you will find reusable user interface elements that you can use for web projects at the NSW Department of Education.</p>
-<h2 id="why-use-the-pattern-library-">Why use the pattern library?</h2>
+            <div class="content"><p><strong>Everything you need to know about making use of our JS Utilities.</strong></p>
 <ul>
-<li>Create a consistent and cohesive experience across NSW Department of Education websites.</li>
-<li>Share a vocabulary between designers, developers, content authors, and publishers.</li>
-<li>Rapidly deploy web projects using quality-assured and accessible UI elements.</li>
-<li>Benefit from future improvements we make to these patterns.</li>
+<li>Utilities are scripts designed for non-specific scenarios.</li>
+<li>They are designed for reusability across multiple scenarios.</li>
+<li>They are built to reduce the amount of JS required for simple DOM manipulations.</li>
+<li>They are unit-tested for reliability.</li>
+<li>They are loaded on a per-use basis, using <a href="http://requirejs.org/">RequireJS</a></li>
+<li>They can be extended, improved and refactored if necessary.</li>
+<li>They are easy to use.</li>
 </ul>
 <h2 id="getting-started">Getting started</h2>
-<h3 id="designers">Designers</h3>
-<ul>
-<li>Familiarise yourself with the <a href="../design/themes.html">theme</a> you&rsquo;ll be working with.</li>
-</ul>
-<h3 id="developers">Developers</h3>
-<ul>
-<li>See how we use pug to generate our templates and components.</li>
-</ul>
-<h3 id="content-authors-and-publishers">Content authors and publishers</h3>
-<ul>
-<li>Understand how we distinguish between <a href="what-are-patterns.html">templates and components</a>.</li>
-<li>Refer to our <a href="guidelines-for-publishers.html">guidelines</a> for using patterns in various content scenarios.</li>
-</ul>
-<h3 id="testers">Testers</h3>
-<ul>
-<li>Learn about how our patterns are expected to behave, including their accessibility requirements.</li>
-</ul>
-<p>&nbsp;</p>
-<hr>
-<p>GEF is a comprehensive framework that includes user experience research, design principles, writing guidelines, and our development standards. Learn more at the <a href="https://education.nsw.gov.au/gef">GEF website</a>.</p>
+<p>All our <a href="https://govnsw-doe.github.io/gef-pattern-library/templates/a-z.html">templates</a> use <a href="http://requirejs.org/">RequireJS</a> to run component and utility scripts when triggered by a selector in the DOM.</p>
+<p>You can add to these scripts by adding to the <code>siteConfig.js</code> configuration object, which by default is located in <code>assets/js/config/</code>, but can be changed to whatever path you want using the data-attribute on the RequireJS script tag. Using pug: </p>
+<pre class="language-jade"><code class="language-jade"><span class="token tag">script<span class="token attributes"><span class="token punctuation">(</span><span class="token attr-name">src</span><span class="token punctuation">=</span><span class="token attr-value"><span class="token string">&quot;//dec-ce.bitbucket.io/gef/pattern-library/assets/js/vendor/require.js&quot;</span> data<span class="token operator">-</span>main<span class="token operator">=</span><span class="token string">&quot;//dec-ce.bitbucket.io/gef/pattern-library/assets/js/main.js&quot;</span> data<span class="token operator">-</span>site<span class="token operator">-</span>config<span class="token operator">-</span>path<span class="token operator">=</span><span class="token string">&quot;[your path here]&quot;</span> type<span class="token operator">=</span><span class="token string">&quot;text/javascript&quot;</span></span><span class="token punctuation">)</span></span></span>
+</code></pre>
+<h2 id="loading-a-utility">Loading a Utility</h2>
+<p>In the siteConfig.js <code>components</code> object, you can add new use-cases for utilities.</p>
+<pre class="language-javascript"><code class="language-javascript"><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+components <span class="token punctuation">:</span> <span class="token punctuation">{</span>
+  <span class="token string">&quot;a-name-to-identify-the-use-case-of-this-utility&quot;</span> <span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;selector&quot;</span> <span class="token punctuation">:</span> <span class="token string">&quot;jquery-selector-string&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;script&quot;</span> <span class="token punctuation">:</span> <span class="token string">&quot;utilities/name-of-utility-without-.js&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;config&quot;</span> <span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token comment" spellcheck="true">// utility configuration options</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;another-use-case&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+</code></pre>
+<h2 id="leveraging-a-utility-in-another-script-">Leveraging a Utility in another script.</h2>
+<p><strong>This is typically for use by in-house developers working on <a href="https://bitbucket.org/dec-ce/gef">GEF</a> or GEF themed repositories</strong></p>
+<p>Utilities can be loaded as Classes into other scripts. This is simply importing the script.</p>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">import</span> AriaToggler <span class="token keyword">from</span> <span class="token string">&quot;utilities/ariaToggler&quot;</span>
+</code></pre>
+<p>And using it like so:</p>
+<pre class="language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">// Instantiate the toggler</span>
+<span class="token keyword">this</span><span class="token punctuation">.</span>toggle <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">AriaToggler</span><span class="token punctuation">(</span>selector<span class="token punctuation">,</span> config<span class="token punctuation">)</span>
+</code></pre>
 </div>
           </div>
         </div>

@@ -34,7 +34,7 @@ $pl-muted:                #f0f1f4;
 $pl-mid-grey:             #767676;
 $pl-dark-grey:            #4a4a4a;
 $pl-darker-grey:          #333;
-$pl-highlight:            #44b9b9;
+$pl-highlight:            #767676;
 
 $pl-header-bg:            $pl-white;
 $pl-subheader-color:      $pl-black;
@@ -55,7 +55,18 @@ $pl-mobile-nav-toggle-icon-active:      $pl-black;
 $pl-text-color:           $pl-darker-grey;
 
 /* ------------------------------
-Imports from bower_components
+Prism Syntax Highlighting CSS
+-------------------------------- */
+
+@import '../../node_modules/prismjs/themes/prism';
+
+pre[class^="language-"] {
+  background-color: $pl-muted;
+  padding: 0;
+}
+
+/* ------------------------------
+Imports from GEF
 -------------------------------- */
 
 // GEF usefuls
@@ -428,17 +439,22 @@ blockquote {
       width: auto;
     }
   }
-}
 
-// .pl-muted-bg {
-//   background-color: $pl-muted;
-// }
+  > ul ul ul {
 
-.pl-highlighted {
-  background-color: $pl-highlight;
+    li {
 
-  * {
-    color: #fff;
+      a {
+        font-size: 0.8rem;
+        padding: 8px $pl-spacing-h;
+
+        &:before {
+          content: '\2013';
+          display: inline-block;
+          margin-right: 0.6rem;
+        }
+      }
+    }
   }
 }
 

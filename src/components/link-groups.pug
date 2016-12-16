@@ -3,7 +3,7 @@ layout: component.pug
 collection: components
 title: Link groups
 display_title: Link groups
-description: Link groups promote useful links to a section&rsquo;s audience groups.
+description: Link groups promote useful links to specific audience groups.
 available: <span>Squiz Matrix</span>
 ---
 
@@ -20,7 +20,7 @@ div.pl-example
     +gef_linkgroup_list(3, 3)
   div.pl-example_code.pl-code
     pre
-      code.language-pug
+      code.language-jade
         | +gef_linkgroup_list(3, 3)
 
 //- Code
@@ -28,7 +28,7 @@ div.code
   :marked
     ## Code
     ### Pug
-  div.code-pug
+  div
     +usage
 
 //- Usage and accessibility
@@ -43,7 +43,7 @@ div.code
   * Suggested link groups: popular information, key tasks, common systems.
   * Squiz Matrix users:
     * Link groups are only available on the section homepage template.
-    * Each list’s title is automatically prefixed with the label &ldquo;For&rdquo;.
+    * Each list&rsquo;s title is automatically prefixed with the label &ldquo;For&rdquo;.
 
   ## How-to guides
   Learn how to use link groups in:

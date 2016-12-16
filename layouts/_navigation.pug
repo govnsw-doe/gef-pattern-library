@@ -1,15 +1,70 @@
 //-
   - @function lowerme(string)
-  - @desc     set a string to lowercase
+  - @desc set a string to lowercase
+  -
+  - @param {string} the string to lowercase
 - function lowerme(string) {
 -   return string.toString().toLowerCase()
 - }
 
 //-
   - @function getPath(page)
-  - @desc
+  - @desc get a properly formatted url from a pug file
+  - 
+  - @param {object} page - the current metalsmith page object
 - function getPath(page)  {
 -    return '../' + page.path.replace('.pug', '.html')
+- }
+
+//-
+  - @function checkSubPage(thisCollection)
+  - @desc returns true if the current collection is the same as a page in thisCollection
+  - 
+  - @param {object} thisCollection - the collection to loop through in order to find a page to match the current page's collection name
+- function checkSubPage(thisCollection) {
+  - for (var o = 0; o < thisCollection.length; o++) 
+    - if (lowerme(thisCollection[o].title) == lowerme(collection))
+      - return true
+  - 
+- }
+
+//- @function buildNav(arr, sub)
+  - @desc loops through array and creates links based on pages within collections 
+  -
+  - @param {array} nav - collection array to loop through
+  - @param {array} subnav - collections array for a sub navigation 
+- function buildNav(nav, subnav)  {
+  - for (var i = 0; i < nav.length; i++)
+    - var category = lowerme(nav[i])
+    - var thisCollection = collections[category]
+
+    mixin nav_items
+      a(href= getPath(thisCollection[0]))= nav[i]
+
+      ul
+        - for (var o = 0; o < thisCollection.length; o++)
+          - var page = thisCollection[o]
+          +create_nav_link(page)
+
+          - var subnavIndex = subnav.indexOf(page.title)
+          - if (subnavIndex !== -1) 
+            - var subCategory = lowerme(subnav[subnavIndex])
+            - var subCollection = collections[subCategory]
+              +sub_nav_items(subCollection)
+            
+
+    mixin sub_nav_items(subCollection)
+      ul
+        - for (var p = 0; p < subCollection.length; p++)
+          - var subPage = subCollection[p]
+          +create_nav_link(subPage)
+    
+    - if (category === lowerme(collection) || checkSubPage(thisCollection))
+      li.current
+        +nav_items
+    - else
+      li
+        +nav_items
 - }
 
 
@@ -30,6 +85,7 @@ mixin create_nav_link(page)
 
 
 - var collectionCategories = ["Overview", "Design", "Templates", "Components", "Utilities"]
+- var collectionSubCatergories = ["Javascript", "Education NSW"];
 
 button.pl-mobile-nav-toggle(href="#navigation", id="navigation-tab" role="tab", aria-controls="navigation", aria-expanded="false")
   | show nav
@@ -38,22 +94,7 @@ nav.pl-nav(id="navigation", role="tabpanel", aria-labelledby="navigation-tabtab"
   h2.uk-hidden Navigation
   ul
     //- loop through collection names and output the links
-    - for (var i = 0; i < collectionCategories.length; i++)
-      - var category = lowerme(collectionCategories[i])
-      - var this_collection = collections[category]
-
-      mixin nav_item
-        a(href= getPath(this_collection[0]))= collectionCategories[i]
-        ul
-          - for (var o = 0; o < this_collection.length; o++)
-            +create_nav_link(this_collection[o])
-
-      - if (category === lowerme(collection))
-        li.current
-          +nav_item
-      - else
-        li
-          +nav_item
+    - buildNav(collectionCategories, collectionSubCatergories)
 
 
 

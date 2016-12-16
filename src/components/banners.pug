@@ -21,7 +21,7 @@ div.pl-example
     +gef_banner("//placehold.it/1350x520")
   div.pl-example_code.pl-code
     pre
-      code.language-pug
+      code.language-jade
         | +gef_banner("//placehold.it/1350x520")
   :marked
     * Keep the title and description text short so they fit inside the key message box.
@@ -30,17 +30,17 @@ div.pl-example
 
 :marked
   ## Short banner
-  Automatically hidden on mobile
 
 div.pl-example
   div.pl-example_live
     +gef_banner("//placehold.it/1350x250", true)
   div.pl-code.pl-example_code
     pre
-      code.language-pug
+      code.language-jade
         | +gef_banner("//placehold.it/1350x250", true)
   :marked
     * The short banner background image should be 1350 px × 250 px.
+    * This banner is automatically hidden on mobile.
 
 //- Code
 :marked
@@ -51,6 +51,10 @@ div.pl-example
 //- Usage and accessibility
 :marked
   ## Usage
+  * The banner can be used in various ways:
+    * introduce a program, team, or business unit.
+    * link to a key announcement.
+    * link to seasonal content.
   * There are two types of banners:
     * Default: a taller image banner with space for a key message.
     * Short: a shorter, image-only banner.

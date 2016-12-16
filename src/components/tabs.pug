@@ -19,7 +19,7 @@ div.pl-example
     +gef_tabs(3)
   div.pl-example_code.pl-code
     pre
-      code.language-pug
+      code.language-jade
         | +gef_tabs(3)
 
 //- Code
@@ -27,7 +27,7 @@ div.code
   :marked
     ## Code
     ### Pug
-  div.code-pug
+  div
     +usage
 
 //- Usage and accessibility
@@ -36,7 +36,7 @@ div.code
   * The title for each tab should be short (up to 25 characters).
   * Titles should be descriptive of the content contained in the tab.
   * A group of tabs should contain content that highly relate to one another.
-  * In small screens, tabs will appear as an accordion.
+  * On small screens, tabs will appear as an accordion, where only one item can be opened at any one time.
   * Squiz Matrix users:
     * Each group of tabs can contain a maximum of 4 tabs.
 
