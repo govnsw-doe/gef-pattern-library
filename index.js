@@ -10,16 +10,14 @@ var async       = require('async'),
     prism       = require('metalsmith-prism'),
     redirect    = require('metalsmith-redirect')
 
+// set the code prefix for markdown to work with prism
 require('marked').setOptions({
   langPrefix: 'language-'
 })
 
-
-
 /**
  * The build.
  */
-
 var metalsmith = Metalsmith(__dirname)
   .metadata({
     sitename: 'GEF Pattern Library'
