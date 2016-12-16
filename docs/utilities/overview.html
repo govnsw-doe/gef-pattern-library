@@ -22,7 +22,7 @@
   <div class="uk-container uk-container-center">
     <div class="uk-grid">
       <div class="uk-width-large-3-10">
-        <header class="pl-header" data-gef-aria-toggle>
+        <header class="pl-header" data-gef-aria-toggle="">
           <h1>Global Experience Framework<span>Pattern Library</span></h1>
           <button class="pl-mobile-nav-toggle" href="#navigation" id="navigation-tab" role="tab" aria-controls="navigation" aria-expanded="false">show nav</button>
           <nav class="pl-nav" id="navigation" role="tabpanel" aria-labelledby="navigation-tabtab" aria-hidden="true" aria-label="tabpanel">
@@ -42,15 +42,15 @@
                                           <li><a href="../design/themes.html">Themes</a></li>
                               </ul>
               </li>
-              <li><a href="../templates/a-z.html">Templates</a>
+              <li><a href="../templates/catalogue.html">Templates</a>
                               <ul>
-                                          <li><a href="../templates/a-z.html">A-Z</a></li>
                                           <li><a href="../templates/catalogue.html">Catalogue</a></li>
+                                          <li><a href="../templates/a-z.html">A-Z</a></li>
                                           <li><a href="../templates/landing.html">Landing</a></li>
                                           <li><a href="../templates/news-article.html">News article</a></li>
                                           <li><a href="../templates/news-index.html">News index</a></li>
-                                          <li><a href="../templates/search-results.html">Search results</a></li>
                                           <li><a href="../templates/section-homepage.html">Section homepage</a></li>
+                                          <li><a href="../templates/search-results.html">Search results</a></li>
                                           <li><a href="../templates/standard-content.html">Standard content</a></li>
                               </ul>
               </li>
@@ -84,7 +84,7 @@
           </nav>
         </header>
       </div>
-      <article class="uk-width-large-7-10" data-gef-external-link-tagger>
+      <article class="uk-width-large-7-10" data-gef-external-link-tagger="">
         <div class="pl-article">
           <header>
             <h1>Overview</h1>
@@ -102,35 +102,34 @@
 </ul>
 <h2 id="getting-started">Getting started</h2>
 <p>All our <a href="https://govnsw-doe.github.io/gef-pattern-library/templates/a-z.html">templates</a> use <a href="http://requirejs.org/">RequireJS</a> to run component and utility scripts when triggered by a selector in the DOM.</p>
-<p>You can add to these scripts by adding to the <code>siteConfig.js</code> configuration object, which by default is located in <code>assets/js/config/</code>, but can be changed to whatever path you want using the data-attribute on the RequireJS script tag.</p>
-<pre><code class="lang-pug">// PUG
-script(src=&quot;//dec-ce.bitbucket.io/gef/pattern-library/assets/js/vendor/require.js&quot; data-main=&quot;//dec-ce.bitbucket.io/gef/pattern-library/assets/js/main.js&quot; data-site-config-path=&quot;[your path here]&quot; type=&quot;text/javascript&quot;)
+<p>You can add to these scripts by adding to the <code>siteConfig.js</code> configuration object, which by default is located in <code>assets/js/config/</code>, but can be changed to whatever path you want using the data-attribute on the RequireJS script tag. Using pug: </p>
+<pre class="language-jade"><code class="language-jade"><span class="token tag">script<span class="token attributes"><span class="token punctuation">(</span><span class="token attr-name">src</span><span class="token punctuation">=</span><span class="token attr-value"><span class="token string">&quot;//dec-ce.bitbucket.io/gef/pattern-library/assets/js/vendor/require.js&quot;</span> data<span class="token operator">-</span>main<span class="token operator">=</span><span class="token string">&quot;//dec-ce.bitbucket.io/gef/pattern-library/assets/js/main.js&quot;</span> data<span class="token operator">-</span>site<span class="token operator">-</span>config<span class="token operator">-</span>path<span class="token operator">=</span><span class="token string">&quot;[your path here]&quot;</span> type<span class="token operator">=</span><span class="token string">&quot;text/javascript&quot;</span></span><span class="token punctuation">)</span></span></span>
 </code></pre>
 <h2 id="loading-a-utility">Loading a Utility</h2>
 <p>In the siteConfig.js <code>components</code> object, you can add new use-cases for utilities.</p>
-<pre><code class="lang-javascript">...
-components : {
-  &quot;a-name-to-identify-the-use-case-of-this-utility&quot; : {
-    &quot;selector&quot; : &quot;jquery-selector-string&quot;,
-    &quot;script&quot; : &quot;utilities/name-of-utility-without-.js&quot;,
-    &quot;config&quot; : {
-      // utility configuration options
-    }
-  },
-  &quot;another-use-case&quot;: {
-    ...
-  }
-},
-...
+<pre class="language-javascript"><code class="language-javascript"><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+components <span class="token punctuation">:</span> <span class="token punctuation">{</span>
+  <span class="token string">&quot;a-name-to-identify-the-use-case-of-this-utility&quot;</span> <span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;selector&quot;</span> <span class="token punctuation">:</span> <span class="token string">&quot;jquery-selector-string&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;script&quot;</span> <span class="token punctuation">:</span> <span class="token string">&quot;utilities/name-of-utility-without-.js&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;config&quot;</span> <span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token comment" spellcheck="true">// utility configuration options</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;another-use-case&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
 </code></pre>
 <h2 id="leveraging-a-utility-in-another-script-">Leveraging a Utility in another script.</h2>
 <p><strong>This is typically for use by in-house developers working on <a href="https://bitbucket.org/dec-ce/gef">GEF</a> or GEF themed repositories</strong></p>
 <p>Utilities can be loaded as Classes into other scripts. This is simply importing the script.</p>
-<pre><code class="lang-javascript">import AriaToggler from &quot;utilities/ariaToggler&quot;
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">import</span> AriaToggler <span class="token keyword">from</span> <span class="token string">&quot;utilities/ariaToggler&quot;</span>
 </code></pre>
 <p>And using it like so:</p>
-<pre><code class="lang-javascript">// Instantiate the toggler
-this.toggle = new AriaToggler(selector, config)
+<pre class="language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">// Instantiate the toggler</span>
+<span class="token keyword">this</span><span class="token punctuation">.</span>toggle <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">AriaToggler</span><span class="token punctuation">(</span>selector<span class="token punctuation">,</span> config<span class="token punctuation">)</span>
 </code></pre>
 </div>
           </div>
