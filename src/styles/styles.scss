@@ -34,7 +34,7 @@ $pl-muted:                #f0f1f4;
 $pl-mid-grey:             #767676;
 $pl-dark-grey:            #4a4a4a;
 $pl-darker-grey:          #333;
-$pl-highlight:            #44b9b9;
+$pl-highlight:            #767676;
 
 $pl-header-bg:            $pl-white;
 $pl-subheader-color:      $pl-black;
@@ -455,18 +455,6 @@ blockquote {
         }
       }
     }
-  }
-}
-
-// .pl-muted-bg {
-//   background-color: $pl-muted;
-// }
-
-.pl-highlighted {
-  background-color: $pl-highlight;
-
-  * {
-    color: #fff;
   }
 }
 
