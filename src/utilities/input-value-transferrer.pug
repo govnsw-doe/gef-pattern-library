@@ -1,0 +1,45 @@
+---
+layout: utility.pug
+collection: javascript
+title: Input Value Transferrer
+display_title: Input Value Transferrer
+description: A javascript utility which passes an input value from one element to another on user interaction
+---
+
+:marked
+
+
+  **Use this utility pass a value of an input field to a hidden field**
+
+  Input Value Transferrer passes an input value from one element to another when a user makes a change to that input.
+
+  `since 1.0.0`
+
+  * `1.0.4` Fixed spelling error on file name and config `inputValueTransferer.js -> inputValueTransferrer.js`
+
+  ## How it works
+
+  When a selected input value is changed by the user, the value is passed to an input element of your choosing.
+
+  ## Usage
+
+  ```jade
+    input(type=text data-gef-input-transferrer="sendValueToMe")
+    input#sendValueToMe(type=hidden)
+  ```
+
+  ## Configuration
+
+  **config.selector** `{string} ("[data-gef-input-transferrer]")` a data attribute with an ID which you wish to pass the value to. Example:
+
+  ```javascript
+  "yourInputTransferrer" : {
+    "selector" : ".your-container",
+    "script" : "utilities/inputValueTranferrer.js",
+    "config" : {
+      selectors: {
+        externalIcon: ".your-external-link"
+      }
+    }
+  }
+  ```

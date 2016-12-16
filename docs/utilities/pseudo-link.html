@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>News article | GEF Pattern Library</title>
-    <meta name="description" content="The news article template is used to publish general news and announcements.">
+    <title>Psuedo Link | GEF Pattern Library</title>
+    <meta name="description" content="A javascript utility which makes an non-anchor element function as if it were an anchor.">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="../styles/styles.css?v0.0.1" rel="stylesheet">
@@ -22,7 +22,7 @@
   <div class="uk-container uk-container-center">
     <div class="uk-grid">
       <div class="uk-width-large-3-10">
-        <header class="pl-header" data-gef-aria-toggle>
+        <header class="pl-header" data-gef-aria-toggle="">
           <h1>Global Experience Framework<span>Pattern Library</span></h1>
           <button class="pl-mobile-nav-toggle" href="#navigation" id="navigation-tab" role="tab" aria-controls="navigation" aria-expanded="false">show nav</button>
           <nav class="pl-nav" id="navigation" role="tabpanel" aria-labelledby="navigation-tabtab" aria-hidden="true" aria-label="tabpanel">
@@ -45,12 +45,12 @@
                                   </ul>
                       </ul>
           </li>
-          <li class="current"><a href="../templates/a-z.html">Templates</a>
+          <li><a href="../templates/a-z.html">Templates</a>
                       <ul>
                                   <li><a href="../templates/a-z.html">A-Z</a></li>
                                   <li><a href="../templates/catalogue.html">Catalogue</a></li>
                                   <li><a href="../templates/landing.html">Landing</a></li>
-                                  <li class="current"><a href="../templates/news-article.html">News article</a></li>
+                                  <li><a href="../templates/news-article.html">News article</a></li>
                                   <li><a href="../templates/news-index.html">News index</a></li>
                                   <li><a href="../templates/search-results.html">Search results</a></li>
                                   <li><a href="../templates/section-homepage.html">Section homepage</a></li>
@@ -76,7 +76,7 @@
                                   <li><a href="../components/teasers.html">Teasers</a></li>
                       </ul>
           </li>
-          <li><a href="../utilities/javascript.html">Utilities</a>
+          <li class="current"><a href="../utilities/javascript.html">Utilities</a>
                       <ul>
                                   <li><a href="../utilities/javascript.html">Javascript</a></li>
                                   <ul>
@@ -84,7 +84,7 @@
                                               <li><a href="../utilities/aria-toggler.html">Aria Toggler</a></li>
                                               <li><a href="../utilities/external-link-tagger.html">External Link Tagger</a></li>
                                               <li><a href="../utilities/input-value-transferrer.html">Input Value Transferrer</a></li>
-                                              <li><a href="../utilities/pseudo-link.html">Psuedo Link</a></li>
+                                              <li class="current"><a href="../utilities/pseudo-link.html">Psuedo Link</a></li>
                                               <li><a href="../utilities/scroll-toggle.html">Scroll Toggle</a></li>
                                   </ul>
                       </ul>
@@ -93,41 +93,47 @@
           </nav>
         </header>
       </div>
-      <article class="uk-width-large-7-10" data-gef-external-link-tagger>
+      <article class="uk-width-large-7-10" data-gef-external-link-tagger="">
         <div class="pl-article">
           <header class="pl-component-header">
-            <h1>News article</h1>
-            <p>The news article template is used to publish general news and announcements.</p>
-            <p class="pl-capitalise">Available in:&nbsp;<span class="pl-pills"><span>Squiz Matrix</span></span></p>
+            <h1>Psuedo Link</h1>
+            <p>A javascript utility which makes an non-anchor element function as if it were an anchor.</p>
           </header>
           <div class="pl-contents">
-            <div class="content"><div class="example"><h2 id="example-education-theme-">Example (Education theme)</h2>
-<a href="http://dec-ce.bitbucket.org/gef-education-theme/test/template-news-article.html">View template</a></div><h2 id="usage">Usage</h2>
-<ul>
-<li>The template supports two ways of grouping news articles:<ul>
-<li>By category - high-level groupings, for example: case studies, events</li>
-<li>By tag - themes within a news article content</li>
-</ul>
-</li>
-<li>The main content area can display general typographic elements (eg bulleted lists, tables).</li>
-<li>Each news article should be associated with a representative image (sized at 1000 px × 562 px). This image appears in the main content column.</li>
-<li>The user can select the category or tag at the bottom of the news article to view other similar articles.</li>
-<li>Squiz Matrix users:<ul>
-<li>A news article can belong to one category but can be assigned multiple tags.</li>
-<li>This template needs to be pre-configured before it’s available for use. Please contact platform administrators for more information.</li>
-<li>Additional content in the sidebar (see below news categories) must be set up by platform administrators.</li>
-</ul>
-</li>
-</ul>
-<h2 id="how-to-guides">How-to guides</h2>
-<p>Learn how to use the news article template in:</p>
-<ul>
-<li><a href="https://education.nsw.gov.au/gef/squiz-matrix-training/page-types/news">Squiz Matrix</a></li>
-</ul>
-<h2 id="related">Related</h2>
-<ul>
-<li><a href="news-index.html">News index</a></li>
-</ul>
+            <div class="content"><p><strong>Use this utility to make a large section of a page a clickable element which links to a singular link within.</strong></p>
+<p><code>since 1.0.0</code></p>
+<h2 id="how-it-works">How it works</h2>
+<p>Pseudo link makes elements function as if they were an anchor by looking for an anchor tag within that element and changing the window location on click.</p>
+<h2 id="usage">Usage</h2>
+<pre class="language-jade"><code class="language-jade">  <span class="token tag">div<span class="token attributes"><span class="token punctuation">(</span><span class="token attr-name">data-pseudo-link</span><span class="token punctuation">)</span></span></span>
+    <span class="token tag">img<span class="token attributes"><span class="token punctuation">(</span><span class="token attr-name">src</span><span class="token punctuation">=</span><span class="token attr-value"><span class="token string">&quot;...&quot;</span></span><span class="token punctuation">)</span></span></span>
+    <span class="token tag">h3</span>
+      <span class="token punctuation">|</span> your title
+    <span class="token tag">p</span>
+      <span class="token punctuation">|</span> +lipsum(&quot;sentences&quot;, 2)
+    <span class="token tag">a<span class="token attributes"><span class="token punctuation">(</span><span class="token attr-name">href</span><span class="token punctuation">=</span><span class="token attr-value"><span class="token string">&quot;http://http://www.dec.nsw.gov.au/&quot;</span></span><span class="token punctuation">)</span></span></span>
+      <span class="token punctuation">|</span> NSW Department of Education
+</code></pre>
+<h2 id="configuration">Configuration</h2>
+<p><strong>selector</strong> <code>{string}</code> A selector </p>
+<pre class="language-javascript"><code class="language-javascript"><span class="token string">&quot;yourPseudoLink&quot;</span> <span class="token punctuation">:</span> <span class="token punctuation">{</span>
+  <span class="token string">&quot;selector&quot;</span> <span class="token punctuation">:</span> <span class="token string">&quot;.your-link&quot;</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;script&quot;</span> <span class="token punctuation">:</span> <span class="token string">&quot;utilities/pseudoLink.js&quot;</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p><strong>config.classes.container</strong> <code>{string} (gef-pseudo-link)</code> a class which is added to the selector when the pseudo link is applied. </p>
+<p>Use this class to style the element with a hover state.</p>
+<pre class="language-javascript"><code class="language-javascript"><span class="token string">&quot;pseudoLink&quot;</span> <span class="token punctuation">:</span> <span class="token punctuation">{</span>
+  <span class="token string">&quot;selector&quot;</span> <span class="token punctuation">:</span> <span class="token string">&quot;[data-pseudo-link]&quot;</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;script&quot;</span> <span class="token punctuation">:</span> <span class="token string">&quot;utilities/pseudoLink&quot;</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;config&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;classes&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      container<span class="token punctuation">:</span> <span class="token string">&quot;gef-pseudo-link&quot;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>     
+<span class="token punctuation">}</span>
+</code></pre>
 </div>
           </div>
         </div>

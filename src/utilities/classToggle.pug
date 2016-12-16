@@ -1,0 +1,74 @@
+---
+layout: utility.pug
+collection: javascript
+title: Class Toggle
+display_title: Class Toggle
+description: A javascript utility which creates a simple class toggle on click.
+draft: true
+---
+
+:marked
+
+  **Only use this utility to change the view or style on click. Do not use for showing and hiding content.**
+
+  If you plan on showing or hiding content, use the accessible friendly (Aria Toggler)[aria-toggle.html].
+
+  The Class Toggle Utility creates a simple class toggle on click on an element of your choosing.
+
+  ## Examples
+
+  * The [Catalogue](https://govnsw-doe.github.io/gef-pattern-library/templates/catalogue.html) view change icons.
+
+  ## How it works
+
+  The script looks for anchor destinations based on the href value of the anchor tags, and if it can't find them, it will apply the specified class to the anchor.
+
+  ## Configuration
+
+  ### Selectors
+
+  **container** `{string} (selector)` a jquery selector for the container of the anchor links
+
+  ```javascript
+  "yourAnchorFilter" : {
+    "selector" : ".your-container",
+    "script" : "utilities/anchorFilter",
+    "config" : {
+      "container" : ".your-container"
+    }
+  }
+  ```
+
+  ### Options
+
+  **inactive_class** `{string} ("inactive")` the class which is added to the anchors without a desination
+
+  ```javascript
+  "yourAriaToggler" : {
+    "selector" : ".your-container",
+    "script" : "utilities/anchorFilter",
+    "config" : {
+      "inactive_class" : ".your-inactive-class"
+    }
+  }
+  ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

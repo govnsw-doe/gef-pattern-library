@@ -80,7 +80,11 @@
                       <ul>
                                   <li><a href="../utilities/javascript.html">Javascript</a></li>
                                   <ul>
+                                              <li><a href="../utilities/anchor-filter.html">Anchor Filter</a></li>
                                               <li class="current"><a href="../utilities/aria-toggler.html">Aria Toggler</a></li>
+                                              <li><a href="../utilities/external-link-tagger.html">External Link Tagger</a></li>
+                                              <li><a href="../utilities/input-value-transferrer.html">Input Value Transferrer</a></li>
+                                              <li><a href="../utilities/pseudo-link.html">Psuedo Link</a></li>
                                               <li><a href="../utilities/scroll-toggle.html">Scroll Toggle</a></li>
                                   </ul>
                       </ul>
@@ -94,12 +98,12 @@
           <header class="pl-component-header">
             <h1>Aria Toggler</h1>
             <p>A javascript utility for accessibility which toggles Aria attributes based on a click or &apos;return&apos; keypress.</p>
-            <p class="pl-capitalise">Versions:<span class="pl-pills"><span>since 1.0.0</span>undefined</span></p>
           </header>
           <div class="pl-contents">
             <div class="content"><p><strong>This utility should be used for any show and hide relationship between two or more elements.</strong></p>
 <p>The Aria Toggler utility helps you to manage toggling between Aria states on a selection of paired elements. It was built after extensive research into Aria attributes and how they should change based on element relationships.</p>
 <p>For the sake of the content below, we will call the element which is triggered by user action the <em>Trigger</em>, and the element which responds to that action the <em>Responder</em>.</p>
+<p><code>since 1.0.0</code></p>
 <h2 id="examples">Examples</h2>
 <ul>
 <li>The mobile navigation on this website</li>
@@ -142,9 +146,9 @@
 <h2 id="configuration">Configuration</h2>
 <h3 id="selectors">Selectors</h3>
 <ul>
-<li><strong>triggers</strong> <code>{string} (&quot;[role=tab]&quot;)</code> the trigger(s) which toggle the aria states.</li>
-<li><strong>panels</strong> <code>{string} (&quot;[role=tabpanel]&quot;)</code> the responder(s) which are affected by the trigger(s).</li>
-<li><strong>btnclose</strong> <code>{string} (&quot;[data-gef-ariatoggler-closebutton]&quot;)</code> an extra element which works as a close button by only toggling aria states back to the default state.</li>
+<li><strong>config.selector.triggers</strong> <code>{string} (&quot;[role=tab]&quot;)</code> the trigger(s) which toggle the aria states.</li>
+<li><strong>config.selector.panels</strong> <code>{string} (&quot;[role=tabpanel]&quot;)</code> the responder(s) which are affected by the trigger(s).</li>
+<li><strong>config.selector.btnclose</strong> <code>{string} (&quot;[data-gef-ariatoggler-closebutton]&quot;)</code> an extra element which works as a close button by only toggling aria states back to the default state.</li>
 </ul>
 <pre class="language-javascript"><code class="language-javascript"><span class="token string">&quot;yourAriaToggler&quot;</span> <span class="token punctuation">:</span> <span class="token punctuation">{</span>
   <span class="token string">&quot;selector&quot;</span> <span class="token punctuation">:</span> <span class="token string">&quot;.your-container&quot;</span><span class="token punctuation">,</span>
@@ -159,7 +163,7 @@
 <span class="token punctuation">}</span>
 </code></pre>
 <h3 id="options">Options</h3>
-<p><strong>autofocus</strong> <code>{boolean|string} (false)</code> autofocuses the Responder when expanded. Adding a selector (string) will autofocus that element if it exists as a child of the Responder.</p>
+<p><strong>config.autofocus</strong> <code>{boolean|string} (false)</code> autofocuses the Responder when expanded. Adding a selector (string) will autofocus that element if it exists as a child of the Responder.</p>
 <pre class="language-javascript"><code class="language-javascript"><span class="token string">&quot;yourAriaToggler&quot;</span> <span class="token punctuation">:</span> <span class="token punctuation">{</span>
   <span class="token string">&quot;selector&quot;</span> <span class="token punctuation">:</span> <span class="token string">&quot;.your-container&quot;</span><span class="token punctuation">,</span>
   <span class="token string">&quot;script&quot;</span> <span class="token punctuation">:</span> <span class="token string">&quot;utilities/ariaToggler&quot;</span><span class="token punctuation">,</span>
@@ -168,7 +172,7 @@
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<p><strong>click_outside</strong> <code>{boolean} (false)</code> toggles the aria attributes to hide the Responder when clicked anywhere outside the Responder</p>
+<p><strong>config.click_outside</strong> <code>{boolean} (false)</code> toggles the aria attributes to hide the Responder when clicked anywhere outside the Responder</p>
 <pre class="language-javascript"><code class="language-javascript"><span class="token string">&quot;yourAriaToggler&quot;</span> <span class="token punctuation">:</span> <span class="token punctuation">{</span>
   <span class="token string">&quot;selector&quot;</span> <span class="token punctuation">:</span> <span class="token string">&quot;.your-container&quot;</span><span class="token punctuation">,</span>
   <span class="token string">&quot;script&quot;</span> <span class="token punctuation">:</span> <span class="token string">&quot;utilities/ariaToggler&quot;</span><span class="token punctuation">,</span>
@@ -177,7 +181,7 @@
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<p><strong>tabindex_toggle</strong> <code>{boolean} (false)</code> toggles the tabindex value from -1 to 0 on the Responder.</p>
+<p><strong>config.tabindex_toggle</strong> <code>{boolean} (false)</code> toggles the tabindex value from -1 to 0 on the Responder.</p>
 <p>This makes the Responder an element which can be tabbed to when in an non-hidden state.</p>
 <pre class="language-javascript"><code class="language-javascript"><span class="token string">&quot;yourAriaToggler&quot;</span> <span class="token punctuation">:</span> <span class="token punctuation">{</span>
   <span class="token string">&quot;selector&quot;</span> <span class="token punctuation">:</span> <span class="token string">&quot;.your-container&quot;</span><span class="token punctuation">,</span>

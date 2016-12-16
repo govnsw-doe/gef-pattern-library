@@ -1,0 +1,58 @@
+---
+layout: utility.pug
+collection: javascript
+title: Psuedo Link
+display_title: Psuedo Link
+description: A javascript utility which makes an non-anchor element function as if it were an anchor.
+---
+
+:marked
+
+  **Use this utility to make a large section of a page a clickable element which links to a singular link within.**
+
+  `since 1.0.0`
+
+  ## How it works
+
+  Pseudo link makes elements function as if they were an anchor by looking for an anchor tag within that element and changing the window location on click.
+
+  ## Usage
+
+  ```jade
+    div(data-pseudo-link)
+      img(src="...")
+      h3
+        | your title
+      p
+        | +lipsum("sentences", 2)
+      a(href="http://http://www.dec.nsw.gov.au/")
+        | NSW Department of Education
+  ```
+
+  ## Configuration
+
+  **selector** `{string}` A selector 
+
+  ```javascript
+  "yourPseudoLink" : {
+    "selector" : ".your-link",
+    "script" : "utilities/pseudoLink.js",
+    }
+  }
+  ```
+
+  **config.classes.container** `{string} (gef-pseudo-link)` a class which is added to the selector when the pseudo link is applied. 
+
+  Use this class to style the element with a hover state.
+  
+  ```javascript
+  "pseudoLink" : {
+    "selector" : "[data-pseudo-link]",
+    "script" : "utilities/pseudoLink",
+    "config": {
+      "classes": {
+        container: "gef-pseudo-link"
+      }
+    }     
+  }
+  ```

@@ -80,7 +80,11 @@
                       <ul>
                                   <li><a href="../utilities/javascript.html">Javascript</a></li>
                                   <ul>
+                                              <li><a href="../utilities/anchor-filter.html">Anchor Filter</a></li>
                                               <li><a href="../utilities/aria-toggler.html">Aria Toggler</a></li>
+                                              <li><a href="../utilities/external-link-tagger.html">External Link Tagger</a></li>
+                                              <li><a href="../utilities/input-value-transferrer.html">Input Value Transferrer</a></li>
+                                              <li><a href="../utilities/pseudo-link.html">Psuedo Link</a></li>
                                               <li class="current"><a href="../utilities/scroll-toggle.html">Scroll Toggle</a></li>
                                   </ul>
                       </ul>
@@ -94,11 +98,11 @@
           <header class="pl-component-header">
             <h1>Scroll Toggle</h1>
             <p>A javascript utility which manages attribute and class toggling based on scroll position.</p>
-            <p class="pl-capitalise">Versions:<span class="pl-pills"><span>since 1.0.0</span>undefined</span></p>
           </header>
           <div class="pl-contents">
             <div class="content"><p><strong>Use this utility to fix an element&apos;s position based on the window&apos;s scroll location</strong></p>
 <p>This Utility can be used for a simple fixing of an element to the bottom of the page or a complex multi-element toggling.</p>
+<p><code>since 1.0.0</code></p>
 <h2 id="examples">Examples</h2>
 <ul>
 <li>The back-to-top button on our <a href="http://dec-ce.bitbucket.org/gef-education-theme/test/template-standard.html">templates</a>, uses it twice per page: once to come into view, and again to stick above the footer.</li>
@@ -112,13 +116,13 @@
 <h2 id="configuration">Configuration</h2>
 <h3 id="options">Options</h3>
 <ul>
-<li><strong>scroll_window</strong> <code>{boolean} (false)</code> set the scrolling element to be the window.</li>
-<li><strong>container</strong> <code>{string} (selector)</code> selector for the container.</li>
-<li><strong>checkpoint</strong> <code>{string|number} (&quot;[data-gef-scrolltoggle-checkpoint]&quot;)</code> selector for the checkpoint or a pixel value for the checkpoint from the top of the scrolling element.</li>
-<li><strong>subject</strong> <code>{string} (&quot;[data-gef-scrolltoggle-subject]&quot;)</code> selector for the element which needs to change when the checkpoint is passed.</li>
-<li><strong>passed_attr</strong> <code>{string} (&quot;data-gef-scrolltoggle-passed&quot;)</code> the attribute which gets added/removed when a checkpoint is passed</li>
+<li><strong>config.scroll_window</strong> <code>{boolean} (false)</code> set the scrolling element to be the window.</li>
+<li><strong>config.container</strong> <code>{string} (selector)</code> selector for the container.</li>
+<li><strong>config.checkpoint</strong> <code>{string|number} (&quot;[data-gef-scrolltoggle-checkpoint]&quot;)</code> selector for the checkpoint or a pixel value for the checkpoint from the top of the scrolling element.</li>
+<li><strong>config.subject</strong> <code>{string} (&quot;[data-gef-scrolltoggle-subject]&quot;)</code> selector for the element which needs to change when the checkpoint is passed.</li>
+<li><strong>config.passed_attr</strong> <code>{string} (&quot;data-gef-scrolltoggle-passed&quot;)</code> the attribute which gets added/removed when a checkpoint is passed</li>
 </ul>
-<p>If <em>scroll_window</em> is set to true, the <em>container</em> will be only be used to find the <em>subject</em>. Otherwise the <em>container</em> is the element is the scrolling element.</p>
+<p>If <em>config.scroll_window</em> is set to true, the <em>container</em> will be only be used to find the <em>subject</em>. Otherwise the <em>container</em> is the element is the scrolling element.</p>
 <p>If the <em>checkpoint</em> selector selects more than one element, then it will select multiple subject based on the <em>subject</em> selector. It will reference the <em>subject</em> by the current <em>checkpoint</em>&apos;s index.</p>
 <pre class="language-javascript"><code class="language-javascript"><span class="token string">&quot;yourScrollToggle&quot;</span> <span class="token punctuation">:</span> <span class="token punctuation">{</span>
   <span class="token string">&quot;selector&quot;</span> <span class="token punctuation">:</span> <span class="token string">&quot;.your-container&quot;</span><span class="token punctuation">,</span>
@@ -132,7 +136,7 @@
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<p><strong>scroller_position</strong> <code>{boolean} (&quot;bottom&quot;)</code> if the <code>scroll_window</code> is true, the toggle is triggered when the checkpoint passes the bottom, middle, top or percentage of the window.</p>
+<p><strong>config.scroller_position</strong> <code>{boolean} (&quot;bottom&quot;)</code> if the <code>scroll_window</code> is true, the toggle is triggered when the checkpoint passes the bottom, middle, top or percentage of the window.</p>
 <p>Options: <code>&quot;bottom&quot;|&quot;middle&quot;|&quot;top&quot;|&quot;percent&quot;</code>.</p>
 <p>If <code>&quot;percent&quot;</code> is selected the <em>scroller_percent</em> needs to be defined or it will default to <code>&quot;bottom&quot;</code></p>
 <pre class="language-javascript"><code class="language-javascript"><span class="token string">&quot;yourScrollToggle&quot;</span> <span class="token punctuation">:</span> <span class="token punctuation">{</span>
@@ -143,7 +147,7 @@
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<p><strong>scroller_percent</strong> <code>{int} (undefined)</code> the percentage value of the window where the <em>checkpoint</em> is triggered.</p>
+<p><strong>config.scroller_percent</strong> <code>{int} (undefined)</code> the percentage value of the window where the <em>checkpoint</em> is triggered.</p>
 <p>For example, if set to <code>25</code>, when the <em>checkpoint</em> passes the top 1/4 of the screen, the <em>subject</em> is toggled.</p>
 <p>Requires <em>scroller_position</em> to be set to <code>&quot;percent&quot;</code>.</p>
 <pre class="language-javascript"><code class="language-javascript"><span class="token string">&quot;yourScrollToggle&quot;</span> <span class="token punctuation">:</span> <span class="token punctuation">{</span>
@@ -154,7 +158,7 @@
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<p><strong>linked</strong> <code>{boolean} (false)</code> set to true to make the <em>checkpoint</em> the href value of the subject anchor tag.</p>
+<p><strong>config.linked</strong> <code>{boolean} (false)</code> set to true to make the <em>checkpoint</em> the href value of the subject anchor tag.</p>
 <pre class="language-jade"><code class="language-jade"><span class="token tag">a<span class="token attributes"><span class="token punctuation">(</span><span class="token attr-name">href</span><span class="token punctuation">=</span><span class="token attr-value"><span class="token string">&quot;#yourCheckpoint&quot;</span></span><span class="token punctuation">)</span></span></span>
   <span class="token punctuation">|</span> I am the subject
 </code></pre>
@@ -166,7 +170,7 @@
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<p><strong>toggle_class</strong> <code>{string} (undefined)</code> a CSS class to toggle off and on based on whether the <em>checkpoint</em> is passed.</p>
+<p><strong>config.toggle_class</strong> <code>{string} (undefined)</code> a CSS class to toggle off and on based on whether the <em>checkpoint</em> is passed.</p>
 <p>If this is set, the utility will still toggle the <em>passed_attr</em></p>
 <pre class="language-javascript"><code class="language-javascript"><span class="token string">&quot;yourScrollToggle&quot;</span> <span class="token punctuation">:</span> <span class="token punctuation">{</span>
   <span class="token string">&quot;selector&quot;</span> <span class="token punctuation">:</span> <span class="token string">&quot;.your-container&quot;</span><span class="token punctuation">,</span>
@@ -176,7 +180,7 @@
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<p><strong>external</strong> <code>{string} (&quot;data-gef-scrolltoggle-subject-id&quot;)</code> a data-attribute for the id of an external subject</p>
+<p><strong>config.external</strong> <code>{string} (&quot;data-gef-scrolltoggle-subject-id&quot;)</code> a data-attribute for the id of an external subject</p>
 <p>This is used if the <em>subject</em> is outside is <em>not</em> a child of the <em>container</em>, but the data-attribute must be on the container.</p>
 <pre class="language-jade"><code class="language-jade"><span class="token tag">div.your-container<span class="token attributes"><span class="token punctuation">(</span><span class="token attr-name">data-gef-scrolltoggle-subject-id</span><span class="token punctuation">=</span><span class="token attr-value"><span class="token string">&quot;yourSubject&quot;</span></span><span class="token punctuation">)</span></span></span>
   <span class="token tag">div.i-am-a-child-of-your-container</span>
