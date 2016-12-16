@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <title>Link groups | GEF Pattern Library</title>
-    <meta name="description" content="Link groups promote useful links to a section&#x2019;s audience groups.">
+    <meta name="description" content="Link groups promote useful links to specific audience groups.">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="../styles/styles.css?v0.0.1" rel="stylesheet">
@@ -88,16 +88,23 @@
         <div class="pl-article">
           <header class="pl-component-header">
             <h1>Link groups</h1>
-            <p>Link groups promote useful links to a section&#x2019;s audience groups.</p>
+            <p>Link groups promote useful links to specific audience groups.</p>
             <p class="pl-capitalise">Available in:&#xA0;<span class="pl-pills"><span>Squiz Matrix</span></span></p>
           </header>
           <div class="pl-contents">
-            <div class="content"><div class="pl-example"><div class="pl-example_live"><ul class="uk-grid gef-linkgroup-list"><li><div class="gef-linkgroup"><h3 class="gef-linkgroup__category">Nam quis nulla </h3><ul class="gef-link-list gef-linkgroups-items"><li><a href="http://education.nsw.gov.au">Phasellus rhoncus aenean id metus id.</a></li><li><a href="http://education.nsw.gov.au">Nulla non lectus sed nisl molestie.</a></li><li><a href="http://education.nsw.gov.au">Maecenas sollicitudin nullam rhoncus aliquam metus..</a></li></ul></div></li><li><div class="gef-linkgroup"><h3 class="gef-linkgroup__category">Nullam feugiat turpis </h3><ul class="gef-link-list gef-linkgroups-items"><li><a href="http://education.nsw.gov.au">Fusce nibh, curabitur sagittis hendrerit ante..</a></li><li><a href="http://education.nsw.gov.au">Duis condimentum augue id magna semper.</a></li><li><a href="http://education.nsw.gov.au">Fusce consectetuer risus a nunc. Aliquam.</a></li></ul></div></li><li><div class="gef-linkgroup"><h3 class="gef-linkgroup__category">Morbi gravida libero </h3><ul class="gef-link-list gef-linkgroups-items"><li><a href="http://education.nsw.gov.au">Proin mattis lacinia justo. Vestibulum facilisis.</a></li><li><a href="http://education.nsw.gov.au">Integer rutrum, orci vestibulum ullamcorper ultricies.</a></li><li><a href="http://education.nsw.gov.au">Aenean vel massa quis mauris vehicula.</a></li></ul></div></li></ul></div><div class="pl-example_code pl-code"><pre class="language-pug"><code class="language-pug">+gef_linkgroup_list(3, 3)</code></pre></div></div><div class="code"><h2 id="code">Code</h2>
+            <div class="content"><div class="pl-example"><div class="pl-example_live"><ul class="uk-grid gef-linkgroup-list"><li><div class="gef-linkgroup"><h3 class="gef-linkgroup__category">Nam quis nulla </h3><ul class="gef-link-list gef-linkgroups-items"><li><a href="http://education.nsw.gov.au">Phasellus rhoncus aenean id metus id.</a></li><li><a href="http://education.nsw.gov.au">Nulla non lectus sed nisl molestie.</a></li><li><a href="http://education.nsw.gov.au">Maecenas sollicitudin nullam rhoncus aliquam metus..</a></li></ul></div></li><li><div class="gef-linkgroup"><h3 class="gef-linkgroup__category">Nullam feugiat turpis </h3><ul class="gef-link-list gef-linkgroups-items"><li><a href="http://education.nsw.gov.au">Fusce nibh, curabitur sagittis hendrerit ante..</a></li><li><a href="http://education.nsw.gov.au">Duis condimentum augue id magna semper.</a></li><li><a href="http://education.nsw.gov.au">Fusce consectetuer risus a nunc. Aliquam.</a></li></ul></div></li><li><div class="gef-linkgroup"><h3 class="gef-linkgroup__category">Morbi gravida libero </h3><ul class="gef-link-list gef-linkgroups-items"><li><a href="http://education.nsw.gov.au">Proin mattis lacinia justo. Vestibulum facilisis.</a></li><li><a href="http://education.nsw.gov.au">Integer rutrum, orci vestibulum ullamcorper ultricies.</a></li><li><a href="http://education.nsw.gov.au">Aenean vel massa quis mauris vehicula.</a></li></ul></div></li></ul></div><div class="pl-example_code pl-code"><pre class="language-jade"><code class="language-jade"><span class="token mixin"><span class="token name function">+gef_linkgroup_list</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span></span></code></pre></div></div><div class="code"><h2 id="code">Code</h2>
 <h3 id="pug">Pug</h3>
+<<<<<<< HEAD
 <div class="code-pug"><pre class="language-jade"><code class="language-jade"><span class="token comment" spellcheck="true">//- Added: 1.0.0</span>
 <span class="token comment" spellcheck="true">//- @param {int} num  - number of linkgroups to display. Valid inputs: 1, 2, 3, 4</span>
 <span class="token comment" spellcheck="true">//- @param {int} links - number of linkgroups items within a linkgroup to display.</span>
 <span class="token mixin"><span class="token name function">+gef_linkgroup_list</span><span class="token punctuation">(</span>num<span class="token punctuation">,</span> links<span class="token punctuation">)</span></span></code></pre></div></div><h2 id="usage">Usage</h2>
+=======
+<div><pre class="language-pug"><code class="language-pug">//- Added: 1.0.0
+//- @param {int} num  - number of linkgroups to display. Valid inputs: 1, 2, 3, 4
+//- @param {int} links - number of linkgroups items within a linkgroup to display.
++gef_linkgroup_list(num, links)</code></pre></div></div><h2 id="usage">Usage</h2>
+>>>>>>> 05257c4b5b135bd81b76765e078b4e1b3ecf94e1
 <ul>
 <li>Link groups provide a way to reveal and highlight key content from a section&#x2019;s information architecture so that likely audience groups can find them more easily.</li>
 <li>Choose an appropriate title for the link group to describe the type of links it contains.</li>
