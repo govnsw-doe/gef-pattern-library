@@ -7,33 +7,21 @@ description: The A-Z template allows publishers to create a list of content sort
 available: <span>Squiz Matrix</span>
 ---
 
-//- External template URL
-- var ext_url_edu_1 = "http://dec-ce.bitbucket.org/gef-education-theme/test/template-landing-a-z-variation1.html"
-- var ext_url_edu_2 = "http://dec-ce.bitbucket.org/gef-education-theme/test/template-landing-a-z-variation2.html"
-- var ext_url_edu_4 = "http://dec-ce.bitbucket.org/gef-education-theme/test/template-landing-a-z-variation3.html"
-
-//- External template title
-- var ext_title_edu_1 = "Link-only"
-- var ext_title_edu_2 = "Link with description"
-- var ext_title_edu_4 = "Link with type"
-
-div.example
-  :marked
-    ## Example (Education theme)
-  a(href=ext_url_edu_1)= ext_title_edu_1
-  <br />
-  a(href=ext_url_edu_2)= ext_title_edu_2
-  <br />
-  | Title with description (similar to above)
-  <br />
-  a(href=ext_url_edu_4)= ext_title_edu_4
-
 :marked
+  ## Example
+  * [Template](http://dec-ce.bitbucket.org/gef/master/template-a-z.html)
+  * [Template (Education)](http://dec-ce.bitbucket.org/gef-education-theme/test/template-landing-a-z-variation2.html)  
+  (Examples above show variation 2)
+
   ## Usage
+  * There are 4 variations to the A-Z template:
+    1. **Link-only**: each item in the list is a link.
+    2. **Link with description**: each item in the list is a link with a brief description.
+    3. **Title with description**: each item in the list is plain text with a brief description. This is useful for definition/glossary-style content.
+    4. **Link with type**: each item in the list is a link and separate column to show any secondary data. For example, an A-Z list of documents can use this column to show each document&rsquo;s format or content type. 
   * As the page scrolls, the alphabet navigation bar remains visible on the screen to allow the user to jump to any alphabet in the list at any time.
   * If the list of content does not contain a specific alphabet, that alphabet&rsquo;s header will not appear in the list. That alphabet would still be visible in the navigation bar but won&rsquo;t be clickable.
-  * Suggested A-Z pages: glossary, document list.
-  * This is a full-width template. It does not include the navigation sidebar.
+  * This is a full-width template: it does not show the right-hand navigation.
 
   ## How-to guides
   Learn how to use the A-Z template in:
