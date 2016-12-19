@@ -4,15 +4,16 @@ collection: javascript
 title: Scroll Toggle
 display_title: Scroll Toggle
 description: A javascript utility which manages attribute and class toggling based on scroll position.
-since: <span>since 1.0.0</span>
-order: 2
 ---
 
 :marked
 
+
   **Use this utility to fix an element's position based on the window's scroll location**
 
   This Utility can be used for a simple fixing of an element to the bottom of the page or a complex multi-element toggling.
+
+  `since 1.0.0`
 
   ## Examples
 
@@ -28,13 +29,13 @@ order: 2
 
   ### Options
 
-  * **scroll_window** `{boolean} (false)` set the scrolling element to be the window.
-  * **container** `{string} (selector)` selector for the container.
-  * **checkpoint** `{string|number} ("[data-gef-scrolltoggle-checkpoint]")` selector for the checkpoint or a pixel value for the checkpoint from the top of the scrolling element.
-  * **subject** `{string} ("[data-gef-scrolltoggle-subject]")` selector for the element which needs to change when the checkpoint is passed.
-  * **passed_attr** `{string} ("data-gef-scrolltoggle-passed")` the attribute which gets added/removed when a checkpoint is passed
+  * **config.scroll_window** `{boolean} (false)` set the scrolling element to be the window.
+  * **config.container** `{string} (selector)` selector for the container.
+  * **config.checkpoint** `{string|number} ("[data-gef-scrolltoggle-checkpoint]")` selector for the checkpoint or a pixel value for the checkpoint from the top of the scrolling element.
+  * **config.subject** `{string} ("[data-gef-scrolltoggle-subject]")` selector for the element which needs to change when the checkpoint is passed.
+  * **config.passed_attr** `{string} ("data-gef-scrolltoggle-passed")` the attribute which gets added/removed when a checkpoint is passed
 
-  If *scroll_window* is set to true, the _container_ will be only be used to find the _subject_. Otherwise the _container_ is the element is the scrolling element.
+  If *config.scroll_window* is set to true, the _container_ will be only be used to find the _subject_. Otherwise the _container_ is the element is the scrolling element.
 
   If the _checkpoint_ selector selects more than one element, then it will select multiple subject based on the _subject_ selector. It will reference the _subject_ by the current _checkpoint_'s index.
 
@@ -52,7 +53,7 @@ order: 2
   }
   ```
 
-  **scroller_position** `{boolean} ("bottom")` if the `scroll_window` is true, the toggle is triggered when the checkpoint passes the bottom, middle, top or percentage of the window.
+  **config.scroller_position** `{boolean} ("bottom")` if the `scroll_window` is true, the toggle is triggered when the checkpoint passes the bottom, middle, top or percentage of the window.
 
   Options: `"bottom"|"middle"|"top"|"percent"`.
 
@@ -68,7 +69,7 @@ order: 2
   }
   ```
 
-  **scroller_percent** `{int} (undefined)` the percentage value of the window where the _checkpoint_ is triggered.
+  **config.scroller_percent** `{int} (undefined)` the percentage value of the window where the _checkpoint_ is triggered.
 
   For example, if set to `25`, when the _checkpoint_ passes the top 1/4 of the screen, the _subject_ is toggled.
 
@@ -84,7 +85,7 @@ order: 2
   }
   ```
 
-  **linked** `{boolean} (false)` set to true to make the _checkpoint_ the href value of the subject anchor tag.
+  **config.linked** `{boolean} (false)` set to true to make the _checkpoint_ the href value of the subject anchor tag.
 
   ```jade
   a(href="#yourCheckpoint")
@@ -101,7 +102,7 @@ order: 2
   }
   ```
 
-  **toggle_class** `{string} (undefined)` a CSS class to toggle off and on based on whether the _checkpoint_ is passed.
+  **config.toggle_class** `{string} (undefined)` a CSS class to toggle off and on based on whether the _checkpoint_ is passed.
 
   If this is set, the utility will still toggle the *passed_attr*
 
@@ -115,7 +116,7 @@ order: 2
   }
   ```
 
-  **external** `{string} ("data-gef-scrolltoggle-subject-id")` a data-attribute for the id of an external subject
+  **config.external** `{string} ("data-gef-scrolltoggle-subject-id")` a data-attribute for the id of an external subject
 
   This is used if the _subject_ is outside is *not* a child of the _container_, but the data-attribute must be on the container.
 

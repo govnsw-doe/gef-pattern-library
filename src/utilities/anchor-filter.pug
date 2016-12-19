@@ -1,0 +1,74 @@
+---
+layout: utility.pug
+collection: javascript
+title: Anchor Filter
+display_title: Anchor Filter
+description: A javascript utility which filters anchor links based on whether their destination exists
+---
+
+:marked
+
+
+  **Use this utility to hide or deactivate un-used anchors**
+
+  The Anchor Filter utility filters anchor links based on whether their destination ID exists on the page. 
+
+  `since 1.0.0`
+
+  ## Examples
+
+  * The [A-Z template](https://govnsw-doe.github.io/gef-pattern-library/templates/a-z.html) where the a-z anchors are removed if they don't have a corresponding section.
+
+  ## How it works
+
+  The script looks for anchor destinations based on the href value of the anchor tags, and if it can't find them, it will apply the specified class to the anchor.
+
+  ## Configuration
+
+  ### Selectors
+
+  **config.container** `{string} (selector)` a jquery selector for the container of the anchor links
+
+  ```javascript
+  "yourAnchorFilter" : {
+    "selector" : ".your-container",
+    "script" : "utilities/anchorFilter",
+    "config" : {
+      "container" : ".your-container"
+    }
+  }
+  ```
+
+  ### Options
+
+  **config.inactive_class** `{string} ("inactive")` the class which is added to the anchors without a desination
+
+  ```javascript
+  "yourAnchorFilter" : {
+    "selector" : ".your-container",
+    "script" : "utilities/anchorFilter",
+    "config" : {
+      "inactive_class" : ".your-inactive-class"
+    }
+  }
+  ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

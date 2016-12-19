@@ -1,0 +1,71 @@
+---
+layout: utility.pug
+collection: javascript
+title: External Link Tagger
+display_title: External Link Tagger
+description: A javascript utility applies a specified class and element to a link when it is external.
+---
+
+:marked
+
+  **Use this utility to add an external link icon to a anchor element**
+
+  The Anchor Filter utility looks for all links within a selector and applies a class and template of your choosing when the link is to another domain.
+
+  `since 1.0.0`
+
+  ## Examples
+
+  * [Google](http://www.google.com)
+
+  ## How it works
+
+  When the script finds an anchor that links to an external url, it will check against a link of white listed domains and also check there isn't an external link already applied before adding a html template of your choosing to the anchor.
+
+  ## Configuration
+
+  ### Options
+
+  **config.domains** `{array} ([])` an list of white labelled domains
+
+  ```javascript
+  "yourLinkTagger" : {
+    "selector" : ".your-container",
+    "script" : "utilities/externalLinkTagger",
+    "config" : {
+      "domains" : [
+        "localhost",
+        "education.nsw.gov.au"
+      ]
+    }
+  }
+  ```
+
+  **config.template** `{string} ("<span class=\"gef-external-link\"></span>")` a template to append to anchors with links to external URLs
+
+  ```javascript
+  "yourLinkTagger" : {
+    "selector" : ".your-container",
+    "script" : "utilities/externalLinkTagger",
+    "config" : {
+      "template": "<span class=\"gef-external-link\"></span>"
+    }
+  }
+  ```
+
+
+  ### Selectors
+
+  **config.selector.externalIcon** `{string} (selector)` a jquery selector which is tested to see if the template has already been applied
+
+  ```javascript
+  "yourLinkTagger" : {
+    "selector" : ".your-container",
+    "script" : "utilities/externalLinkTagger",
+    "config" : {
+      selectors: {
+        externalIcon: ".your-external-link"
+      }
+    }
+  }
+  ```
