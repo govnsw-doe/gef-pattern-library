@@ -481,6 +481,7 @@ blockquote {
 
     &[aria-hidden=true] {
       transform: none;
+      transition: none;
       width: auto;
     }
   }
@@ -720,6 +721,10 @@ $font-name: 'FontAwesome';
   font: $pl-font-gef;
   // load all of GEF CSS
   @import "gef/src/assets/sass/core";
+
+  a:focus {
+    outline-offset: 2px !important;
+  }
 
   // anchor box
   .gef-anchor-box {
