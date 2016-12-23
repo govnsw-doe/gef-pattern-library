@@ -1,0 +1,81 @@
+---
+layout: content.pug
+collection: education nsw
+title: Colour palette (TEST)
+display_title: Colour palette (TEST)
+description: [Enter description here]
+---
+
+//- Create a single colour block
+//- name: Name of the colour
+//- hex: The colour's hex value (without the #)
+//- invert: set to true to use white text (optional, default is false)
+mixin colour(name, hex, invert)
+	- var style = 'background-color:#' + hex;
+	if invert
+		- style += ';color:#fff'
+	
+	div.pl-palette-colour(style=style)
+		p: strong #{name}
+		p ##{hex}
+
+
+//- Page content
+:marked
+
+	Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.
+
+	## Header two
+
+	Et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur.
+
+
+//- Pallete group 1
+:marked
+	### Group 1
+	Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.	
+
+div.pl-palette-group
+	div.pl-palette
+		+colour('Nebula', 'CDD9DC')
+		+colour('Horizon', '698C97', true)
+		+colour('Tarawera', '053F51', true)
+
+	div.pl-palette
+		+colour('Botticelli', 'C6E0E9')
+		+colour('Moonstone Blue', '69AFC5')
+		+colour('Allports', '05799E', true)
+
+	div.pl-palette
+		+colour('Iceberg', 'E0F3F3')
+		+colour('Monte Carlo', '7CCECE')
+		+colour('Dull Cyan', '44B9B9')
+
+	div.pl-palette
+		+colour('Nebula', 'CDD9DC')
+		+colour('Horizon', '698C97', true)
+		+colour('Tarawera', '053F51', true)
+
+
+//- Optional regular page content again
+:marked
+	Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.	
+
+
+//- Pallete group 2
+:marked
+	### Group 2
+	Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.	
+
+div.pl-palette-group
+	div.pl-palette
+		+colour('Nebula', 'CDD9DC')
+
+	div.pl-palette
+		+colour('Botticelli', 'C6E0E9')
+
+	div.pl-palette
+		+colour('Iceberg', 'E0F3F3')
+
+	div.pl-palette
+		+colour('Nebula', 'CDD9DC')

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Psuedo Link | GEF Pattern Library</title>
-    <meta name="description" content="A javascript utility which makes an non-anchor element function as if it were an anchor.">
+    <title>Colour palette (TEST) | GEF Pattern Library</title>
+    <meta name="description" content='["Enter description here"]'>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="../styles/styles.css?v0.0.1" rel="stylesheet">
@@ -22,7 +22,7 @@
   <div class="uk-container uk-container-center">
     <div class="uk-grid">
       <div class="uk-width-large-3-10">
-        <header class="pl-header" data-gef-aria-toggle="">
+        <header class="pl-header" data-gef-aria-toggle>
           <h1>Global Experience Framework<span>Pattern Library</span></h1>
           <button class="pl-mobile-nav-toggle" href="#navigation" id="navigation-tab" role="tab" aria-controls="navigation" aria-expanded="false">show nav</button>
           <nav class="pl-nav" id="navigation" role="tabpanel" aria-labelledby="navigation-tab" aria-hidden="true" aria-label="tabpanel">
@@ -36,14 +36,14 @@
                                   <li><a href="../overview/downloads.html">Downloads</a></li>
                       </ul>
           </li>
-          <li><a href="../design/colour.html">Design</a>
+          <li class="current"><a href="../design/colour.html">Design</a>
                       <ul>
                                   <li><a href="../design/colour.html">Colour</a></li>
                                   <li><a href="../design/education-nsw.html">Education NSW</a></li>
                                   <ul>
                                               <li><a href="../design/colour palette.html">Colour palette</a></li>
                                               <li><a href="../design/example-sub-page.html">Typography</a></li>
-                                              <li><a href="../design/palette-test.html">Colour palette (TEST)</a></li>
+                                              <li class="current"><a href="../design/palette-test.html">Colour palette (TEST)</a></li>
                                   </ul>
                       </ul>
           </li>
@@ -78,7 +78,7 @@
                                   <li><a href="../components/teasers.html">Teasers</a></li>
                       </ul>
           </li>
-          <li class="current"><a href="../utilities/javascript.html">Utilities</a>
+          <li><a href="../utilities/javascript.html">Utilities</a>
                       <ul>
                                   <li><a href="../utilities/javascript.html">Javascript</a></li>
                                   <ul>
@@ -86,7 +86,7 @@
                                               <li><a href="../utilities/anchor-filter.html">Anchor Filter</a></li>
                                               <li><a href="../utilities/external-link-tagger.html">External Link Tagger</a></li>
                                               <li><a href="../utilities/input-value-transferrer.html">Input Value Transferrer</a></li>
-                                              <li class="current"><a href="../utilities/pseudo-link.html">Psuedo Link</a></li>
+                                              <li><a href="../utilities/pseudo-link.html">Psuedo Link</a></li>
                                               <li><a href="../utilities/scroll-toggle.html">Scroll Toggle</a></li>
                                   </ul>
                       </ul>
@@ -95,48 +95,21 @@
           </nav>
         </header>
       </div>
-      <article class="uk-width-large-7-10" data-gef-external-link-tagger="">
+      <article class="uk-width-large-7-10" data-gef-external-link-tagger>
         <div class="pl-article">
-          <header class="pl-component-header">
-            <h1>Psuedo Link</h1>
-            <p>A javascript utility which makes an non-anchor element function as if it were an anchor.</p>
+          <header>
+            <h1>Colour palette (TEST)</h1>
           </header>
           <div class="pl-contents">
-            <div class="content"><p><strong>Use this utility to make a large section of a page a clickable element which links to a singular link within.</strong></p>
-<p><code>since 1.0.0</code></p>
-<h2 id="how-it-works">How it works</h2>
-<p>Pseudo link makes elements function as if they were an anchor by looking for an anchor tag within that element and changing the window location on click.</p>
-<h2 id="usage">Usage</h2>
-<pre class="language-jade"><code class="language-jade">  <span class="token tag">div<span class="token attributes"><span class="token punctuation">(</span><span class="token attr-name">data-pseudo-link</span><span class="token punctuation">)</span></span></span>
-    <span class="token tag">img<span class="token attributes"><span class="token punctuation">(</span><span class="token attr-name">src</span><span class="token punctuation">=</span><span class="token attr-value"><span class="token string">&quot;...&quot;</span></span><span class="token punctuation">)</span></span></span>
-    <span class="token tag">h3</span>
-      <span class="token punctuation">|</span> your title
-    <span class="token tag">p</span>
-      <span class="token punctuation">|</span> +lipsum(&quot;sentences&quot;, 2)
-    <span class="token tag">a<span class="token attributes"><span class="token punctuation">(</span><span class="token attr-name">href</span><span class="token punctuation">=</span><span class="token attr-value"><span class="token string">&quot;http://http://www.dec.nsw.gov.au/&quot;</span></span><span class="token punctuation">)</span></span></span>
-      <span class="token punctuation">|</span> NSW Department of Education
-</code></pre>
-<h2 id="configuration">Configuration</h2>
-<p><strong>selector</strong> <code>{string}</code> A selector </p>
-<pre class="language-javascript"><code class="language-javascript"><span class="token string">&quot;yourPseudoLink&quot;</span> <span class="token punctuation">:</span> <span class="token punctuation">{</span>
-  <span class="token string">&quot;selector&quot;</span> <span class="token punctuation">:</span> <span class="token string">&quot;.your-link&quot;</span><span class="token punctuation">,</span>
-  <span class="token string">&quot;script&quot;</span> <span class="token punctuation">:</span> <span class="token string">&quot;utilities/pseudoLink.js&quot;</span><span class="token punctuation">,</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-</code></pre>
-<p><strong>config.classes.container</strong> <code>{string} (gef-pseudo-link)</code> a class which is added to the selector when the pseudo link is applied. </p>
-<p>Use this class to style the element with a hover state.</p>
-<pre class="language-javascript"><code class="language-javascript"><span class="token string">&quot;pseudoLink&quot;</span> <span class="token punctuation">:</span> <span class="token punctuation">{</span>
-  <span class="token string">&quot;selector&quot;</span> <span class="token punctuation">:</span> <span class="token string">&quot;[data-pseudo-link]&quot;</span><span class="token punctuation">,</span>
-  <span class="token string">&quot;script&quot;</span> <span class="token punctuation">:</span> <span class="token string">&quot;utilities/pseudoLink&quot;</span><span class="token punctuation">,</span>
-  <span class="token string">&quot;config&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
-    <span class="token string">&quot;classes&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
-      container<span class="token punctuation">:</span> <span class="token string">&quot;gef-pseudo-link&quot;</span>
-    <span class="token punctuation">}</span>
-  <span class="token punctuation">}</span>     
-<span class="token punctuation">}</span>
-</code></pre>
-</div>
+            <div class="content"><p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.</p>
+<h2 id="header-two">Header two</h2>
+<p>Et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur.</p>
+<h3 id="group-1">Group 1</h3>
+<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.    </p>
+<div class="pl-palette-group"><div class="pl-palette"><div class="pl-palette-colour" style="background-color:#CDD9DC"><p><strong>Nebula</strong></p><p>#CDD9DC</p></div><div class="pl-palette-colour" style="background-color:#698C97;color:#fff"><p><strong>Horizon</strong></p><p>#698C97</p></div><div class="pl-palette-colour" style="background-color:#053F51;color:#fff"><p><strong>Tarawera</strong></p><p>#053F51</p></div></div><div class="pl-palette"><div class="pl-palette-colour" style="background-color:#C6E0E9"><p><strong>Botticelli</strong></p><p>#C6E0E9</p></div><div class="pl-palette-colour" style="background-color:#69AFC5"><p><strong>Moonstone Blue</strong></p><p>#69AFC5</p></div><div class="pl-palette-colour" style="background-color:#05799E;color:#fff"><p><strong>Allports</strong></p><p>#05799E</p></div></div><div class="pl-palette"><div class="pl-palette-colour" style="background-color:#E0F3F3"><p><strong>Iceberg</strong></p><p>#E0F3F3</p></div><div class="pl-palette-colour" style="background-color:#7CCECE"><p><strong>Monte Carlo</strong></p><p>#7CCECE</p></div><div class="pl-palette-colour" style="background-color:#44B9B9"><p><strong>Dull Cyan</strong></p><p>#44B9B9</p></div></div><div class="pl-palette"><div class="pl-palette-colour" style="background-color:#CDD9DC"><p><strong>Nebula</strong></p><p>#CDD9DC</p></div><div class="pl-palette-colour" style="background-color:#698C97;color:#fff"><p><strong>Horizon</strong></p><p>#698C97</p></div><div class="pl-palette-colour" style="background-color:#053F51;color:#fff"><p><strong>Tarawera</strong></p><p>#053F51</p></div></div></div><p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.    </p>
+<h3 id="group-2">Group 2</h3>
+<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.    </p>
+<div class="pl-palette-group"><div class="pl-palette"><div class="pl-palette-colour" style="background-color:#CDD9DC"><p><strong>Nebula</strong></p><p>#CDD9DC</p></div></div><div class="pl-palette"><div class="pl-palette-colour" style="background-color:#C6E0E9"><p><strong>Botticelli</strong></p><p>#C6E0E9</p></div></div><div class="pl-palette"><div class="pl-palette-colour" style="background-color:#E0F3F3"><p><strong>Iceberg</strong></p><p>#E0F3F3</p></div></div><div class="pl-palette"><div class="pl-palette-colour" style="background-color:#CDD9DC"><p><strong>Nebula</strong></p><p>#CDD9DC</p></div></div></div></div>
           </div>
         </div>
       </article>
